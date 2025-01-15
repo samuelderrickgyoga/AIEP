@@ -1,13 +1,14 @@
 from flask import Flask, request, jsonify
+from surprise import Dataset, Reader, SVD
+from surprise.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 import numpy as np
 from scipy.sparse import csr_matrix
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.preprocessing import MinMaxScaler
-from surprise import SVD, Dataset, Reader
 import joblib
-from datetime import datetime
+import asyncio
 import os
 from threading import Lock
 import logging
@@ -15,9 +16,11 @@ from typing import List, Dict, Union
 from prometheus_client import Histogram, Counter, Gauge
 import time
 
-# Monitoring metrics
+# Monitoring setup
 RECOMMENDATION_LATENCY = Histogram('recommendation_latency_seconds', 'Time spent processing recommendations')
 ENGAGEMENT_SCORE_GAUGE = Gauge('engagement_score_average', 'Average engagement score across all students')
+MODEL_TRAINING_DURATION = Histogram('model_training_duration_seconds', 'Time spent training models')
+INTERACTION_COUNTER = Counter('interaction_total', 'Total number of logged interactions')
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -28,48 +31,58 @@ class RecommendationEngine:
     def __init__(self):
         self.data_lock = Lock()
         self.available_courses_index = set()
+        self.cached_engagement_scores = {}
         self.load_datasets()
         self.cf_model = None
         self.cbf_model = None
+        self.tfidf_vectorizer = None
         self.load_or_train_models()
 
     def load_datasets(self) -> None:
-        self.students = pd.read_csv('data/students.csv')
-        self.courses = pd.read_csv('data/courses.csv')
-        self.engagement = pd.read_csv('data/engagement.csv')
-        self.user_item_matrix = self._create_sparse_matrix()
-        self.update_available_courses()
-
-    def calculate_engagement_score(self, student_id: int) -> float:
         try:
-            student_engagement = self.engagement[self.engagement['student_id'] == student_id]
-            if student_engagement.empty:
-                logger.info(f"No engagement data found for student {student_id}")
-                return 0.0
-
-            time_score = student_engagement['time_spent'].sum() / self.courses['expected_time'].sum()
-            completion_score = student_engagement['completion_status'].mean()
-            quiz_score = student_engagement['quiz_score'].mean()
-
-            score = (0.4 * time_score + 0.3 * completion_score + 0.3 * quiz_score)
-            logger.info(f"Calculated engagement score for student {student_id}: {score:.2f}")
-            return score
+            self.students = pd.read_csv('data/students.csv')
+            self.courses = pd.read_csv('data/courses.csv')
+            self.engagement = pd.read_csv('data/engagement.csv')
+            self.user_item_matrix = self._create_sparse_matrix()
+            self.update_available_courses()
+            logger.info("Datasets loaded successfully")
         except Exception as e:
-            logger.error(f"Error calculating engagement score for student {student_id}: {e}")
-            return 0.0
+            logger.error(f"Error loading datasets: {e}")
+            raise
 
-    def normalize_engagement_score(self, student_id: int) -> float:
-        try:
-            scores = self.engagement.groupby('student_id').apply(
-                lambda df: self.calculate_engagement_score(df['student_id'].iloc[0])
-            )
-            scaler = MinMaxScaler()
-            normalized_scores = scaler.fit_transform(scores.values.reshape(-1, 1))
-            normalized_score = dict(zip(scores.index, normalized_scores))[student_id]
-            return normalized_score
-        except Exception as e:
-            logger.error(f"Error normalizing engagement score for student {student_id}: {e}")
-            return 0.0
+    def load_or_train_models(self) -> None:
+        with MODEL_TRAINING_DURATION.time():
+            try:
+                if self._check_saved_models():
+                    self._load_saved_models()
+                else:
+                    self._train_new_models()
+            except Exception as e:
+                logger.error(f"Error in model initialization: {e}")
+                raise
+
+    def _train_new_models(self) -> None:
+        logger.info("Training new models...")
+        self.train_cf_model()
+        self.train_cbf_model()
+        self._save_models()
+
+    def train_cf_model(self) -> None:
+        reader = Reader(rating_scale=(1, 5))
+        data = Dataset.load_from_df(
+            self.engagement[['student_id', 'course_id', 'rating']], 
+            reader
+        )
+        trainset, _ = train_test_split(data, test_size=0.2)
+        self.cf_model = SVD(n_factors=100)
+        self.cf_model.fit(trainset)
+        logger.info("CF model trained successfully")
+
+    def train_cbf_model(self) -> None:
+        self.tfidf_vectorizer = TfidfVectorizer(stop_words='english')
+        course_features = self.tfidf_vectorizer.fit_transform(self.courses['features'])
+        self.cbf_model = cosine_similarity(course_features)
+        logger.info("CBF model trained successfully")
 
     async def get_hybrid_recommendations(
         self, 
@@ -77,25 +90,18 @@ class RecommendationEngine:
         n: int = 5
     ) -> Dict[str, Union[List, float]]:
         with RECOMMENDATION_LATENCY.time():
-            start_time = time.time()
-            
             normalized_engagement = self.normalize_engagement_score(student_id)
-            cf_recs = self.get_cf_recommendations(student_id, n)
-            cbf_recs = self.get_cbf_recommendations(student_id, n)
             
-            hybrid_recs = []
-            for rec_set, weight in [(cf_recs, 0.6), (cbf_recs, 0.4)]:
-                for course_id, score in rec_set:
-                    if course_id in self.available_courses_index:
-                        confidence = score * weight * (1 + 0.2 * normalized_engagement)
-                        hybrid_recs.append({
-                            'course_id': course_id,
-                            'confidence': confidence,
-                            'engagement_boost': normalized_engagement
-                        })
+            cf_task = asyncio.to_thread(self.get_cf_recommendations, student_id, n)
+            cbf_task = asyncio.to_thread(self.get_cbf_recommendations, student_id, n)
             
-            execution_time = time.time() - start_time
-            logger.info(f"Generated recommendations for student {student_id} in {execution_time:.2f} seconds")
+            cf_recs, cbf_recs = await asyncio.gather(cf_task, cbf_task)
+            
+            hybrid_recs = self._combine_recommendations(
+                cf_recs, 
+                cbf_recs, 
+                normalized_engagement
+            )
             
             return {
                 'recommendations': sorted(hybrid_recs, key=lambda x: x['confidence'], reverse=True)[:n],
@@ -103,22 +109,33 @@ class RecommendationEngine:
             }
 
     async def log_interaction(self, interaction_data: Dict) -> None:
+        INTERACTION_COUNTER.inc()
         with self.data_lock:
             if self._validate_interaction(interaction_data):
-                self.engagement = self.engagement.append(interaction_data, ignore_index=True)
+                self.engagement = pd.concat([
+                    self.engagement, 
+                    pd.DataFrame([interaction_data])
+                ], ignore_index=True)
                 self.engagement.to_csv('data/engagement.csv', index=False)
                 self.user_item_matrix = self._create_sparse_matrix()
+                self.cached_engagement_scores.pop(interaction_data['student_id'], None)
                 await self.update_engagement_metrics()
 
-    async def update_engagement_metrics(self):
-        avg_score = self.engagement.groupby('student_id').apply(
-            lambda df: self.calculate_engagement_score(df['student_id'].iloc[0])
-        ).mean()
-        ENGAGEMENT_SCORE_GAUGE.set(avg_score)
+@app.route('/train', methods=['POST'])
+async def train_models():
+    try:
+        await engine.load_or_train_models()
+        return jsonify({"message": "Models trained successfully"})
+    except Exception as e:
+        logger.error(f"Training error: {e}")
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/recommendations/<int:student_id>', methods=['GET'])
 async def get_recommendations(student_id: int):
     try:
+        if student_id not in engine.students['student_id'].values:
+            return jsonify({'error': 'Invalid student ID'}), 400
+            
         result = await engine.get_hybrid_recommendations(student_id)
         return jsonify({
             'student_id': student_id,
@@ -127,5 +144,9 @@ async def get_recommendations(student_id: int):
             'timestamp': datetime.now().isoformat()
         })
     except Exception as e:
-        logger.error(f"Error getting recommendations: {str(e)}")
+        logger.error(f"Recommendation error: {e}")
         return jsonify({'error': 'Internal server error'}), 500
+
+if __name__ == '__main__':
+    engine = RecommendationEngine()
+    app.run(debug=True)

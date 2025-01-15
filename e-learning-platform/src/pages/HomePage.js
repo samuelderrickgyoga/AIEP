@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RegistrationForm from '../components/RegistrationForm';
 import CourseList from '../components/CourseList';
+import RecommendedCourses from '../components/RecommendedCourses';
 
 const categories = [
   {
@@ -74,7 +75,7 @@ const testimonials = [
 
 const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  const [studentId, setStudentId] = useState(null);
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Top Navigation */}
@@ -207,7 +208,11 @@ const HomePage = () => {
   </div>
 </header>
 
-
+{studentId && (
+        <section className="container mx-auto py-8">
+            <RecommendedCourses studentId={studentId} />
+        </section>
+    )}
 
       {/* Sections */}
       <main className="container mx-auto py-12 space-y-12">
