@@ -3,16 +3,23 @@ import numpy as np
 import os
 from datetime import datetime, timedelta
 
+# Get the absolute path to the directory containing this script
+base_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(base_dir, 'data')
+
 # Ensure the data directory exists
-os.makedirs('data', exist_ok=True)
+os.makedirs(data_dir, exist_ok=True)
 
 # Check if required files exist
-if not (os.path.exists('data/students.csv') and os.path.exists('data/courses.csv')):
-    raise FileNotFoundError("Required files 'students.csv' and 'courses.csv' are missing in the 'data' directory.")
+students_path = os.path.join(data_dir, 'students.csv')
+courses_path = os.path.join(data_dir, 'courses.csv')
 
+if not (os.path.exists(students_path) and os.path.exists(courses_path)):
+    raise FileNotFoundError("Required files 'students.csv' and 'courses.csv' are missing in the 'data' directory.")
+    
 # Load existing students and courses
-students_df = pd.read_csv('data/students.csv')
-courses_df = pd.read_csv('data/courses.csv')
+students_df = pd.read_csv(students_path)
+courses_df = pd.read_csv(courses_path)
 
 # Generate engagement data
 engagements = []
@@ -21,6 +28,7 @@ num_engagements = 1000  # Number of engagement records
 for _ in range(num_engagements):
     student_id = np.random.choice(students_df['student_id'])
     course_id = np.random.choice(courses_df['course_id'])
+    course_name = np.random.choice(courses_df['course_name'])
     
     # Generate realistic engagement metrics
     avg_time = courses_df.loc[courses_df['course_id'] == course_id, 'average_time'].values[0]
@@ -38,6 +46,7 @@ for _ in range(num_engagements):
     engagements.append({
         'student_id': student_id,
         'course_id': course_id,
+        'course_name': course_name,
         'time_spent': round(time_spent, 2),
         'quiz_score': round(quiz_score, 2),
         'completion_status': completion_status,
@@ -51,7 +60,8 @@ engagement_df = pd.DataFrame(engagements)
 engagement_df = engagement_df.drop_duplicates(subset=['student_id', 'course_id'])
 
 # Save to CSV
-engagement_df.to_csv('data/engagement.csv', index=False)
+engagement_csv_path = os.path.join(data_dir, 'engagement.csv')
+engagement_df.to_csv(engagement_csv_path, index=False)
 
 # Print summary statistics
 print("Generated 'engagement.csv' with the following statistics:")

@@ -1,0 +1,971 @@
+student_id,course_id,course_name,time_spent,quiz_score,completion_status,rating
+1058,1073,Go Data Structures,43.72,88.66,0.75,4.8
+1064,1163,Building Electron Apps,45.12,64.65,0.75,4.1
+1058,1129,Rust Algorithms,15.45,50.6,1.0,4.3
+1082,1122,Java Algorithms,60.48,56.6,0.25,1.6
+1057,1004,Cross-platform Flutter Development,18.62,68.36,0.5,2.1
+1058,1160,NLP in Practice,60.95,69.48,0.5,3.4
+1049,1138,Native Kotlin Development,53.17,75.87,0.5,3.5
+1086,1036,Native Flutter Development,13.94,84.93,0.25,2.0
+1006,1042,MySQL Security,20.37,69.13,1.0,4.2
+1074,1081,Java Programming,25.73,92.09,1.0,5.0
+1004,1125,Native Kotlin Development,27.69,83.79,0.5,3.4
+1019,1029,Flutter App Development,47.64,78.98,0.5,4.4
+1053,1199,Machine Learning in Practice,52.92,0.0,0.0,1.0
+1074,1165,Cross-platform Flutter Development,15.44,49.89,0.5,2.2
+1043,1165,Java Programming,29.56,0.0,0.0,1.0
+1096,1121,Java Programming,59.77,81.44,1.0,4.7
+1072,1066,Advanced Java,16.09,79.1,1.0,4.0
+1013,1147,Rust Data Structures,23.09,98.57,0.5,3.2
+1003,1190,Rust Data Structures,20.62,0.0,0.0,1.0
+1021,1140,Advanced Computer Vision,15.74,69.58,0.75,4.1
+1098,1040,Go Programming,44.97,0.0,0.0,1.0
+1094,1113,Go Data Structures,70.4,71.11,0.75,3.9
+1093,1147,Go Programming,27.62,0.0,0.0,1.0
+1031,1060,Machine Learning Fundamentals,75.16,85.92,0.5,3.7
+1041,1149,JavaFX Application Architecture,26.73,72.0,0.75,2.8
+1090,1044,Native Kotlin Development,87.5,86.86,1.0,4.5
+1045,1058,WPF Application Architecture,56.46,74.03,0.75,3.1
+1007,1156,Modern Angular Development,17.25,44.66,0.25,1.6
+1021,1057,Advanced C++,59.77,63.96,0.25,2.4
+1071,1160,Native React Native Development,62.19,76.69,0.5,3.6
+1021,1064,Native React Native Development,55.91,0.0,0.0,1.0
+1082,1100,Applied Machine Learning,54.6,70.17,1.0,4.0
+1024,1061,Machine Learning Fundamentals,61.09,82.24,1.0,5.0
+1007,1142,Oracle Security,61.9,76.36,0.5,2.7
+1078,1123,Machine Learning Fundamentals,37.19,100.0,0.5,3.5
+1054,1082,WPF Application Architecture,28.62,100.0,0.75,4.3
+1066,1007,JavaFX Application Architecture,37.84,68.49,0.75,3.0
+1028,1004,Modern Flask Development,8.14,67.86,1.0,4.0
+1020,1055,Java Algorithms,27.67,0.0,0.0,1.0
+1052,1141,MySQL Database Design,25.25,68.74,0.5,3.1
+1036,1173,Go Algorithms,46.55,77.43,0.5,3.8
+1006,1133,Go Programming,33.1,85.52,0.5,3.8
+1049,1078,Rust Algorithms,100.0,81.49,0.5,4.3
+1079,1096,C++ Algorithms,18.42,76.1,1.0,3.9
+1040,1022,Redis Security,81.83,60.93,1.0,2.8
+1013,1166,NLP in Practice,71.05,73.67,0.25,2.2
+1018,1188,Oracle Administration,11.94,50.9,0.5,2.4
+1048,1130,MongoDB Administration,24.17,72.46,0.75,2.9
+1047,1155,Backend Development with Flask,54.82,79.12,0.25,1.8
+1044,1058,PostgreSQL Performance Tuning,48.39,67.91,0.5,3.0
+1024,1145,Backend Development with Flask,53.11,39.98,0.5,2.5
+1022,1138,PostgreSQL Security,19.08,0.0,0.0,1.0
+1010,1193,Backend Development with Angular,29.01,65.53,0.5,2.4
+1098,1112,Full Stack Vue.js,40.63,67.29,0.25,2.1
+1079,1175,Advanced Java,14.44,0.0,0.0,1.0
+1090,1093,Native Flutter Development,8.32,0.0,0.0,1.0
+1058,1052,Computer Vision Fundamentals,96.84,67.75,0.75,3.4
+1077,1096,Modern Angular Development,20.21,77.98,0.5,2.4
+1016,1059,Java Algorithms,23.5,68.51,1.0,4.7
+1027,1039,Advanced C++,26.2,84.15,1.0,4.2
+1070,1182,Kotlin App Development,34.68,57.69,0.75,2.2
+1096,1032,WPF GUI Development,15.57,0.0,0.0,1.0
+1093,1110,Advanced Computer Vision,34.98,90.9,0.75,4.2
+1023,1149,Redis Security,32.13,72.26,1.0,4.7
+1069,1170,Advanced Deep Learning,31.82,71.39,0.75,2.9
+1049,1062,Native Kotlin Development,16.57,83.14,0.5,2.7
+1059,1157,PostgreSQL Administration,60.28,75.3,0.5,2.6
+1037,1125,Advanced Java,46.02,52.64,1.0,3.3
+1024,1089,Cross-platform Flutter Development,15.5,78.37,0.25,2.5
+1038,1018,JavaScript Programming,69.16,74.31,0.25,2.9
+1010,1001,Frontend Development with Flask,27.7,87.43,0.25,2.5
+1086,1027,Rust Algorithms,55.31,58.07,1.0,4.3
+1029,1131,Go Algorithms,62.21,54.13,0.75,3.3
+1048,1097,Cross-platform iOS Development,45.78,59.62,1.0,3.9
+1097,1136,Computer Vision Fundamentals,20.65,76.52,0.25,2.9
+1023,1019,Advanced Computer Vision,59.93,76.78,0.75,3.7
+1097,1195,Cross-platform Flutter Development,48.21,41.4,0.5,2.0
+1047,1053,Oracle Administration,62.04,55.79,0.5,2.7
+1010,1156,Applied Neural Networks,17.88,49.48,0.25,1.7
+1052,1099,PostgreSQL Security,96.48,79.04,1.0,5.0
+1006,1093,Backend Development with Node.js,11.26,69.2,0.25,1.8
+1038,1123,C++ Algorithms,30.74,85.28,0.75,4.2
+1086,1102,Redis Security,33.81,60.1,0.5,2.9
+1055,1003,Go Programming,65.39,91.81,0.75,4.1
+1010,1025,Backend Development with Node.js,36.68,72.22,0.5,3.4
+1041,1072,Native Kotlin Development,34.2,82.09,0.25,2.8
+1086,1123,Building JavaFX Apps,52.35,55.19,1.0,4.0
+1007,1093,NLP in Practice,11.79,61.44,0.75,3.1
+1062,1105,MongoDB Database Design,37.01,53.02,0.5,2.6
+1053,1183,Advanced Java,29.54,70.44,0.75,4.1
+1069,1048,JavaFX Application Architecture,44.15,79.63,0.5,3.1
+1035,1139,Redis Database Design,17.7,0.0,0.0,1.0
+1009,1116,Native Kotlin Development,18.43,65.16,0.5,3.2
+1092,1027,Modern Angular Development,27.63,69.18,0.5,2.5
+1083,1139,Deep Learning in Practice,4.22,57.08,1.0,3.8
+1057,1104,Native Kotlin Development,17.78,0.0,0.0,1.0
+1090,1094,Deep Learning Fundamentals,36.56,51.87,0.75,2.3
+1044,1104,Kotlin App Development,25.81,46.14,0.75,2.7
+1063,1091,WPF Application Architecture,60.71,0.0,0.0,1.0
+1042,1001,Native React Native Development,31.13,68.38,0.75,2.6
+1028,1040,Redis Security,32.53,83.01,0.25,2.7
+1041,1040,PostgreSQL Administration,27.17,90.65,0.5,2.0
+1079,1115,Java Programming,42.63,76.68,0.75,4.2
+1060,1181,iOS App Development,29.82,94.51,0.75,4.4
+1022,1130,Redis Security,24.8,100.0,1.0,4.5
+1011,1010,Full Stack Angular,32.82,36.17,0.5,1.3
+1041,1151,NLP Fundamentals,72.24,83.69,1.0,5.0
+1078,1137,Flutter App Development,37.42,71.37,0.75,4.0
+1042,1145,Native Kotlin Development,54.93,72.53,0.5,3.3
+1057,1136,Rust Programming,18.82,57.98,0.25,2.5
+1034,1072,WPF GUI Development,25.68,68.17,0.5,3.3
+1038,1007,Native Kotlin Development,27.86,57.35,0.5,2.5
+1097,1169,Applied Machine Learning,24.43,54.07,1.0,3.3
+1051,1076,Go Data Structures,75.41,80.18,1.0,4.2
+1079,1121,Modern Vue.js Development,59.14,77.99,0.5,3.1
+1071,1166,PostgreSQL Administration,58.64,57.05,0.75,4.1
+1008,1197,Go Data Structures,55.04,70.48,0.75,3.1
+1097,1177,Applied Machine Learning,39.37,30.89,1.0,3.2
+1029,1057,Modern React Development,70.06,93.42,1.0,4.1
+1042,1185,Backend Development with Flask,40.26,78.48,0.5,2.7
+1056,1177,Java Algorithms,44.98,54.99,0.75,2.1
+1016,1088,Computer Vision Fundamentals,22.56,67.16,0.75,3.2
+1051,1069,Native React Native Development,17.04,0.0,0.0,1.0
+1084,1017,PostgreSQL Performance Tuning,65.64,83.11,0.75,4.6
+1054,1163,PostgreSQL Administration,32.91,100.0,0.75,4.7
+1040,1010,MySQL Security,11.26,95.33,0.75,4.3
+1005,1061,Native React Native Development,72.85,74.65,0.5,3.2
+1033,1029,Oracle Security,31.35,61.39,0.25,2.7
+1039,1197,Native Flutter Development,58.89,56.71,1.0,3.9
+1098,1178,Full Stack Angular,62.32,82.84,0.5,3.1
+1020,1146,PostgreSQL Performance Tuning,67.12,66.02,0.5,3.1
+1066,1025,Oracle Administration,32.86,81.62,0.25,3.4
+1039,1090,Go Algorithms,37.18,0.0,0.0,1.0
+1056,1157,JavaScript Programming,47.31,52.09,0.75,3.2
+1081,1029,MongoDB Performance Tuning,47.81,70.28,0.5,3.1
+1008,1083,iOS App Development,34.31,80.45,0.25,2.3
+1025,1091,Backend Development with Node.js,51.21,0.0,0.0,1.0
+1015,1101,Advanced Neural Networks,33.33,95.76,0.75,3.6
+1075,1029,Computer Vision Fundamentals,47.86,73.81,0.25,2.1
+1094,1088,Deep Learning in Practice,29.48,55.06,0.25,1.7
+1090,1144,Advanced Go,29.16,85.95,0.25,2.6
+1025,1169,Cross-platform React Native Development,43.54,74.34,0.5,3.4
+1088,1153,Modern React Development,72.84,66.15,0.25,2.1
+1004,1183,JavaScript Data Structures,35.99,34.73,0.75,3.7
+1098,1140,Native Kotlin Development,25.7,74.91,0.5,2.4
+1077,1077,NLP in Practice,50.4,82.75,0.25,3.2
+1004,1173,Modern Angular Development,57.35,77.8,0.75,3.1
+1090,1163,NLP in Practice,34.44,72.44,1.0,4.6
+1064,1155,Machine Learning Fundamentals,71.17,83.8,0.5,3.4
+1061,1081,PostgreSQL Security,21.19,89.39,0.75,4.6
+1099,1008,Java Programming,45.37,90.96,1.0,4.8
+1094,1156,Redis Administration,16.23,0.0,0.0,1.0
+1004,1176,Frontend Development with Vue.js,37.26,0.0,0.0,1.0
+1087,1115,JavaScript Programming,74.8,85.05,0.75,3.8
+1010,1090,Advanced Go,29.27,65.35,0.5,2.0
+1037,1082,Computer Vision in Practice,19.45,82.02,0.5,3.4
+1041,1176,MongoDB Security,28.83,0.0,0.0,1.0
+1096,1017,Machine Learning in Practice,50.24,0.0,0.0,1.0
+1011,1132,Android App Development,24.79,59.84,0.5,3.2
+1045,1167,Java Algorithms,12.94,0.0,0.0,1.0
+1066,1200,Electron GUI Development,30.59,77.33,0.75,3.4
+1066,1009,Cross-platform React Native Development,61.33,92.91,1.0,5.0
+1092,1157,Advanced C++,25.96,71.17,0.5,3.5
+1071,1137,Redis Security,49.58,41.95,0.5,2.7
+1081,1148,Advanced Java,78.66,59.0,0.5,2.5
+1072,1032,MongoDB Security,23.88,60.82,0.75,3.5
+1026,1054,Native Kotlin Development,64.63,56.91,1.0,3.6
+1018,1187,Modern Node.js Development,51.15,76.66,0.25,2.4
+1047,1166,Advanced Python,41.08,51.47,0.5,2.5
+1053,1090,iOS App Development,37.9,75.84,1.0,4.4
+1067,1024,JavaFX Application Architecture,53.93,66.05,1.0,4.6
+1028,1156,Rust Algorithms,18.71,49.78,0.5,2.3
+1018,1029,JavaFX GUI Development,42.94,66.68,0.5,2.3
+1045,1197,Native Flutter Development,68.96,96.91,0.5,3.4
+1057,1142,Deep Learning Fundamentals,22.72,65.38,1.0,3.9
+1046,1153,Backend Development with Angular,57.58,93.26,0.75,4.1
+1029,1200,Android App Development,45.57,44.35,0.75,2.7
+1070,1048,JavaScript Programming,46.38,66.0,0.25,2.9
+1007,1092,Redis Database Design,64.97,72.38,0.5,2.8
+1020,1092,Advanced JavaScript,41.37,0.0,0.0,1.0
+1034,1158,Cross-platform React Native Development,49.65,84.93,0.75,4.6
+1044,1025,Advanced Go,27.92,74.26,0.25,1.7
+1050,1178,Modern Flask Development,47.05,73.83,0.5,2.8
+1006,1049,Kotlin App Development,50.58,73.44,0.75,5.0
+1033,1190,Java Algorithms,28.69,34.59,0.25,1.4
+1046,1150,WPF Application Architecture,30.46,70.68,0.25,2.1
+1001,1065,Advanced Java,21.11,0.0,0.0,1.0
+1098,1063,Native React Native Development,49.55,89.52,0.75,4.3
+1071,1069,Computer Vision in Practice,26.19,61.29,0.75,3.6
+1021,1015,Native Kotlin Development,47.43,50.48,0.75,3.2
+1081,1150,Go Programming,31.07,79.19,0.5,3.3
+1004,1086,Advanced Java,30.57,97.91,0.5,3.5
+1011,1088,Machine Learning in Practice,42.73,71.54,0.75,3.1
+1054,1057,Machine Learning Fundamentals,96.96,67.59,0.75,3.7
+1099,1093,JavaFX Application Architecture,9.29,92.71,0.5,4.4
+1059,1152,Native Flutter Development,46.31,59.68,0.25,2.2
+1095,1100,WPF Application Architecture,30.86,53.48,0.25,2.4
+1013,1042,Go Programming,34.67,95.38,0.5,4.1
+1084,1029,Redis Database Design,42.18,97.31,0.5,2.6
+1036,1070,JavaScript Programming,14.96,78.86,0.75,3.9
+1032,1060,Cross-platform Flutter Development,61.68,47.65,0.5,1.5
+1017,1044,Computer Vision in Practice,99.8,56.65,0.5,2.5
+1024,1119,Building Electron Apps,72.44,60.85,0.25,2.2
+1034,1039,Advanced Go,26.32,83.84,1.0,4.2
+1066,1092,Full Stack Flask,61.1,36.92,0.5,2.7
+1046,1011,Advanced Java,70.78,73.94,0.25,3.8
+1026,1137,WPF Application Architecture,42.02,74.63,0.5,3.7
+1041,1191,Backend Development with Flask,42.66,80.21,0.5,2.7
+1026,1001,Go Programming,35.27,0.0,0.0,1.0
+1004,1115,Redis Performance Tuning,54.32,86.66,0.5,2.4
+1056,1102,Deep Learning in Practice,37.96,69.83,0.25,2.8
+1100,1173,Applied NLP,41.2,75.87,0.25,2.7
+1034,1161,Modern Node.js Development,10.23,49.82,0.75,3.9
+1039,1157,Cross-platform Kotlin Development,42.48,90.86,1.0,4.1
+1027,1024,Cross-platform Flutter Development,75.38,0.0,0.0,1.0
+1044,1119,Backend Development with Flask,64.57,62.72,0.75,4.0
+1036,1130,Modern Angular Development,20.1,66.26,1.0,4.8
+1063,1186,Full Stack Django,54.96,99.95,0.75,4.2
+1077,1145,Redis Administration,18.67,89.07,0.5,4.0
+1054,1066,JavaFX Application Architecture,48.55,100.0,1.0,4.8
+1039,1009,Go Algorithms,76.24,80.61,0.25,2.9
+1093,1134,WPF GUI Development,66.9,57.42,0.5,3.3
+1013,1186,C++ Data Structures,29.9,58.48,1.0,4.3
+1057,1010,Go Programming,22.91,64.25,0.25,2.7
+1059,1088,Backend Development with Flask,25.07,78.43,0.25,3.0
+1068,1099,JavaScript Programming,56.62,0.0,0.0,1.0
+1041,1114,Go Data Structures,50.94,83.01,1.0,4.4
+1047,1030,NLP Fundamentals,70.49,42.28,0.75,3.5
+1021,1143,Computer Vision Fundamentals,21.22,64.27,0.75,2.9
+1091,1060,Backend Development with React,53.75,90.02,0.75,4.8
+1002,1018,Java Programming,42.08,81.56,0.25,1.9
+1065,1077,Building JavaFX Apps,61.81,80.88,1.0,4.2
+1011,1147,NLP in Practice,16.22,90.69,0.75,3.4
+1023,1020,Kotlin App Development,90.91,64.28,0.75,2.2
+1013,1044,Modern Vue.js Development,54.29,100.0,0.5,4.7
+1053,1175,Native Flutter Development,13.81,47.13,1.0,4.7
+1064,1088,Modern React Development,20.92,72.31,0.75,3.1
+1079,1054,NLP Fundamentals,25.82,80.56,0.5,4.2
+1074,1132,Applied NLP,28.37,52.41,0.25,1.8
+1012,1071,Advanced Deep Learning,21.44,0.0,0.0,1.0
+1010,1105,JavaScript Algorithms,55.79,84.16,0.25,2.8
+1073,1071,Modern Angular Development,13.2,66.64,0.75,3.3
+1097,1064,Android App Development,61.46,48.52,0.5,2.3
+1094,1188,Advanced Java,12.38,61.01,1.0,4.3
+1015,1197,Advanced Computer Vision,67.97,50.97,0.5,2.4
+1085,1170,Redis Administration,56.92,55.3,0.75,2.7
+1064,1197,Rust Algorithms,56.95,43.37,1.0,3.8
+1038,1187,Backend Development with Django,53.81,58.56,0.25,1.5
+1036,1091,Go Programming,69.21,61.41,1.0,4.0
+1023,1145,Advanced JavaScript,24.76,73.04,0.5,3.1
+1013,1026,Modern React Development,62.42,71.52,0.75,3.6
+1055,1054,Applied Deep Learning,50.52,48.21,0.75,3.7
+1056,1123,JavaFX Application Architecture,32.91,52.25,1.0,4.3
+1022,1110,Go Algorithms,19.36,0.0,0.0,1.0
+1037,1189,Backend Development with Django,62.01,68.53,0.75,5.0
+1030,1130,Modern Angular Development,19.12,0.0,0.0,1.0
+1093,1025,WPF Application Architecture,22.59,66.72,0.25,2.7
+1024,1034,Go Data Structures,57.28,100.0,0.75,4.8
+1081,1087,Computer Vision Fundamentals,22.46,64.73,0.5,3.7
+1022,1026,Native Kotlin Development,65.53,55.19,0.5,3.2
+1055,1089,NLP Fundamentals,9.2,65.88,0.5,2.9
+1078,1074,Full Stack Django,35.03,60.89,0.75,3.5
+1048,1082,MongoDB Database Design,27.24,86.28,0.5,4.0
+1019,1150,Computer Vision Fundamentals,18.55,68.45,0.5,3.1
+1046,1048,WPF Application Architecture,21.95,0.0,0.0,1.0
+1097,1093,Native React Native Development,13.16,76.18,0.5,3.1
+1041,1139,Computer Vision Fundamentals,16.31,57.26,1.0,3.7
+1032,1029,Advanced NLP,55.51,79.37,0.25,1.7
+1006,1033,Full Stack Django,47.26,70.93,0.75,3.1
+1048,1031,Python Programming,65.57,81.1,0.75,3.9
+1003,1078,Advanced Deep Learning,90.12,71.49,0.75,3.3
+1076,1029,WPF Application Architecture,41.11,82.85,0.5,2.6
+1091,1018,Advanced Python,49.34,89.4,0.75,3.4
+1006,1144,Backend Development with Flask,27.71,77.8,0.25,2.4
+1094,1051,NLP in Practice,58.13,90.07,1.0,4.4
+1097,1088,Backend Development with Django,19.74,87.27,0.5,3.6
+1049,1038,Advanced C++,34.76,0.0,0.0,1.0
+1034,1151,Java Programming,27.53,66.28,0.5,3.3
+1078,1036,PyQt Application Architecture,31.4,44.14,0.75,3.0
+1065,1101,MongoDB Administration,20.5,81.12,1.0,5.0
+1093,1023,JavaFX GUI Development,42.29,50.98,0.5,2.9
+1092,1006,MySQL Database Design,46.24,70.96,0.25,2.7
+1083,1041,Backend Development with Flask,54.96,0.0,0.0,1.0
+1062,1163,Electron GUI Development,57.12,94.22,0.25,2.7
+1088,1173,NLP in Practice,37.09,99.96,0.5,3.3
+1073,1120,PostgreSQL Performance Tuning,18.9,82.96,0.5,3.4
+1029,1037,Machine Learning in Practice,47.7,74.26,1.0,5.0
+1018,1199,PostgreSQL Security,82.27,64.65,0.25,1.8
+1034,1149,NLP Fundamentals,25.75,0.0,0.0,1.0
+1038,1081,Full Stack React,28.64,78.76,0.5,2.8
+1089,1039,Building Electron Apps,30.83,73.17,0.75,3.9
+1048,1065,Deep Learning in Practice,36.48,93.38,0.5,3.4
+1071,1080,JavaFX GUI Development,51.27,76.58,0.75,4.1
+1052,1062,Native React Native Development,15.21,69.86,0.5,2.7
+1022,1064,Redis Administration,36.4,87.14,0.5,2.3
+1025,1075,Rust Programming,49.22,78.68,0.5,2.9
+1021,1103,Advanced C++,24.26,72.27,0.75,3.8
+1039,1160,Electron GUI Development,45.47,60.37,0.75,3.4
+1045,1026,NLP in Practice,53.82,64.28,0.5,2.9
+1023,1182,Advanced NLP,80.4,100.0,1.0,4.6
+1023,1196,WPF Application Architecture,20.5,69.6,0.5,2.8
+1058,1007,WPF Application Architecture,37.06,92.41,1.0,4.8
+1067,1086,JavaScript Programming,45.61,68.13,0.25,1.4
+1062,1196,Building WPF Apps,11.52,74.18,1.0,4.8
+1056,1147,C++ Programming,27.58,91.04,1.0,5.0
+1091,1178,Building WPF Apps,43.97,59.97,0.75,2.7
+1077,1036,Cross-platform Flutter Development,34.15,44.45,0.5,2.2
+1032,1100,Rust Data Structures,35.97,72.07,0.5,2.8
+1075,1181,Kotlin App Development,23.55,81.18,0.25,3.1
+1058,1132,Modern React Development,37.24,76.3,0.25,2.5
+1050,1113,PostgreSQL Performance Tuning,63.86,55.74,0.5,2.5
+1082,1146,iOS App Development,36.56,80.06,0.5,2.9
+1069,1093,Building .NET Apps,16.64,62.73,1.0,3.5
+1031,1105,Advanced Java,53.16,77.74,0.75,3.1
+1002,1009,PostgreSQL Administration,41.72,52.48,0.5,2.5
+1047,1052,WPF Application Architecture,34.64,49.45,0.75,3.4
+1016,1023,PostgreSQL Administration,31.04,69.8,0.25,2.9
+1074,1014,Android App Development,17.13,85.98,0.5,3.6
+1034,1088,Redis Performance Tuning,51.31,53.2,0.5,3.1
+1064,1044,Java Algorithms,81.04,91.6,0.5,3.6
+1028,1158,Full Stack Angular,38.6,78.75,1.0,4.1
+1068,1133,Full Stack Angular,21.41,80.53,0.25,2.4
+1057,1033,Backend Development with Node.js,51.07,83.33,0.5,3.4
+1077,1192,NLP Fundamentals,51.48,52.09,0.5,2.1
+1088,1098,Native React Native Development,29.31,74.03,0.25,2.6
+1088,1080,Modern React Development,55.29,66.87,1.0,3.9
+1091,1068,PostgreSQL Security,54.76,90.76,0.5,3.6
+1084,1071,Building JavaFX Apps,26.46,64.71,0.5,3.6
+1037,1072,Java Algorithms,23.5,70.77,0.5,3.4
+1096,1103,Rust Data Structures,20.33,0.0,0.0,1.0
+1055,1124,Flutter App Development,30.88,91.62,0.75,4.2
+1055,1037,Kotlin App Development,40.88,66.37,1.0,4.1
+1100,1107,Flutter App Development,53.26,77.85,0.25,2.3
+1083,1120,WPF GUI Development,61.67,50.91,0.5,3.1
+1062,1017,Cross-platform Flutter Development,53.5,42.78,0.5,2.2
+1085,1034,WPF Application Architecture,51.29,79.39,0.25,2.7
+1095,1103,Full Stack Vue.js,6.32,53.81,0.5,2.6
+1075,1142,Kotlin App Development,50.42,0.0,0.0,1.0
+1092,1169,MySQL Performance Tuning,37.55,73.03,1.0,4.1
+1006,1151,Cross-platform React Native Development,48.45,87.42,0.5,3.0
+1003,1054,Advanced Computer Vision,34.27,0.0,0.0,1.0
+1007,1075,Applied Neural Networks,50.08,85.32,0.5,2.3
+1037,1185,Java Algorithms,33.94,84.03,1.0,4.2
+1074,1115,JavaFX GUI Development,63.64,83.17,0.75,3.8
+1026,1098,Cross-platform React Native Development,27.68,87.26,0.25,3.2
+1064,1098,Applied Deep Learning,34.92,73.8,1.0,4.8
+1085,1004,PostgreSQL Performance Tuning,25.55,0.0,0.0,1.0
+1087,1169,Rust Algorithms,25.53,95.24,0.25,2.6
+1098,1053,Native Flutter Development,77.12,48.18,0.25,2.2
+1004,1051,JavaFX Application Architecture,52.43,83.08,0.75,3.9
+1003,1187,Computer Vision Fundamentals,75.91,48.83,1.0,3.8
+1008,1048,Advanced Neural Networks,34.86,82.77,0.5,3.5
+1053,1172,NLP in Practice,17.43,43.56,0.25,1.8
+1018,1117,Native Kotlin Development,40.3,57.59,0.5,3.6
+1023,1140,MongoDB Administration,18.09,84.35,0.25,2.9
+1074,1151,PyQt Application Architecture,65.81,79.04,0.5,2.2
+1053,1062,Computer Vision in Practice,10.22,100.0,0.5,3.6
+1074,1071,Cross-platform Flutter Development,18.18,89.49,1.0,5.0
+1009,1066,Full Stack Flask,64.69,47.36,0.5,2.5
+1019,1105,PostgreSQL Administration,53.4,79.78,0.75,3.6
+1007,1174,MongoDB Administration,28.14,0.0,0.0,1.0
+1062,1064,Advanced Go,44.94,64.47,0.5,3.3
+1029,1010,Rust Algorithms,11.33,54.34,0.75,3.6
+1032,1145,Backend Development with Flask,62.88,73.02,0.75,3.4
+1086,1172,PostgreSQL Security,25.94,73.32,0.25,2.3
+1037,1194,Frontend Development with Vue.js,14.95,50.34,0.75,3.3
+1015,1142,Native Flutter Development,66.37,0.0,0.0,1.0
+1050,1174,Advanced Go,45.82,75.16,0.25,2.8
+1013,1135,C++ Data Structures,43.48,90.56,0.25,3.2
+1012,1134,Oracle Security,46.42,69.59,1.0,4.2
+1001,1015,MySQL Security,37.04,89.8,0.75,3.9
+1077,1105,Oracle Security,43.15,0.0,0.0,1.0
+1074,1092,Java Programming,38.99,59.27,1.0,4.0
+1051,1057,Oracle Security,55.87,69.72,1.0,5.0
+1037,1197,JavaFX Application Architecture,50.14,87.19,0.5,3.9
+1058,1176,Modern React Development,26.77,70.43,0.5,3.2
+1030,1058,Native Kotlin Development,35.15,86.59,0.75,4.8
+1027,1164,Full Stack Node.js,77.93,0.0,0.0,1.0
+1013,1031,Deep Learning Fundamentals,42.75,62.09,1.0,3.6
+1045,1012,Building .NET Apps,73.62,51.19,0.5,2.7
+1077,1167,Cross-platform React Native Development,9.98,72.43,0.75,3.7
+1090,1039,Redis Security,25.27,75.2,0.75,3.8
+1079,1025,Native Kotlin Development,21.18,58.1,0.75,3.0
+1021,1132,Neural Networks in Practice,47.28,55.53,0.75,2.5
+1085,1135,Backend Development with Angular,72.41,62.52,0.5,2.9
+1075,1191,Cross-platform Flutter Development,26.58,65.93,0.5,2.3
+1033,1021,Flutter App Development,34.46,82.33,0.5,3.6
+1092,1098,iOS App Development,40.84,77.28,0.5,3.5
+1029,1089,NLP Fundamentals,11.02,61.24,0.5,2.7
+1088,1067,Full Stack Node.js,66.84,87.34,0.25,2.6
+1097,1018,JavaScript Algorithms,62.13,51.48,0.75,3.5
+1099,1193,Native React Native Development,24.46,68.14,0.75,3.8
+1026,1009,Cross-platform React Native Development,77.54,0.0,0.0,1.0
+1036,1177,Backend Development with Flask,27.02,0.0,0.0,1.0
+1060,1004,Modern Vue.js Development,13.03,92.64,0.5,3.7
+1064,1194,Full Stack Vue.js,22.81,0.0,0.0,1.0
+1007,1051,Go Programming,1.0,90.9,1.0,4.1
+1025,1146,Machine Learning Fundamentals,48.18,71.71,0.5,2.9
+1076,1087,Android App Development,27.86,75.93,1.0,4.0
+1080,1077,Cross-platform Flutter Development,59.66,74.85,0.5,3.1
+1016,1170,Native Kotlin Development,48.02,56.27,0.5,3.0
+1069,1168,Java Programming,37.41,62.17,1.0,4.4
+1092,1046,WPF Application Architecture,19.6,80.15,1.0,4.8
+1060,1115,Advanced Java,45.49,80.25,0.75,4.2
+1018,1185,Go Data Structures,26.04,66.37,0.75,3.5
+1049,1196,PostgreSQL Security,17.8,70.6,0.25,3.0
+1021,1131,Redis Administration,48.87,63.23,1.0,3.9
+1047,1013,Advanced Deep Learning,70.71,89.17,1.0,4.0
+1040,1106,Cross-platform React Native Development,12.15,86.65,1.0,4.8
+1100,1162,Backend Development with Node.js,64.05,0.0,0.0,1.0
+1029,1164,Native React Native Development,88.09,64.36,0.25,3.0
+1024,1134,WPF Application Architecture,40.56,0.0,0.0,1.0
+1031,1075,Advanced Neural Networks,98.36,44.75,0.5,2.1
+1091,1022,Rust Data Structures,76.43,0.0,0.0,1.1
+1073,1114,Applied Neural Networks,36.54,65.57,0.25,2.7
+1042,1189,Backend Development with Django,31.78,54.26,0.25,1.8
+1041,1131,Native Kotlin Development,58.83,89.92,0.25,2.9
+1086,1162,Oracle Security,62.78,58.48,0.5,3.1
+1029,1085,Backend Development with Node.js,39.15,42.12,0.5,1.3
+1098,1023,Oracle Administration,36.92,91.33,0.75,3.1
+1011,1121,MongoDB Administration,20.09,69.96,0.5,2.5
+1029,1115,WPF Application Architecture,72.4,67.15,0.25,2.7
+1085,1186,React Native App Development,38.73,63.95,0.5,2.5
+1068,1019,PostgreSQL Administration,41.63,90.41,0.5,3.2
+1078,1040,Advanced Deep Learning,28.31,84.09,1.0,4.4
+1002,1001,Computer Vision Fundamentals,24.85,67.74,0.5,3.8
+1022,1194,NLP in Practice,25.81,78.87,0.5,3.8
+1012,1082,Full Stack Angular,15.54,63.63,0.75,3.2
+1082,1163,WPF Application Architecture,46.31,70.38,0.25,1.6
+1011,1190,Native React Native Development,33.57,82.56,0.75,4.1
+1061,1051,Redis Security,52.31,40.23,0.5,2.9
+1054,1059,Native React Native Development,35.42,84.19,0.75,4.2
+1020,1180,Rust Programming,43.76,74.28,0.5,3.6
+1063,1027,Building JavaFX Apps,60.14,92.37,0.5,3.8
+1079,1200,Kotlin App Development,51.53,63.4,1.0,3.5
+1016,1004,Advanced C++,20.52,70.12,0.5,2.7
+1063,1010,Native Flutter Development,25.64,0.0,0.0,1.0
+1062,1091,C++ Programming,42.67,0.0,0.0,1.0
+1073,1081,PostgreSQL Administration,19.7,65.1,0.5,3.0
+1074,1106,Go Programming,12.81,87.33,0.5,3.6
+1047,1182,NLP in Practice,77.73,88.88,0.5,3.3
+1022,1075,Redis Administration,47.39,77.49,0.75,3.3
+1062,1192,Backend Development with Node.js,38.93,79.07,0.75,3.9
+1027,1044,Modern Angular Development,92.73,87.67,0.5,3.9
+1012,1034,Java Algorithms,65.0,73.86,0.5,3.3
+1078,1120,PostgreSQL Security,32.19,0.0,0.0,1.1
+1071,1182,Building JavaFX Apps,65.43,67.57,0.5,2.2
+1098,1134,Frontend Development with Flask,53.26,83.5,0.75,4.5
+1055,1042,Go Programming,33.22,78.07,0.75,3.6
+1070,1037,Native Kotlin Development,38.2,0.0,0.0,1.0
+1041,1157,Modern Angular Development,38.14,81.87,0.5,2.8
+1070,1092,Computer Vision Fundamentals,57.22,79.86,0.5,3.3
+1089,1053,WPF GUI Development,37.98,88.32,0.5,2.9
+1037,1172,Native React Native Development,27.13,56.38,0.5,3.5
+1059,1105,Kotlin App Development,35.58,64.9,0.75,3.6
+1092,1106,Go Programming,21.9,80.14,0.75,3.5
+1053,1196,Oracle Administration,16.96,73.01,0.25,2.4
+1001,1197,Java Programming,46.2,80.17,0.25,2.0
+1058,1098,Computer Vision Fundamentals,40.11,75.79,0.25,2.9
+1046,1158,JavaFX GUI Development,36.95,34.35,0.25,1.6
+1023,1015,Machine Learning Fundamentals,69.48,55.76,0.25,2.2
+1017,1062,Rust Algorithms,18.29,65.66,0.25,2.3
+1071,1103,Full Stack Angular,31.31,90.44,0.25,3.5
+1032,1103,Java Programming,21.27,97.89,1.0,4.8
+1059,1097,Modern Flask Development,39.5,0.0,0.0,1.0
+1098,1176,Android App Development,16.45,67.11,0.5,2.9
+1019,1134,Modern React Development,74.6,60.1,0.5,2.7
+1059,1150,Advanced Java,34.71,79.93,0.5,3.7
+1010,1032,Java Programming,12.69,53.7,1.0,4.0
+1014,1199,Backend Development with Django,62.67,64.89,0.75,3.8
+1027,1048,Native Flutter Development,31.06,61.99,0.75,4.0
+1066,1166,MongoDB Security,48.52,0.0,0.0,1.0
+1015,1067,Backend Development with Node.js,42.71,71.23,0.5,2.2
+1019,1172,Redis Administration,33.22,47.46,0.25,2.4
+1069,1109,Machine Learning in Practice,19.59,77.41,0.5,2.9
+1077,1084,Java Algorithms,94.69,62.88,1.0,4.5
+1062,1114,Full Stack Node.js,37.43,68.57,0.75,4.0
+1051,1015,Modern Angular Development,54.17,78.2,0.75,3.6
+1035,1200,Deep Learning Fundamentals,33.05,70.66,0.5,3.5
+1023,1102,Go Programming,22.46,66.27,1.0,3.8
+1043,1150,Modern Angular Development,20.33,48.82,0.25,2.1
+1053,1192,WPF Application Architecture,50.09,61.73,0.5,2.3
+1037,1116,Native React Native Development,30.39,91.07,1.0,4.6
+1049,1016,Flutter App Development,18.33,78.13,0.25,2.0
+1029,1130,NLP in Practice,3.94,73.73,1.0,3.9
+1039,1022,Full Stack Vue.js,64.91,86.66,0.5,4.4
+1098,1071,Backend Development with React,23.93,79.57,0.5,2.8
+1100,1032,Full Stack Node.js,26.94,48.12,0.75,3.0
+1082,1008,Advanced JavaScript,47.51,89.17,1.0,4.3
+1080,1136,Neural Networks in Practice,18.33,0.0,0.0,1.0
+1061,1052,MongoDB Security,48.51,70.52,0.5,3.6
+1080,1129,Redis Administration,12.23,52.71,0.25,1.3
+1038,1046,Modern Angular Development,46.1,93.11,1.0,5.0
+1062,1098,Machine Learning in Practice,21.72,88.53,0.5,3.5
+1005,1144,Cross-platform React Native Development,30.23,100.0,0.25,4.5
+1060,1144,Advanced Deep Learning,24.99,76.96,0.25,2.0
+1012,1044,Backend Development with Angular,51.58,74.7,1.0,4.6
+1017,1027,Native React Native Development,51.39,66.46,1.0,4.2
+1064,1130,Full Stack Django,20.24,61.67,0.25,2.1
+1042,1173,Android App Development,28.6,100.0,0.25,3.4
+1045,1039,Full Stack Angular,24.26,60.21,1.0,4.0
+1077,1082,Building .NET Apps,14.09,83.83,0.5,4.2
+1086,1152,WPF GUI Development,41.93,92.84,0.5,3.4
+1002,1118,Go Programming,52.94,64.27,0.25,1.4
+1006,1192,Redis Security,49.6,74.0,0.75,3.2
+1074,1047,Frontend Development with Vue.js,18.28,0.0,0.0,1.0
+1052,1086,Modern Angular Development,56.33,0.0,0.0,1.0
+1065,1104,JavaScript Algorithms,16.57,84.64,0.75,4.5
+1032,1183,WPF GUI Development,25.49,51.66,0.5,2.2
+1012,1016,Advanced JavaScript,20.38,60.76,0.25,1.8
+1023,1164,NLP in Practice,62.72,90.15,0.25,3.6
+1035,1129,MySQL Database Design,16.69,66.68,1.0,4.5
+1070,1016,NLP in Practice,14.93,0.0,0.0,1.0
+1095,1035,Native Kotlin Development,15.82,74.93,0.75,3.9
+1082,1060,iOS App Development,27.02,91.89,0.5,3.8
+1081,1037,Oracle Administration,43.63,81.82,0.25,2.2
+1005,1171,NLP in Practice,61.66,74.29,1.0,4.4
+1027,1017,Full Stack React,58.74,35.54,0.5,3.0
+1013,1064,Applied NLP,42.64,52.16,0.25,2.0
+1044,1181,Backend Development with Flask,23.55,0.0,0.0,1.0
+1015,1052,Oracle Security,78.15,71.64,0.75,4.8
+1060,1067,MongoDB Security,32.4,56.37,1.0,3.5
+1024,1106,Full Stack Django,20.92,96.19,1.0,3.7
+1049,1009,Java Algorithms,70.89,100.0,1.0,4.8
+1081,1105,Deep Learning in Practice,28.37,0.0,0.0,1.0
+1026,1017,Native React Native Development,64.65,47.27,0.75,2.7
+1017,1022,Cross-platform Kotlin Development,100.0,64.59,1.0,4.3
+1066,1171,Oracle Administration,60.02,39.14,0.5,2.2
+1067,1071,Native React Native Development,22.41,72.29,0.5,2.9
+1076,1043,Native Flutter Development,44.45,72.01,0.25,2.3
+1002,1109,WPF GUI Development,23.0,0.0,0.0,1.0
+1014,1105,Advanced Java,42.62,44.93,1.0,4.0
+1040,1147,Modern Angular Development,35.18,55.73,0.25,2.3
+1097,1186,PostgreSQL Administration,55.13,0.0,0.0,1.0
+1003,1104,Native Flutter Development,15.69,82.11,0.25,2.4
+1089,1181,Java Programming,41.4,100.0,0.25,3.2
+1062,1155,React Native App Development,40.79,68.08,0.25,2.0
+1017,1075,Redis Administration,74.69,65.24,0.5,2.9
+1060,1117,PostgreSQL Security,59.85,47.18,0.25,1.4
+1027,1165,Cross-platform React Native Development,30.57,63.22,0.75,3.3
+1064,1125,Native Flutter Development,26.08,75.24,0.25,2.9
+1070,1012,MySQL Performance Tuning,100.0,59.92,1.0,3.0
+1036,1026,Computer Vision in Practice,76.47,77.68,1.0,4.7
+1029,1184,Go Data Structures,6.99,70.89,0.75,3.1
+1007,1060,Java Algorithms,49.03,80.18,0.5,3.0
+1091,1129,Kotlin App Development,14.42,0.0,0.0,1.4
+1007,1031,Go Data Structures,22.09,44.96,1.0,2.7
+1060,1068,Frontend Development with Vue.js,55.48,69.59,1.0,4.3
+1050,1059,JavaFX Application Architecture,15.69,58.55,0.5,2.9
+1035,1019,WPF GUI Development,75.25,85.79,0.25,3.2
+1053,1029,Building Electron Apps,51.04,94.85,0.25,3.9
+1018,1037,Advanced C++,22.83,67.59,0.5,2.8
+1083,1166,WPF Application Architecture,44.54,51.66,0.75,3.1
+1088,1019,Full Stack React,17.2,46.77,0.5,2.6
+1032,1032,JavaScript Data Structures,13.52,0.0,0.0,1.0
+1060,1113,Java Algorithms,23.46,45.04,0.25,1.7
+1089,1030,Applied Neural Networks,55.59,51.76,0.25,2.0
+1031,1178,Redis Performance Tuning,56.07,81.25,1.0,4.2
+1054,1047,Native Kotlin Development,21.54,62.32,0.25,2.8
+1083,1176,Native React Native Development,24.45,0.0,0.0,1.0
+1055,1162,Advanced JavaScript,35.84,55.55,0.5,2.3
+1001,1185,Machine Learning in Practice,28.5,62.64,0.5,3.1
+1089,1012,PostgreSQL Performance Tuning,62.82,71.21,1.0,3.5
+1089,1028,Advanced Deep Learning,47.75,54.21,0.5,4.0
+1095,1023,Building JavaFX Apps,20.96,66.91,0.25,2.8
+1044,1022,Cross-platform React Native Development,47.52,46.5,1.0,4.4
+1061,1145,Native Kotlin Development,69.18,64.98,1.0,4.0
+1063,1176,Rust Algorithms,37.93,77.16,1.0,4.0
+1024,1150,Advanced Python,20.78,59.98,0.5,2.5
+1008,1001,Native iOS Development,24.17,89.02,0.75,4.1
+1006,1182,Cross-platform React Native Development,80.89,60.81,0.25,3.0
+1059,1031,MongoDB Administration,56.98,0.0,0.0,1.0
+1015,1117,Building Electron Apps,46.63,70.51,0.5,2.9
+1096,1192,Android App Development,52.88,64.99,0.5,3.5
+1073,1153,MySQL Security,55.5,67.97,0.5,2.7
+1092,1144,Computer Vision Fundamentals,28.44,67.59,0.25,1.9
+1090,1056,C++ Programming,48.74,60.72,0.5,2.8
+1087,1039,Full Stack Angular,17.69,97.51,0.75,4.7
+1078,1105,Android App Development,37.53,83.56,0.25,3.3
+1050,1175,Redis Security,22.15,82.72,0.75,3.9
+1040,1162,Cross-platform Flutter Development,42.03,72.66,0.5,2.9
+1035,1018,Full Stack Node.js,75.97,60.71,1.0,3.7
+1100,1176,JavaFX Application Architecture,37.22,36.3,0.5,2.3
+1025,1006,Deep Learning Fundamentals,48.22,58.26,1.0,4.3
+1029,1074,Native Kotlin Development,66.32,0.0,0.0,1.0
+1062,1010,Backend Development with Angular,24.26,84.65,0.25,2.1
+1031,1148,Native Flutter Development,100.0,79.77,1.0,4.6
+1070,1004,Rust Algorithms,25.34,58.12,0.75,4.2
+1088,1195,Cross-platform Flutter Development,31.96,75.65,0.5,3.5
+1085,1181,JavaFX Application Architecture,34.31,78.56,1.0,4.6
+1044,1060,Go Programming,62.35,54.62,0.25,2.5
+1034,1042,Cross-platform React Native Development,18.17,78.97,0.5,3.2
+1063,1090,Go Algorithms,31.61,0.0,0.0,1.0
+1050,1032,JavaFX Application Architecture,20.88,0.0,0.0,1.0
+1072,1095,MongoDB Security,22.55,34.83,1.0,3.3
+1045,1135,Frontend Development with Vue.js,65.4,75.57,0.5,2.3
+1001,1123,MySQL Security,37.68,51.76,1.0,3.7
+1026,1007,Deep Learning in Practice,46.43,51.63,1.0,3.9
+1056,1188,C++ Data Structures,13.36,79.29,1.0,4.2
+1090,1157,Java Algorithms,37.62,69.79,0.75,3.6
+1060,1177,MySQL Database Design,19.92,0.0,0.0,1.0
+1021,1047,Modern React Development,14.15,63.18,0.25,2.6
+1061,1080,Java Programming,58.89,73.16,0.25,2.0
+1096,1034,Full Stack Angular,42.79,88.12,0.75,4.9
+1037,1111,PostgreSQL Performance Tuning,24.83,66.08,0.5,3.2
+1033,1057,Native React Native Development,56.28,69.89,0.5,2.4
+1006,1043,Advanced Neural Networks,27.02,96.61,0.5,4.3
+1084,1127,Native Kotlin Development,43.9,71.12,0.25,1.8
+1025,1155,Modern Angular Development,66.92,93.46,1.0,4.8
+1083,1030,Full Stack Node.js,95.71,65.12,0.5,2.2
+1007,1129,Oracle Administration,26.43,81.94,1.0,4.1
+1051,1195,PostgreSQL Security,50.18,80.67,0.5,2.7
+1075,1011,Building JavaFX Apps,73.56,64.6,0.5,3.9
+1093,1153,NLP in Practice,35.38,28.55,0.5,1.6
+1072,1164,WPF GUI Development,68.06,62.89,0.75,3.6
+1073,1070,MongoDB Security,17.67,51.96,0.25,1.9
+1039,1024,Backend Development with React,45.37,83.34,0.25,1.9
+1003,1025,Native React Native Development,29.76,75.23,0.25,1.4
+1028,1181,Neural Networks Fundamentals,19.4,60.0,0.5,2.5
+1016,1121,Building Electron Apps,49.14,90.18,0.25,1.9
+1013,1107,Backend Development with Flask,39.33,66.35,0.25,2.1
+1093,1122,Full Stack Node.js,48.58,86.16,1.0,4.7
+1004,1069,Modern Flask Development,18.81,67.32,0.75,3.4
+1003,1151,Advanced Computer Vision,38.68,60.82,0.5,3.2
+1028,1148,Advanced NLP,61.85,65.07,0.5,2.8
+1020,1067,Python Programming,72.89,78.62,0.5,2.6
+1042,1067,C++ Programming,52.05,64.23,0.5,2.3
+1093,1057,Native React Native Development,40.56,51.35,0.75,3.1
+1014,1171,Java Algorithms,79.2,77.28,0.25,2.7
+1035,1020,C++ Programming,58.2,68.4,0.25,2.4
+1031,1104,MySQL Performance Tuning,18.08,39.1,0.75,1.9
+1088,1115,Advanced Go,21.48,0.0,0.0,1.0
+1072,1087,Deep Learning in Practice,18.84,52.28,0.25,1.8
+1008,1005,Cross-platform Flutter Development,11.43,71.61,0.75,3.9
+1011,1192,Native Kotlin Development,45.76,84.03,0.5,3.4
+1019,1028,Native Flutter Development,49.04,60.32,0.25,1.6
+1064,1105,Go Algorithms,55.81,78.78,0.75,3.3
+1031,1198,Frontend Development with Vue.js,65.28,71.44,0.25,2.5
+1022,1133,Computer Vision in Practice,36.28,90.55,0.5,4.2
+1031,1186,iOS App Development,30.06,31.89,0.75,2.6
+1004,1132,PostgreSQL Administration,26.44,90.08,1.0,4.9
+1085,1162,Redis Database Design,51.64,53.89,0.25,1.5
+1015,1118,Backend Development with Vue.js,19.23,86.34,0.5,3.5
+1072,1015,Rust Programming,75.98,49.27,1.0,2.8
+1089,1081,Cross-platform Flutter Development,2.55,55.44,0.5,2.8
+1048,1027,JavaFX GUI Development,47.68,68.76,1.0,4.4
+1062,1134,JavaFX Application Architecture,82.74,51.7,0.25,1.9
+1046,1133,Oracle Security,43.14,81.59,0.25,3.1
+1011,1030,Native Flutter Development,63.2,75.43,1.0,5.0
+1025,1170,Frontend Development with Vue.js,44.93,70.81,0.5,2.2
+1091,1002,Computer Vision Fundamentals,35.21,0.0,0.0,1.0
+1028,1127,Redis Performance Tuning,48.66,80.48,1.0,4.6
+1024,1079,WPF Application Architecture,20.81,58.1,1.0,4.1
+1062,1084,Cross-platform iOS Development,51.8,65.72,0.5,3.2
+1024,1200,Cross-platform React Native Development,48.06,88.96,0.25,2.8
+1064,1169,JavaScript Algorithms,33.81,58.27,0.25,2.0
+1027,1199,Java Programming,71.13,59.82,1.0,3.3
+1018,1178,Electron GUI Development,39.23,66.22,1.0,4.7
+1051,1187,MongoDB Database Design,36.44,65.75,0.75,3.4
+1026,1169,Go Programming,23.84,0.0,0.0,1.0
+1035,1005,Machine Learning Fundamentals,19.89,72.85,0.25,2.2
+1035,1021,JavaScript Data Structures,40.34,0.0,0.0,1.0
+1017,1011,Machine Learning in Practice,51.53,0.0,0.0,1.0
+1044,1173,Full Stack Flask,37.04,72.06,0.5,2.8
+1080,1090,JavaScript Data Structures,38.94,57.88,1.0,4.3
+1086,1011,Redis Security,23.13,61.95,0.5,2.7
+1066,1180,Advanced Java,54.4,56.62,0.5,3.1
+1045,1005,Cross-platform Kotlin Development,22.25,36.94,0.25,1.0
+1008,1084,Kotlin App Development,89.7,49.48,0.25,2.2
+1061,1108,Advanced Go,29.58,61.03,1.0,4.4
+1037,1002,Kotlin App Development,35.13,0.0,0.0,1.0
+1029,1182,PostgreSQL Performance Tuning,74.6,52.23,0.75,4.1
+1085,1166,Native Kotlin Development,39.78,51.8,0.5,2.6
+1088,1122,MongoDB Administration,61.69,64.26,0.25,2.0
+1079,1136,MongoDB Database Design,15.5,84.89,1.0,5.0
+1056,1006,Cross-platform Flutter Development,44.05,0.0,0.0,1.0
+1037,1153,MongoDB Security,62.11,74.14,1.0,3.7
+1014,1089,Full Stack React,14.7,85.33,0.75,4.2
+1040,1090,PostgreSQL Security,28.9,48.84,0.75,2.8
+1099,1026,Redis Performance Tuning,58.49,68.93,0.25,2.6
+1055,1001,Frontend Development with Vue.js,19.32,85.58,0.5,3.9
+1003,1142,PostgreSQL Performance Tuning,48.06,51.13,0.5,1.7
+1003,1087,Modern Flask Development,31.98,67.94,1.0,3.2
+1002,1054,NLP Fundamentals,17.45,72.53,0.75,3.6
+1029,1003,Advanced NLP,69.67,96.08,0.5,3.8
+1053,1052,Oracle Administration,40.43,77.56,0.5,4.6
+1018,1115,C++ Algorithms,80.69,61.74,0.75,3.3
+1058,1057,Android App Development,47.17,84.44,0.25,2.2
+1083,1142,Go Data Structures,60.07,86.02,0.5,4.5
+1059,1174,Redis Administration,61.61,75.62,1.0,4.0
+1008,1154,MySQL Security,71.33,64.12,0.25,2.7
+1019,1069,Go Algorithms,17.19,60.69,1.0,3.4
+1065,1177,Computer Vision Fundamentals,35.02,52.16,1.0,3.5
+1055,1177,Building JavaFX Apps,48.49,75.24,0.5,2.8
+1017,1029,Rust Programming,67.72,0.0,0.0,1.0
+1040,1188,Advanced Go,15.03,93.42,0.25,3.0
+1069,1004,Redis Database Design,21.81,58.2,0.5,2.6
+1029,1101,Backend Development with Django,33.33,81.37,0.5,2.8
+1091,1111,MongoDB Administration,38.85,92.7,0.25,3.2
+1067,1078,Native Kotlin Development,76.47,83.77,0.75,4.4
+1072,1073,MongoDB Performance Tuning,30.98,49.27,0.5,2.5
+1094,1063,Modern React Development,31.16,0.0,0.0,1.0
+1078,1139,Advanced Computer Vision,20.38,51.84,1.0,3.6
+1060,1084,Advanced Java,62.28,71.07,1.0,4.1
+1096,1050,Modern Angular Development,74.69,62.53,0.75,2.0
+1056,1152,Advanced C++,49.64,79.76,0.5,2.4
+1064,1200,Cross-platform React Native Development,60.59,0.0,0.0,1.0
+1075,1077,Go Programming,66.07,81.84,1.0,4.7
+1061,1198,Oracle Security,66.15,64.78,0.25,2.5
+1044,1191,Advanced Python,21.0,79.24,1.0,5.0
+1030,1098,Java Programming,17.31,75.16,1.0,4.3
+1043,1028,Native Flutter Development,42.7,0.0,0.0,1.0
+1005,1196,Rust Algorithms,15.05,89.45,0.5,3.4
+1030,1163,Full Stack Vue.js,36.91,57.58,0.5,2.3
+1008,1181,MySQL Security,20.26,38.52,0.5,2.7
+1043,1020,Java Algorithms,50.16,60.35,1.0,3.7
+1025,1086,C++ Data Structures,49.99,78.81,0.75,4.3
+1074,1186,Native Kotlin Development,34.36,54.86,0.75,2.5
+1023,1122,Native Kotlin Development,47.55,77.9,0.75,4.0
+1068,1025,Modern React Development,32.6,78.1,1.0,5.0
+1065,1079,Native React Native Development,18.67,0.0,0.0,1.0
+1024,1126,MongoDB Security,77.29,62.59,0.5,2.2
+1083,1103,C++ Algorithms,7.72,90.28,0.75,3.6
+1081,1099,Computer Vision in Practice,71.73,67.48,0.75,3.8
+1080,1065,MongoDB Security,54.11,57.08,0.25,1.6
+1091,1140,MongoDB Security,16.14,42.22,0.25,1.0
+1081,1142,Backend Development with Flask,35.09,85.49,0.75,4.2
+1003,1192,Oracle Administration,59.19,36.57,0.5,2.3
+1028,1179,Modern Node.js Development,53.18,87.01,1.0,4.4
+1058,1061,Modern Angular Development,43.91,83.38,1.0,4.2
+1084,1102,WPF GUI Development,25.41,65.92,1.0,4.2
+1037,1081,Rust Algorithms,21.28,62.74,1.0,3.7
+1059,1123,PostgreSQL Administration,36.33,61.48,0.75,3.3
+1031,1065,Go Data Structures,13.88,51.91,0.5,2.3
+1075,1071,Modern Flask Development,20.88,0.0,0.0,1.0
+1035,1113,Computer Vision Fundamentals,44.14,69.36,0.5,3.0
+1062,1086,Advanced Java,28.22,55.94,0.75,3.7
+1089,1146,JavaScript Data Structures,58.21,100.0,0.25,3.8
+1070,1122,Full Stack Node.js,66.28,59.49,1.0,4.7
+1073,1015,Advanced Go,57.71,76.64,0.25,2.6
+1077,1168,Rust Algorithms,22.43,66.18,0.5,2.8
+1091,1028,JavaFX GUI Development,13.2,52.75,0.25,2.8
+1034,1085,Backend Development with Angular,57.01,86.85,0.5,3.2
+1001,1188,PostgreSQL Security,14.92,79.22,1.0,3.8
+1096,1113,Building Electron Apps,59.77,79.47,0.75,4.4
+1085,1149,PostgreSQL Administration,33.11,71.78,0.5,3.0
+1015,1046,Redis Administration,77.66,78.61,0.25,2.5
+1006,1020,Modern React Development,53.68,67.94,0.5,2.7
+1033,1106,MongoDB Database Design,13.48,73.9,0.5,2.1
+1047,1174,Native Flutter Development,48.4,65.34,1.0,4.5
+1019,1003,Modern Angular Development,61.24,89.07,0.25,2.6
+1065,1047,Backend Development with React,14.25,65.92,0.25,1.8
+1002,1194,WPF GUI Development,21.85,100.0,0.5,3.8
+1085,1059,Backend Development with Flask,34.77,89.66,0.75,4.2
+1086,1200,Redis Security,56.0,54.23,0.25,2.4
+1093,1178,Cross-platform React Native Development,50.22,74.15,0.5,3.7
+1006,1190,JavaScript Data Structures,29.83,57.84,0.25,2.1
+1051,1061,Backend Development with Flask,70.17,52.02,1.0,4.1
+1022,1117,Oracle Administration,33.65,97.45,0.5,4.7
+1020,1050,Cross-platform React Native Development,80.44,72.84,0.5,3.9
+1066,1135,Advanced Computer Vision,38.59,69.76,0.5,3.4
+1086,1091,Redis Security,87.74,55.55,0.75,3.0
+1008,1194,Advanced JavaScript,15.66,100.0,1.0,4.3
+1045,1159,Full Stack Django,28.39,63.35,1.0,5.0
+1015,1078,Neural Networks in Practice,61.47,0.0,0.0,1.0
+1023,1003,C++ Data Structures,64.57,60.02,0.75,3.0
+1035,1037,WPF GUI Development,32.2,78.97,1.0,3.7
+1027,1118,Advanced NLP,47.29,44.79,1.0,2.9
+1061,1111,Cross-platform Kotlin Development,16.91,83.19,1.0,4.5
+1059,1162,Native Kotlin Development,69.11,38.5,0.75,2.7
+1047,1092,Cross-platform Kotlin Development,67.07,55.0,0.25,2.6
+1021,1039,Java Programming,12.94,67.85,0.75,3.7
+1067,1005,MongoDB Performance Tuning,28.96,63.9,0.25,1.7
+1033,1037,Java Algorithms,47.48,55.48,0.25,2.6
+1063,1194,Advanced Go,24.34,51.06,0.25,3.4
+1057,1007,Native React Native Development,23.05,74.0,1.0,4.9
+1016,1075,Frontend Development with Vue.js,45.06,32.6,1.0,3.3
+1068,1042,Go Programming,16.31,100.0,0.5,4.4
+1079,1184,Full Stack Node.js,30.52,74.19,0.75,2.7
+1071,1188,Advanced JavaScript,18.19,66.91,0.5,2.6
+1033,1105,PostgreSQL Security,8.59,49.99,1.0,3.9
+1040,1020,Rust Programming,50.34,64.06,1.0,4.0
+1096,1168,Backend Development with Flask,43.61,68.63,0.25,3.3
+1066,1124,C++ Programming,23.66,72.46,0.75,3.9
+1005,1179,Android App Development,61.94,49.42,0.5,2.6
+1091,1094,Full Stack Angular,26.85,100.0,0.75,5.0
+1004,1045,Advanced Go,50.7,80.27,0.25,2.5
+1039,1019,Advanced JavaScript,57.12,88.47,1.0,4.6
+1011,1174,Applied Machine Learning,56.75,54.35,0.5,2.1
+1094,1009,Computer Vision in Practice,72.87,52.5,0.25,2.1
+1080,1196,Flutter App Development,18.9,74.52,0.5,4.5
+1091,1021,Java Algorithms,16.75,37.92,1.0,4.0
+1078,1030,NLP in Practice,43.94,69.39,0.75,2.9
+1095,1021,Modern React Development,23.75,83.16,1.0,4.3
+1043,1163,JavaScript Programming,36.82,71.03,0.75,3.5
+1059,1149,Native Kotlin Development,32.37,62.01,0.75,2.9
+1054,1092,Native React Native Development,90.86,0.0,0.0,1.0
+1037,1033,Full Stack Node.js,52.55,66.23,0.75,3.3
+1076,1137,JavaScript Programming,50.75,66.05,0.75,3.6
+1040,1110,Full Stack Django,32.31,99.01,0.5,4.2
+1023,1088,Building Electron Apps,22.63,72.21,1.0,4.9
+1001,1105,WPF GUI Development,43.97,59.08,0.5,3.1
+1029,1160,Android App Development,44.09,68.32,0.75,3.9
+1074,1096,Advanced NLP,4.74,66.76,0.5,2.9
+1033,1193,PostgreSQL Security,22.12,61.34,0.5,2.7
+1089,1065,Redis Performance Tuning,26.04,0.0,0.0,1.0
+1093,1071,Modern Flask Development,23.68,51.45,0.5,2.4
+1037,1077,WPF GUI Development,57.68,96.25,0.5,3.5
+1084,1129,Oracle Security,6.39,40.35,0.5,2.5
+1090,1079,Native Kotlin Development,29.6,63.37,0.75,3.0
+1082,1096,Advanced Python,14.7,0.0,0.0,1.0
+1011,1137,Java Algorithms,45.0,87.26,0.75,4.0
+1054,1180,WPF Application Architecture,47.92,0.0,0.0,1.0
+1030,1101,MongoDB Performance Tuning,32.18,63.69,1.0,4.0
+1038,1190,JavaFX Application Architecture,22.11,0.0,0.0,1.0
+1088,1100,Android App Development,54.96,57.65,0.5,2.5
+1051,1196,Redis Performance Tuning,26.43,69.41,0.5,3.4
+1011,1077,Building .NET Apps,39.45,68.83,0.5,3.3
+1087,1010,Rust Data Structures,25.31,89.21,0.25,2.9
+1016,1046,JavaFX Application Architecture,42.37,48.43,0.75,3.8
+1059,1108,Java Algorithms,32.05,64.84,0.5,2.7
+1031,1004,Native Kotlin Development,16.01,0.0,0.0,1.0
+1062,1057,Cross-platform Flutter Development,81.79,0.0,0.0,1.0
+1092,1194,Applied Deep Learning,28.35,52.02,0.5,2.7
+1058,1012,Neural Networks in Practice,100.0,75.48,1.0,3.7
+1089,1112,Flutter App Development,33.53,59.86,1.0,3.5
+1060,1053,Cross-platform Flutter Development,98.14,70.04,0.25,2.0
+1077,1011,Cross-platform React Native Development,53.2,88.93,0.75,3.8
+1019,1195,Neural Networks Fundamentals,59.11,57.89,0.5,2.9
+1007,1044,Frontend Development with Vue.js,31.58,0.0,0.0,1.0
+1017,1101,Advanced Neural Networks,28.77,66.9,0.25,2.9
+1008,1011,WPF Application Architecture,40.24,81.13,0.25,2.4
+1040,1153,MongoDB Security,49.37,80.56,0.5,3.7
+1025,1113,WPF Application Architecture,69.86,77.33,0.75,3.7
+1056,1138,Cross-platform React Native Development,29.91,25.72,0.75,2.8
+1040,1122,Android App Development,53.31,98.23,0.75,5.0
+1025,1191,MySQL Database Design,37.56,0.0,0.0,1.0
+1051,1068,Oracle Administration,12.69,36.35,0.75,2.8
+1074,1159,JavaFX GUI Development,4.4,83.25,0.5,4.0
+1094,1172,Cross-platform iOS Development,27.38,0.0,0.0,1.0
+1087,1170,JavaFX Application Architecture,46.56,86.29,0.5,3.3
+1051,1036,Rust Data Structures,13.13,58.59,0.75,3.1
+1059,1145,Computer Vision Fundamentals,46.0,59.17,0.25,2.9
+1081,1189,Native iOS Development,45.26,69.93,0.5,4.1
+1086,1126,Rust Programming,79.35,68.65,1.0,4.5
+1001,1192,Backend Development with Flask,36.08,60.31,0.25,2.3
+1030,1152,WPF Application Architecture,53.82,46.91,0.25,1.4
+1085,1172,NLP in Practice,18.92,62.33,1.0,3.3
+1078,1174,Full Stack Flask,71.82,53.27,0.75,2.8
+1084,1167,Java Algorithms,11.19,83.66,0.75,3.3
+1074,1181,Kotlin App Development,32.42,64.36,0.5,3.1
+1044,1075,Backend Development with Flask,50.42,80.83,0.5,2.5
+1009,1106,Advanced C++,8.63,75.29,0.75,3.4
+1049,1123,Backend Development with Flask,19.33,77.92,0.5,3.4
+1056,1174,Computer Vision Fundamentals,35.22,68.3,0.75,3.6
+1083,1018,Computer Vision Fundamentals,32.94,88.4,0.5,4.1
+1099,1094,JavaFX Application Architecture,48.9,67.55,0.5,3.3
+1018,1018,JavaScript Programming,81.38,51.07,0.5,2.5
+1079,1102,Redis Security,14.11,70.95,0.75,3.4
+1055,1167,JavaScript Programming,15.54,73.79,0.5,3.5
+1008,1081,Kotlin App Development,24.68,74.64,0.5,2.9
+1019,1123,Machine Learning Fundamentals,30.9,79.03,0.75,4.1
+1061,1140,Modern React Development,10.79,94.16,0.5,4.0
+1023,1191,JavaFX Application Architecture,31.47,71.28,0.5,3.1
+1057,1120,Deep Learning Fundamentals,58.34,81.95,0.25,2.4
+1060,1192,Modern Angular Development,57.03,62.53,1.0,3.9
+1082,1118,Native React Native Development,35.12,45.45,0.25,1.3
+1018,1176,Full Stack Django,25.27,61.94,0.25,2.6
+1084,1191,Frontend Development with Vue.js,48.69,74.95,0.5,3.3
+1066,1132,React Native App Development,30.22,0.0,0.0,1.0
+1036,1187,Full Stack Node.js,40.46,50.05,1.0,4.0
+1022,1071,MongoDB Security,30.0,47.43,0.5,2.8
+1037,1025,Computer Vision in Practice,32.54,97.56,0.75,4.6
+1058,1036,PostgreSQL Security,23.97,67.16,0.25,2.4
+1090,1187,NLP Fundamentals,41.19,67.11,0.5,3.5
+1054,1143,Applied Deep Learning,30.99,0.0,0.0,1.0
+1009,1158,Oracle Administration,57.7,47.35,0.5,2.1
+1086,1109,PyQt Application Architecture,18.54,0.0,0.0,1.0
+1008,1003,Redis Performance Tuning,27.37,64.6,0.25,1.5
+1090,1053,JavaFX Application Architecture,68.96,76.45,0.5,4.3
+1090,1175,Flutter App Development,27.62,25.83,1.0,3.0
+1026,1058,Cross-platform React Native Development,47.61,69.67,0.75,3.9
+1002,1048,Backend Development with React,8.67,66.64,0.5,3.2
+1017,1137,Android App Development,36.76,77.12,1.0,5.0
+1028,1151,Full Stack Node.js,66.62,60.51,1.0,5.0
+1035,1143,Backend Development with Angular,17.68,64.56,0.75,4.3
+1042,1181,Java Programming,44.3,59.75,0.25,1.5
+1082,1123,Electron GUI Development,31.77,59.33,0.5,3.0
+1055,1158,Flutter App Development,52.11,61.07,0.5,2.1
+1028,1149,Redis Administration,32.74,90.16,0.25,2.7
+1032,1065,Rust Data Structures,29.74,41.45,0.5,2.8
+1071,1107,Native Kotlin Development,45.66,73.32,0.75,4.2
+1055,1021,Python Programming,48.5,97.33,0.75,4.3
+1071,1112,Backend Development with Django,72.43,78.81,0.25,3.5
+1089,1155,Modern Angular Development,70.28,74.72,0.25,2.4
+1038,1118,C++ Algorithms,44.41,53.87,0.5,2.7
+1063,1156,Building WPF Apps,16.89,92.85,0.5,2.7
+1008,1129,Redis Performance Tuning,18.09,70.38,0.5,3.8
+1069,1074,Machine Learning in Practice,80.66,64.59,1.0,3.6
+1026,1132,Android App Development,58.76,85.26,0.25,3.5
+1042,1096,Frontend Development with Vue.js,9.87,0.0,0.0,1.0
+1072,1001,Building Electron Apps,23.41,72.29,0.5,3.6
+1069,1118,Backend Development with Vue.js,31.04,62.86,0.5,3.1
+1069,1070,Oracle Security,29.65,0.0,0.0,1.0
+1096,1067,Kotlin App Development,63.24,82.78,0.25,2.3
+1098,1158,JavaFX Application Architecture,51.48,61.94,0.75,2.7
+1096,1039,Full Stack Django,32.21,62.6,0.5,2.7
+1057,1054,Full Stack Angular,46.4,68.59,0.5,3.0
+1051,1118,React Native App Development,45.4,65.04,1.0,4.5
+1010,1133,Modern Angular Development,35.91,88.22,0.5,2.7
+1086,1026,Backend Development with Flask,74.63,85.83,1.0,4.3
+1036,1106,Java Programming,16.05,58.92,1.0,4.4
+1029,1094,JavaFX Application Architecture,41.14,93.71,0.75,3.6
+1063,1005,Modern Node.js Development,25.99,68.23,0.5,3.0
+1009,1044,MongoDB Security,57.18,65.08,0.5,2.3
+1036,1116,Backend Development with React,40.38,0.0,0.0,1.0
+1074,1083,Kotlin App Development,17.16,63.54,0.5,3.3
+1011,1136,Neural Networks in Practice,19.11,71.96,0.5,2.3
+1042,1018,Go Programming,56.37,93.97,1.0,4.7
+1042,1033,JavaFX Application Architecture,30.46,0.0,0.0,1.0
+1053,1123,Electron GUI Development,42.12,65.62,0.25,3.3
+1037,1122,Redis Security,56.87,91.95,0.5,3.6
+1037,1156,Applied NLP,11.66,79.16,0.75,3.7
+1084,1092,iOS App Development,50.77,63.05,0.25,3.1
+1061,1007,MongoDB Administration,15.26,65.13,0.5,3.6
+1092,1113,Modern React Development,67.03,83.95,0.25,2.5
+1060,1200,JavaFX GUI Development,58.08,67.52,0.5,3.5
+1075,1171,Redis Performance Tuning,46.43,0.0,0.0,1.0
+1024,1002,Neural Networks in Practice,31.17,71.62,0.5,2.9
+1026,1188,Computer Vision Fundamentals,10.0,0.0,0.0,1.0
+1100,1104,Advanced C++,23.97,91.48,0.5,3.4
+1005,1043,Native React Native Development,46.94,85.89,0.5,3.5
+1022,1116,MongoDB Database Design,46.61,86.85,0.5,3.5
+1043,1170,Neural Networks in Practice,72.98,80.25,1.0,4.0
+1064,1069,Building Electron Apps,24.56,41.02,0.5,3.0
+1074,1030,JavaScript Programming,92.84,85.4,0.5,3.5
+1009,1129,Frontend Development with Vue.js,16.32,66.67,0.5,3.4
+1011,1149,MySQL Security,30.38,66.35,0.25,2.8
+1059,1160,Electron GUI Development,44.81,79.19,0.75,3.7
+1055,1194,Python Programming,21.51,100.0,1.0,5.0
+1082,1190,JavaFX Application Architecture,16.93,99.97,0.5,3.3
+1069,1001,Cross-platform React Native Development,23.34,70.03,0.25,2.4
+1016,1144,Rust Algorithms,32.01,92.91,0.25,2.9
+1044,1064,Neural Networks Fundamentals,49.85,53.01,0.75,3.5
+1064,1111,Neural Networks in Practice,26.99,76.01,1.0,3.8
+1085,1098,Full Stack Django,51.07,64.85,0.25,1.9
+1098,1039,Native React Native Development,19.31,67.14,0.25,2.8
+1098,1185,MongoDB Security,31.76,86.56,1.0,4.0
+1069,1151,Computer Vision Fundamentals,48.05,45.91,0.75,2.4
+1052,1033,MongoDB Performance Tuning,68.11,89.67,0.5,2.3
+1003,1029,Backend Development with Flask,66.41,72.93,0.5,3.2
+1024,1024,Native Kotlin Development,25.46,69.19,0.5,2.6
+1068,1198,Oracle Administration,68.75,54.04,0.5,2.6
+1079,1166,Android App Development,45.47,55.75,1.0,4.1
+1038,1002,MySQL Performance Tuning,34.73,100.0,0.25,3.0
+1008,1168,Full Stack Angular,29.06,81.54,0.75,2.9
+1010,1068,WPF Application Architecture,37.27,0.0,0.0,1.0
+1044,1007,Frontend Development with Vue.js,38.88,79.48,1.0,4.6
+1085,1114,Backend Development with Vue.js,41.29,85.19,1.0,4.6
+1082,1154,Cross-platform React Native Development,57.17,0.0,0.0,1.0
+1036,1149,PostgreSQL Security,40.43,78.06,0.25,2.1
+1042,1111,Kotlin App Development,27.06,0.0,0.0,1.0
+1096,1174,Cross-platform React Native Development,42.01,65.44,0.75,4.1
+1069,1198,Redis Performance Tuning,45.5,0.0,0.0,1.0
+1071,1169,Native React Native Development,31.84,75.84,0.25,2.5
+1067,1139,Electron GUI Development,15.06,0.0,0.0,1.0
+1050,1192,Modern React Development,33.97,66.17,0.5,3.5
+1013,1027,Full Stack Angular,71.19,55.39,0.5,2.4
+1084,1116,MySQL Performance Tuning,25.56,64.7,0.5,2.9
+1100,1165,Native React Native Development,37.8,57.83,0.5,3.2
