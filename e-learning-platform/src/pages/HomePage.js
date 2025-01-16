@@ -61,14 +61,14 @@ const testimonials = [
     id: 2,
     name: 'Dero Samy',
     role: 'Mobile Developer',
-    image: 'https://randomuser.me/api/portraits/men/1.jpg',
+    image: './src/images/WhatsApp Image 2025-01-16 at 10.21.08_074de606.jpg', 
     testimony: 'The instructors are world-class and the community support is amazing. I landed my dream job thanks to the skills I gained here.',
   },
   {
     id: 3,
     name: 'Taby Alupo',
     role: 'Data Scientist',
-    image: 'https://randomuser.me/api/portraits/women/2.jpg',
+    image: './src/images/WhatsApp Image 2025-01-16 at 10.20.40_7855e0ed.jpg',
     testimony: 'The project-based learning approach made complex concepts easy to grasp. Phoenix is definitely worth every penny!',
   },
 ];
