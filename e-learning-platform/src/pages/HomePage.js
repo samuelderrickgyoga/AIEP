@@ -52,23 +52,23 @@ const categories = [
 const testimonials = [
   {
     id: 1,
-    name: 'Bob K',
+    name: 'Sirajje K',
     role: 'Web Developer',
-    image: 'https://randomuser.me/api/portraits/women/1.jpg',
+    image: '/images/photo_2024-03-16_22-52-00.jpg',
     testimony: 'Phoenix has transformed the way I learn. The courses are easy to follow and very engaging! I went from beginner to professional in just 6 months.',
   },
   {
     id: 2,
     name: 'Dero Samy',
     role: 'Mobile Developer',
-    image: './src/images/WhatsApp Image 2025-01-16 at 10.21.08_074de606.jpg', 
+    image: '/images/WhatsApp Image 2025-01-16 at 10.21.08_074de606.jpg', 
     testimony: 'The instructors are world-class and the community support is amazing. I landed my dream job thanks to the skills I gained here.',
   },
   {
     id: 3,
     name: 'Taby Alupo',
     role: 'Data Scientist',
-    image: './src/images/WhatsApp Image 2025-01-16 at 10.20.40_7855e0ed.jpg',
+    image: '/images/WhatsApp Image 2025-01-16 at 10.20.40_7855e0ed.jpg',
     testimony: 'The project-based learning approach made complex concepts easy to grasp. Phoenix is definitely worth every penny!',
   },
 ];
