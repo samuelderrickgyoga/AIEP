@@ -209,6 +209,32 @@ async def get_recommendations(student_id: int):
         logger.error(f"Recommendation error: {e}")
         return jsonify({'error': 'Internal server error'}), 500
 
+@app.route('/metrics/engagement/<int:student_id>', methods=['GET'])
+async def get_engagement_metrics(student_id: int):
+    try:
+        progress = engine.get_student_progress(student_id)
+        return jsonify({
+            'student_id': student_id,
+            'progress_metrics': progress,
+            'timestamp': datetime.now().isoformat()
+        })
+    except Exception as e:
+        logger.error(f"Error fetching engagement metrics: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/metrics/content-performance', methods=['GET'])
+async def get_content_performance():
+    try:
+        metrics = engine.calculate_engagement_metrics()
+        return jsonify({
+            'content_performance': metrics['content_performance'],
+            'overall_time': metrics['overall_time'],
+            'timestamp': datetime.now().isoformat()
+        })
+    except Exception as e:
+        logger.error(f"Error fetching content performance: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
 if __name__ == '__main__':
     engine = RecommendationEngine()
     app.run(debug=True)
