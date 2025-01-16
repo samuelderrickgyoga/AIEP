@@ -121,6 +121,68 @@ class RecommendationEngine:
                 self.cached_engagement_scores.pop(interaction_data['student_id'], None)
                 await self.update_engagement_metrics()
 
+    def calculate_engagement_metrics(self) -> Dict:
+        # Calculate overall time spent per course
+        overall_time = self.engagement.groupby(['course_id'])['time_spent'].mean()
+        
+        # Calculate average metrics for normalization
+        avg_time_spent = self.engagement['time_spent'].mean()
+        
+        # Calculate engagement scores
+        self.engagement['engagement_score'] = (
+            0.4 * (self.engagement['time_spent'] / avg_time_spent) +
+            0.4 * (self.engagement['quiz_score'] / 100) +
+            0.2 * (self.engagement['rating'] / 5)
+        )
+        
+        # Track content type effectiveness
+        content_performance = pd.merge(
+            self.engagement,
+            self.courses[['course_id', 'content_type']],
+            on='course_id'
+        ).groupby('content_type').agg({
+            'quiz_score': 'mean',
+            'engagement_score': 'mean',
+            'time_spent': 'mean'
+        })
+        
+        return {
+            'overall_time': overall_time.to_dict(),
+            'content_performance': content_performance.to_dict(),
+            'avg_engagement_score': self.engagement['engagement_score'].mean()
+        }
+
+    def get_student_progress(self, student_id: int) -> Dict:
+        student_data = self.engagement[self.engagement['student_id'] == student_id]
+        
+        progress_metrics = {
+            'engagement_score': student_data['engagement_score'].mean(),
+            'quiz_performance': student_data['quiz_score'].mean(),
+            'preferred_content': self._get_preferred_content_type(student_id),
+            'completed_courses': len(student_data[student_data['completion_status'] == 1.0])
+        }
+        
+        # Determine progression readiness
+        progress_metrics['ready_for_next'] = (
+            progress_metrics['engagement_score'] > 0.7 and 
+            progress_metrics['quiz_performance'] > 70
+        )
+        
+        return progress_metrics
+
+    def _get_preferred_content_type(self, student_id: int) -> str:
+        student_performance = pd.merge(
+            self.engagement[self.engagement['student_id'] == student_id],
+            self.courses[['course_id', 'content_type']],
+            on='course_id'
+        )
+        
+        return student_performance.groupby('content_type')['quiz_score'].mean().idxmax()
+
+    def update_engagement_metrics(self) -> None:
+        metrics = self.calculate_engagement_metrics()
+        ENGAGEMENT_SCORE_GAUGE.set(metrics['avg_engagement_score'])
+
 @app.route('/train', methods=['POST'])
 async def train_models():
     try:
