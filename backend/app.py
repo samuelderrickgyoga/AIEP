@@ -51,6 +51,7 @@ class RecommendationEngine:
             raise
 
     def load_or_train_models(self) -> None:
+        os.makedirs('models', exist_ok=True)  # Ensure models/ directory exists
         with MODEL_TRAINING_DURATION.time():
             try:
                 if self._check_saved_models():
@@ -83,6 +84,21 @@ class RecommendationEngine:
         course_features = self.tfidf_vectorizer.fit_transform(self.courses['features'])
         self.cbf_model = cosine_similarity(course_features)
         logger.info("CBF model trained successfully")
+
+    def _save_models(self) -> None:
+        joblib.dump(self.cf_model, 'models/cf_model.pk')
+        joblib.dump(self.tfidf_vectorizer, 'models/tfidf_vectorizer.pk')
+        joblib.dump(self.cbf_model, 'models/cbf_similarity_matrix.pk')
+        logger.info("Models saved successfully")
+
+    def _load_saved_models(self) -> None:
+        self.cf_model = joblib.load('models/cf_model.pk')
+        self.tfidf_vectorizer = joblib.load('models/tfidf_vectorizer.pk')
+        self.cbf_model = joblib.load('models/cbf_similarity_matrix.pk')
+        logger.info("Models loaded successfully")
+
+    def _check_saved_models(self) -> bool:
+        return os.path.exists('models/cf_model.pk') and os.path.exists('models/tfidf_vectorizer.pk') and os.path.exists('models/cbf_similarity_matrix.pk')
 
     async def get_hybrid_recommendations(
         self, 
@@ -122,20 +138,13 @@ class RecommendationEngine:
                 await self.update_engagement_metrics()
 
     def calculate_engagement_metrics(self) -> Dict:
-        # Calculate overall time spent per course
         overall_time = self.engagement.groupby(['course_id'])['time_spent'].mean()
-        
-        # Calculate average metrics for normalization
         avg_time_spent = self.engagement['time_spent'].mean()
-        
-        # Calculate engagement scores
         self.engagement['engagement_score'] = (
             0.4 * (self.engagement['time_spent'] / avg_time_spent) +
             0.4 * (self.engagement['quiz_score'] / 100) +
             0.2 * (self.engagement['rating'] / 5)
         )
-        
-        # Track content type effectiveness
         content_performance = pd.merge(
             self.engagement,
             self.courses[['course_id', 'content_type']],
@@ -145,7 +154,6 @@ class RecommendationEngine:
             'engagement_score': 'mean',
             'time_spent': 'mean'
         })
-        
         return {
             'overall_time': overall_time.to_dict(),
             'content_performance': content_performance.to_dict(),
@@ -154,20 +162,16 @@ class RecommendationEngine:
 
     def get_student_progress(self, student_id: int) -> Dict:
         student_data = self.engagement[self.engagement['student_id'] == student_id]
-        
         progress_metrics = {
             'engagement_score': student_data['engagement_score'].mean(),
             'quiz_performance': student_data['quiz_score'].mean(),
             'preferred_content': self._get_preferred_content_type(student_id),
             'completed_courses': len(student_data[student_data['completion_status'] == 1.0])
         }
-        
-        # Determine progression readiness
         progress_metrics['ready_for_next'] = (
             progress_metrics['engagement_score'] > 0.7 and 
             progress_metrics['quiz_performance'] > 70
         )
-        
         return progress_metrics
 
     def _get_preferred_content_type(self, student_id: int) -> str:
@@ -176,7 +180,6 @@ class RecommendationEngine:
             self.courses[['course_id', 'content_type']],
             on='course_id'
         )
-        
         return student_performance.groupby('content_type')['quiz_score'].mean().idxmax()
 
     def update_engagement_metrics(self) -> None:
