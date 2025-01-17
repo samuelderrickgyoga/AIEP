@@ -21,7 +21,16 @@ RECOMMENDATION_LATENCY = Histogram('recommendation_latency_seconds', 'Time spent
 ENGAGEMENT_SCORE_GAUGE = Gauge('engagement_score_average', 'Average engagement score across all students')
 MODEL_TRAINING_DURATION = Histogram('model_training_duration_seconds', 'Time spent training models')
 INTERACTION_COUNTER = Counter('interaction_total', 'Total number of logged interactions')
+base_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(base_dir, 'data')
 
+# Ensure the data directory exists
+os.makedirs(data_dir, exist_ok=True)
+
+# Check if required files exist
+students_path = os.path.join(data_dir, 'students.csv')
+courses_path = os.path.join(data_dir, 'courses.csv')
+engagement_path = os.path.join(data_dir, 'engagement.csv')
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -37,12 +46,50 @@ class RecommendationEngine:
         self.cbf_model = None
         self.tfidf_vectorizer = None
         self.load_or_train_models()
+    
+    def _create_sparse_matrix(self) -> csr_matrix:
+        """
+        Creates a sparse matrix for the user-item (student-course) engagement data.
+        """
+        try:
+            # Ensure the engagement data has the required columns
+            if not all(col in self.engagement.columns for col in ['student_id', 'course_id', 'rating']):
+                raise ValueError("Engagement data is missing required columns: 'student_id', 'course_id', 'rating'")
+
+            # Create a pivot table for the user-item matrix
+            user_item_df = self.engagement.pivot_table(
+                index='student_id', 
+                columns='course_id', 
+                values='rating', 
+                fill_value=0
+            )
+            
+            # Convert the pivot table to a sparse matrix
+            sparse_matrix = csr_matrix(user_item_df.values)
+            return sparse_matrix
+        except Exception as e:
+            logger.error(f"Error creating sparse matrix: {e}")
+            raise
+    def update_available_courses(self) -> None:
+        """
+        Updates the set of available courses based on the courses dataset.
+        """
+        try:
+            if 'course_id' in self.courses.columns:
+                self.available_courses_index = set(self.courses['course_id'])
+            else:
+                raise ValueError("Courses dataset is missing the required 'course_id' column")
+            logger.info("Available courses updated successfully")
+        except Exception as e:
+            logger.error(f"Error updating available courses: {e}")
+            raise
+
 
     def load_datasets(self) -> None:
         try:
-            self.students = pd.read_csv('data/students.csv')
-            self.courses = pd.read_csv('data/courses.csv')
-            self.engagement = pd.read_csv('data/engagement.csv')
+            self.students = pd.read_csv(students_path)
+            self.courses = pd.read_csv(courses_path )
+            self.engagement = pd.read_csv(engagement_path)
             self.user_item_matrix = self._create_sparse_matrix()
             self.update_available_courses()
             logger.info("Datasets loaded successfully")

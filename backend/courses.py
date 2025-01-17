@@ -36,15 +36,32 @@ technologies = {
     6: ['Python', 'Java', 'C++', 'JavaScript', 'Go', 'Rust']
 }
 
+# Add feature templates for better course descriptions
+feature_templates = {
+    1: ['Build responsive websites', 'Create modern UIs', 'Handle API integration', 'Implement authentication', 'Database integration'],
+    2: ['Cross-platform development', 'Native features access', 'Mobile UI/UX', 'App store deployment', 'Push notifications'],
+    3: ['Data preprocessing', 'Model training', 'Neural network architecture', 'Hyperparameter tuning', 'Model deployment'],
+    4: ['Schema design', 'Query optimization', 'Data modeling', 'Backup and recovery', 'Security implementation'],
+    5: ['UI component design', 'Event handling', 'System integration', 'Cross-platform compatibility', 'Performance optimization'],
+    6: ['Object-oriented programming', 'Memory management', 'Concurrent programming', 'Standard libraries', 'Best practices']
+}
 # Generate 200 courses
 num_courses = 200
 courses_data = []
 course_id = 1001
 
+# Generate 200 courses with features
 for _ in range(num_courses):
     category_id = np.random.randint(1, 7)
     technology = np.random.choice(technologies[category_id])
     course_template = np.random.choice(course_templates[category_id])
+    
+    # Generate rich feature description
+    category_features = feature_templates[category_id]
+    selected_features = np.random.choice(category_features, size=np.random.randint(2, 5), replace=False)
+    feature_text = f"{technology} course covering: {', '.join(selected_features)}. "
+    feature_text += f"Perfect for {difficulty_levels[np.random.randint(0, 3)]} learners. "
+    feature_text += f"Includes {content_types[np.random.randint(0, 5)]} content."
     
     courses_data.append({
         'course_id': course_id,
@@ -53,7 +70,8 @@ for _ in range(num_courses):
         'content_type': np.random.choice(content_types),
         'difficulty': np.random.choice(difficulty_levels),
         'rating': round(np.random.uniform(3.5, 5.0), 1),
-        'average_time': np.random.randint(20, 101)  # hours
+        'average_time': np.random.randint(20, 101),
+        'features': feature_text
     })
     course_id += 1
 

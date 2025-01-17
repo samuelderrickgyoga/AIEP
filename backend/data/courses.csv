@@ -1,201 +1,201 @@
-course_id,course_name,category_id,content_type,difficulty,rating,average_time
-1001,Full Stack Django,1,Video,Advanced,4.2,32
-1002,Building JavaFX Apps,5,Mixed,Intermediate,4.8,50
-1003,Native Flutter Development,2,Interactive,Advanced,3.8,78
-1004,Advanced C++,6,Mixed,Beginner,4.0,25
-1005,Cross-platform Flutter Development,2,Video,Beginner,4.2,25
-1006,Full Stack Vue.js,1,Interactive,Advanced,4.0,64
-1007,Native React Native Development,2,Video,Advanced,4.7,51
-1008,PostgreSQL Security,4,Mixed,Advanced,4.2,71
-1009,PostgreSQL Administration,4,Video,Intermediate,4.9,93
-1010,Oracle Administration,4,Mixed,Advanced,3.7,32
-1011,Native Kotlin Development,2,Interactive,Advanced,3.6,66
-1012,Building JavaFX Apps,5,Text,Beginner,4.4,99
-1013,Building .NET Apps,5,Text,Intermediate,4.3,82
-1014,Modern Angular Development,1,Project-based,Beginner,4.2,22
-1015,Advanced Neural Networks,3,Project-based,Advanced,4.8,94
-1016,Android App Development,2,Interactive,Intermediate,4.5,21
-1017,MongoDB Performance Tuning,4,Video,Beginner,4.0,92
-1018,Modern Node.js Development,1,Text,Advanced,4.4,69
-1019,JavaFX Application Architecture,5,Project-based,Intermediate,4.0,72
-1020,Advanced Go,6,Interactive,Beginner,4.5,80
-1021,Backend Development with Flask,1,Text,Advanced,4.0,58
-1022,C++ Algorithms,6,Video,Beginner,3.7,99
-1023,Full Stack Node.js,1,Mixed,Advanced,4.0,43
-1024,Redis Security,4,Mixed,Intermediate,3.5,70
-1025,Modern Angular Development,1,Mixed,Intermediate,4.7,44
-1026,Advanced Deep Learning,3,Interactive,Intermediate,4.3,86
-1027,Native Flutter Development,2,Interactive,Beginner,4.6,92
-1028,Modern Angular Development,1,Project-based,Advanced,4.2,65
-1029,Advanced Computer Vision,3,Project-based,Beginner,4.5,72
-1030,Advanced Computer Vision,3,Mixed,Beginner,3.5,100
-1031,Advanced Deep Learning,3,Video,Advanced,3.7,75
-1032,Native Flutter Development,2,Interactive,Beginner,4.3,27
-1033,Full Stack Angular,1,Project-based,Intermediate,4.8,60
-1034,Go Algorithms,6,Video,Beginner,3.8,81
-1035,MongoDB Administration,4,Mixed,Beginner,3.9,27
-1036,Java Algorithms,6,Interactive,Beginner,4.3,34
-1037,MySQL Performance Tuning,4,Interactive,Advanced,4.2,51
-1038,MongoDB Security,4,Interactive,Beginner,3.5,60
-1039,Rust Algorithms,6,Text,Intermediate,3.6,36
-1040,Native Kotlin Development,2,Project-based,Advanced,4.6,39
-1041,Full Stack Angular,1,Mixed,Advanced,4.9,86
-1042,Rust Data Structures,6,Mixed,Advanced,4.0,41
-1043,NLP Fundamentals,3,Mixed,Advanced,4.0,74
-1044,Backend Development with Django,1,Video,Intermediate,4.8,98
-1045,Deep Learning Fundamentals,3,Video,Advanced,4.4,57
-1046,Oracle Security,4,Interactive,Advanced,4.0,65
-1047,Backend Development with Angular,1,Video,Beginner,4.3,26
-1048,Go Programming,6,Mixed,Beginner,3.9,54
-1049,Machine Learning in Practice,3,Video,Intermediate,3.9,66
-1050,PostgreSQL Security,4,Text,Beginner,4.4,97
-1051,Native React Native Development,2,Video,Advanced,4.2,63
-1052,Oracle Security,4,Mixed,Intermediate,4.4,84
-1053,WPF Application Architecture,5,Mixed,Advanced,4.6,99
-1054,Flutter App Development,2,Project-based,Intermediate,3.8,60
-1055,MySQL Database Design,4,Project-based,Beginner,4.0,46
-1056,Go Data Structures,6,Text,Beginner,3.7,60
-1057,Frontend Development with Flask,1,Text,Advanced,4.5,78
-1058,Native React Native Development,2,Interactive,Advanced,3.7,71
-1059,WPF Application Architecture,5,Text,Advanced,4.3,39
-1060,Machine Learning Fundamentals,3,Mixed,Advanced,4.7,86
-1061,Redis Performance Tuning,4,Video,Advanced,4.0,86
-1062,Backend Development with React,1,Interactive,Advanced,4.6,20
-1063,WPF GUI Development,5,Project-based,Advanced,3.7,49
-1064,Cross-platform React Native Development,2,Text,Intermediate,4.0,62
-1065,Cross-platform React Native Development,2,Interactive,Advanced,4.0,51
-1066,Neural Networks Fundamentals,3,Project-based,Beginner,4.3,73
-1067,Advanced Java,6,Video,Beginner,4.3,75
-1068,Oracle Administration,4,Mixed,Beginner,3.9,75
-1069,React Native App Development,2,Video,Intermediate,4.0,29
-1070,Rust Algorithms,6,Project-based,Beginner,4.9,37
-1071,Backend Development with Flask,1,Text,Beginner,4.2,31
-1072,Cross-platform React Native Development,2,Mixed,Beginner,3.7,59
-1073,PostgreSQL Administration,4,Interactive,Advanced,4.4,52
-1074,iOS App Development,2,Video,Beginner,4.6,96
-1075,Advanced Neural Networks,3,Text,Advanced,4.3,98
-1076,Redis Administration,4,Project-based,Intermediate,3.7,97
-1077,PostgreSQL Security,4,Project-based,Beginner,4.7,74
-1078,Advanced C++,6,Text,Beginner,4.7,97
-1079,Computer Vision Fundamentals,3,Mixed,Advanced,4.3,32
-1080,Full Stack React,1,Mixed,Beginner,4.1,73
-1081,Rust Algorithms,6,Video,Beginner,3.6,29
-1082,Electron GUI Development,5,Mixed,Intermediate,4.7,28
-1083,Go Programming,6,Text,Beginner,4.9,37
-1084,Rust Programming,6,Video,Advanced,3.8,100
-1085,Advanced JavaScript,6,Project-based,Intermediate,4.6,58
-1086,Machine Learning Fundamentals,3,Video,Advanced,4.7,60
-1087,Frontend Development with Vue.js,1,Text,Beginner,4.4,38
-1088,JavaScript Programming,6,Text,Advanced,4.5,47
-1089,Redis Performance Tuning,4,Text,Beginner,4.8,23
-1090,Backend Development with Node.js,1,Video,Beginner,4.7,50
-1091,Modern React Development,1,Text,Advanced,4.0,95
-1092,Backend Development with Vue.js,1,Video,Advanced,3.8,85
-1093,Oracle Administration,4,Video,Advanced,3.7,21
-1094,PyQt Application Architecture,5,Project-based,Advanced,4.1,66
-1095,JavaFX Application Architecture,5,Video,Beginner,3.7,61
-1096,Electron GUI Development,5,Text,Advanced,3.6,24
-1097,Full Stack Node.js,1,Text,Intermediate,3.8,55
-1098,Modern Vue.js Development,1,Project-based,Advanced,4.3,53
-1099,Full Stack Django,1,Project-based,Intermediate,3.8,94
-1100,Advanced Java,6,Text,Advanced,4.3,61
-1101,Deep Learning in Practice,3,Video,Intermediate,4.3,37
-1102,Go Algorithms,6,Video,Intermediate,3.7,41
-1103,Machine Learning Fundamentals,3,Video,Beginner,4.3,34
-1104,Java Algorithms,6,Text,Beginner,3.8,27
-1105,JavaFX GUI Development,5,Project-based,Beginner,4.7,61
-1106,Building Electron Apps,5,Mixed,Advanced,3.8,21
-1107,Java Programming,6,Project-based,Beginner,3.6,62
-1108,JavaScript Programming,6,Interactive,Advanced,3.5,49
-1109,NLP in Practice,3,Mixed,Advanced,3.8,30
-1110,NLP Fundamentals,3,Mixed,Intermediate,4.6,33
-1111,Cross-platform iOS Development,2,Interactive,Intermediate,4.3,51
-1112,MongoDB Database Design,4,Project-based,Beginner,4.7,85
-1113,JavaScript Algorithms,6,Video,Beginner,4.1,89
-1114,PostgreSQL Security,4,Project-based,Advanced,4.7,54
-1115,Go Programming,6,Mixed,Beginner,4.4,91
-1116,Computer Vision in Practice,3,Mixed,Advanced,4.0,50
-1117,NLP in Practice,3,Interactive,Beginner,4.0,59
-1118,Java Programming,6,Text,Advanced,4.6,78
-1119,Applied Neural Networks,3,Text,Intermediate,4.1,93
-1120,Modern React Development,1,Video,Advanced,4.0,67
-1121,NLP in Practice,3,Video,Advanced,3.5,88
-1122,Kotlin App Development,2,Mixed,Advanced,3.7,97
-1123,Go Programming,6,Video,Intermediate,4.6,48
-1124,Kotlin App Development,2,Video,Advanced,5.0,43
-1125,JavaFX Application Architecture,5,Interactive,Intermediate,3.7,70
-1126,Native React Native Development,2,Text,Beginner,3.8,83
-1127,Backend Development with Flask,1,Mixed,Intermediate,4.8,60
-1128,Full Stack Vue.js,1,Video,Beginner,4.3,74
-1129,Go Data Structures,6,Mixed,Intermediate,4.2,21
-1130,Applied Deep Learning,3,Text,Beginner,4.5,25
-1131,Full Stack Flask,1,Mixed,Intermediate,4.3,61
-1132,NLP Fundamentals,3,Mixed,Beginner,3.6,57
-1133,Cross-platform Flutter Development,2,Project-based,Beginner,4.3,54
-1134,MongoDB Security,4,Text,Advanced,4.8,96
-1135,Neural Networks in Practice,3,Project-based,Intermediate,4.1,78
-1136,C++ Data Structures,6,Mixed,Advanced,3.9,26
-1137,MongoDB Administration,4,Text,Beginner,4.1,62
-1138,Machine Learning in Practice,3,Text,Advanced,4.5,58
-1139,MySQL Security,4,Video,Advanced,4.5,20
-1140,Redis Database Design,4,Interactive,Advanced,4.1,26
-1141,Java Algorithms,6,Interactive,Intermediate,4.1,89
-1142,Redis Administration,4,Project-based,Beginner,4.2,85
-1143,Backend Development with Flask,1,Interactive,Intermediate,3.9,37
-1144,Redis Security,4,Interactive,Beginner,4.3,38
-1145,Frontend Development with Vue.js,1,Project-based,Intermediate,4.2,79
-1146,PostgreSQL Performance Tuning,4,Video,Intermediate,3.7,79
-1147,NLP in Practice,3,Interactive,Advanced,3.8,40
-1148,Computer Vision Fundamentals,3,Text,Advanced,3.5,91
-1149,Building WPF Apps,5,Project-based,Advanced,4.3,53
-1150,PostgreSQL Performance Tuning,4,Mixed,Advanced,4.7,36
-1151,Modern Flask Development,1,Project-based,Advanced,4.1,74
-1152,PyQt Application Architecture,5,Project-based,Advanced,4.1,59
-1153,Java Programming,6,Project-based,Intermediate,3.9,74
-1154,Android App Development,2,Video,Advanced,4.8,89
-1155,Building Electron Apps,5,Mixed,Intermediate,4.2,87
-1156,Rust Data Structures,6,Text,Advanced,3.5,26
-1157,Cross-platform React Native Development,2,Mixed,Advanced,4.9,63
-1158,Computer Vision Fundamentals,3,Video,Beginner,4.9,62
-1159,Native Flutter Development,2,Mixed,Advanced,4.5,34
-1160,JavaScript Programming,6,Text,Intermediate,4.0,73
-1161,Applied NLP,3,Project-based,Advanced,4.9,26
-1162,Cross-platform Kotlin Development,2,Interactive,Beginner,4.3,69
-1163,Frontend Development with Vue.js,1,Text,Intermediate,4.7,59
-1164,Applied Machine Learning,3,Video,Intermediate,4.6,91
-1165,C++ Programming,6,Interactive,Advanced,4.6,42
-1166,Computer Vision Fundamentals,3,Mixed,Advanced,4.7,65
-1167,WPF GUI Development,5,Interactive,Beginner,3.9,21
-1168,Applied NLP,3,Mixed,Beginner,3.6,39
-1169,Modern Vue.js Development,1,Text,Beginner,4.5,38
-1170,Cross-platform React Native Development,2,Project-based,Advanced,4.3,77
-1171,JavaScript Data Structures,6,Project-based,Beginner,5.0,89
-1172,Kotlin App Development,2,Text,Beginner,4.9,40
-1173,Machine Learning in Practice,3,Mixed,Advanced,3.8,55
-1174,Advanced Java,6,Interactive,Beginner,4.4,68
-1175,WPF Application Architecture,5,Video,Beginner,4.2,27
-1176,Native Kotlin Development,2,Video,Beginner,3.8,43
-1177,MySQL Database Design,4,Interactive,Intermediate,4.3,59
-1178,JavaFX Application Architecture,5,Text,Beginner,4.3,72
-1179,Native Kotlin Development,2,Project-based,Advanced,4.3,85
-1180,Flutter App Development,2,Text,Beginner,4.1,71
-1181,WPF Application Architecture,5,Interactive,Intermediate,4.9,44
-1182,Advanced NLP,3,Video,Intermediate,4.3,99
-1183,Native iOS Development,2,Mixed,Advanced,4.1,38
-1184,Full Stack Node.js,1,Text,Intermediate,4.4,47
-1185,Advanced Python,6,Mixed,Advanced,4.7,51
-1186,Python Programming,6,Interactive,Intermediate,4.1,56
-1187,Building Electron Apps,5,Video,Advanced,4.3,67
-1188,Java Algorithms,6,Video,Intermediate,4.3,20
-1189,Modern React Development,1,Project-based,Beginner,4.2,65
-1190,Advanced C++,6,Interactive,Advanced,4.9,37
-1191,Advanced Go,6,Interactive,Advanced,4.2,42
-1192,Cross-platform Flutter Development,2,Text,Beginner,4.0,65
-1193,JavaFX GUI Development,5,Video,Intermediate,4.3,33
-1194,NLP in Practice,3,Interactive,Advanced,4.9,31
-1195,Kotlin App Development,2,Video,Intermediate,3.5,69
-1196,WPF GUI Development,5,Interactive,Advanced,4.9,27
-1197,Oracle Database Design,4,Video,Beginner,3.7,95
-1198,Native Kotlin Development,2,Project-based,Advanced,3.6,81
-1199,Computer Vision in Practice,3,Mixed,Advanced,4.3,90
-1200,Modern Node.js Development,1,Video,Advanced,4.3,78
+course_id,course_name,category_id,content_type,difficulty,rating,average_time,features
+1001,MySQL Database Design,4,Text,Beginner,4.6,86,"MySQL course covering: Backup and recovery, Data modeling, Security implementation, Query optimization. Perfect for Beginner learners. Includes Interactive content."
+1002,Native React Native Development,2,Mixed,Advanced,4.6,86,"React Native course covering: Push notifications, Native features access, App store deployment. Perfect for Advanced learners. Includes Project-based content."
+1003,MySQL Performance Tuning,4,Text,Intermediate,3.6,28,"MySQL course covering: Schema design, Query optimization. Perfect for Beginner learners. Includes Mixed content."
+1004,JavaFX GUI Development,5,Text,Advanced,4.4,40,"JavaFX course covering: Cross-platform compatibility, System integration, Performance optimization. Perfect for Beginner learners. Includes Mixed content."
+1005,Backend Development with Angular,1,Mixed,Intermediate,3.7,37,"Angular course covering: Build responsive websites, Create modern UIs, Implement authentication. Perfect for Advanced learners. Includes Project-based content."
+1006,MongoDB Performance Tuning,4,Video,Advanced,4.7,54,"MongoDB course covering: Backup and recovery, Security implementation. Perfect for Intermediate learners. Includes Interactive content."
+1007,PyQt GUI Development,5,Interactive,Intermediate,4.8,21,"PyQt course covering: UI component design, Event handling, System integration. Perfect for Intermediate learners. Includes Text content."
+1008,Deep Learning Fundamentals,3,Interactive,Advanced,4.0,44,"Deep Learning course covering: Model deployment, Neural network architecture. Perfect for Beginner learners. Includes Text content."
+1009,Modern Angular Development,1,Project-based,Intermediate,3.5,66,"Angular course covering: Database integration, Build responsive websites. Perfect for Advanced learners. Includes Text content."
+1010,Native React Native Development,2,Text,Intermediate,4.5,21,"React Native course covering: Native features access, Mobile UI/UX. Perfect for Intermediate learners. Includes Project-based content."
+1011,PostgreSQL Administration,4,Interactive,Advanced,4.8,98,"PostgreSQL course covering: Security implementation, Schema design, Query optimization, Backup and recovery. Perfect for Intermediate learners. Includes Interactive content."
+1012,Building JavaFX Apps,5,Video,Advanced,3.8,38,"JavaFX course covering: Event handling, UI component design. Perfect for Advanced learners. Includes Mixed content."
+1013,Computer Vision Fundamentals,3,Video,Beginner,4.7,83,"Computer Vision course covering: Model training, Data preprocessing, Model deployment, Neural network architecture. Perfect for Beginner learners. Includes Video content."
+1014,Backend Development with Angular,1,Project-based,Intermediate,3.8,72,"Angular course covering: Implement authentication, Build responsive websites, Create modern UIs, Database integration. Perfect for Beginner learners. Includes Project-based content."
+1015,Cross-platform Android Development,2,Project-based,Advanced,3.9,67,"Android course covering: App store deployment, Native features access. Perfect for Beginner learners. Includes Text content."
+1016,NLP in Practice,3,Text,Beginner,3.6,69,"NLP course covering: Data preprocessing, Hyperparameter tuning, Neural network architecture, Model training. Perfect for Beginner learners. Includes Text content."
+1017,Modern Vue.js Development,1,Mixed,Intermediate,4.9,26,"Vue.js course covering: Database integration, Create modern UIs, Implement authentication, Handle API integration. Perfect for Intermediate learners. Includes Interactive content."
+1018,Full Stack Flask,1,Project-based,Advanced,4.1,44,"Flask course covering: Build responsive websites, Handle API integration, Database integration. Perfect for Advanced learners. Includes Interactive content."
+1019,MongoDB Security,4,Project-based,Beginner,4.9,33,"MongoDB course covering: Query optimization, Schema design, Backup and recovery. Perfect for Advanced learners. Includes Interactive content."
+1020,Redis Security,4,Video,Beginner,3.9,77,"Redis course covering: Schema design, Data modeling, Backup and recovery, Query optimization. Perfect for Intermediate learners. Includes Interactive content."
+1021,Oracle Database Design,4,Interactive,Intermediate,4.8,55,"Oracle course covering: Schema design, Security implementation, Query optimization. Perfect for Beginner learners. Includes Project-based content."
+1022,Electron GUI Development,5,Text,Advanced,4.1,33,"Electron course covering: UI component design, System integration, Cross-platform compatibility, Event handling. Perfect for Beginner learners. Includes Video content."
+1023,iOS App Development,2,Interactive,Intermediate,4.3,84,"iOS course covering: Mobile UI/UX, Native features access, App store deployment, Push notifications. Perfect for Intermediate learners. Includes Mixed content."
+1024,Advanced Rust,6,Text,Advanced,4.2,38,"Rust course covering: Best practices, Memory management, Object-oriented programming, Concurrent programming. Perfect for Intermediate learners. Includes Mixed content."
+1025,Backend Development with Django,1,Project-based,Intermediate,3.9,43,"Django course covering: Build responsive websites, Handle API integration. Perfect for Beginner learners. Includes Video content."
+1026,Applied NLP,3,Text,Intermediate,4.5,44,"NLP course covering: Data preprocessing, Model deployment, Model training, Hyperparameter tuning. Perfect for Advanced learners. Includes Video content."
+1027,PyQt Application Architecture,5,Project-based,Beginner,3.6,84,"PyQt course covering: Performance optimization, UI component design, Event handling. Perfect for Beginner learners. Includes Project-based content."
+1028,Java Programming,6,Project-based,Advanced,3.6,75,"Java course covering: Concurrent programming, Object-oriented programming, Best practices. Perfect for Intermediate learners. Includes Mixed content."
+1029,Frontend Development with Node.js,1,Project-based,Beginner,4.2,84,"Node.js course covering: Build responsive websites, Database integration, Handle API integration. Perfect for Intermediate learners. Includes Video content."
+1030,Full Stack Angular,1,Mixed,Advanced,4.8,29,"Angular course covering: Create modern UIs, Implement authentication, Handle API integration. Perfect for Beginner learners. Includes Project-based content."
+1031,Applied NLP,3,Mixed,Intermediate,4.5,100,"NLP course covering: Neural network architecture, Data preprocessing. Perfect for Beginner learners. Includes Interactive content."
+1032,Machine Learning Fundamentals,3,Video,Intermediate,4.2,79,"Machine Learning course covering: Model training, Data preprocessing, Model deployment, Neural network architecture. Perfect for Beginner learners. Includes Project-based content."
+1033,Advanced C++,6,Video,Intermediate,4.0,53,"C++ course covering: Concurrent programming, Standard libraries. Perfect for Advanced learners. Includes Project-based content."
+1034,C++ Programming,6,Text,Intermediate,4.6,89,"C++ course covering: Standard libraries, Object-oriented programming, Best practices, Memory management. Perfect for Beginner learners. Includes Text content."
+1035,JavaFX Application Architecture,5,Project-based,Advanced,4.6,65,"JavaFX course covering: UI component design, Cross-platform compatibility. Perfect for Intermediate learners. Includes Video content."
+1036,Advanced Deep Learning,3,Text,Intermediate,4.6,84,"Deep Learning course covering: Model training, Data preprocessing. Perfect for Advanced learners. Includes Mixed content."
+1037,PyQt Application Architecture,5,Text,Intermediate,4.2,21,"PyQt course covering: Performance optimization, Event handling, UI component design. Perfect for Advanced learners. Includes Project-based content."
+1038,Machine Learning in Practice,3,Interactive,Advanced,3.8,81,"Machine Learning course covering: Model deployment, Neural network architecture. Perfect for Intermediate learners. Includes Project-based content."
+1039,Applied Neural Networks,3,Text,Beginner,4.3,93,"Neural Networks course covering: Model training, Model deployment, Data preprocessing, Neural network architecture. Perfect for Intermediate learners. Includes Project-based content."
+1040,Native Kotlin Development,2,Project-based,Intermediate,4.7,78,"Kotlin course covering: App store deployment, Native features access. Perfect for Beginner learners. Includes Text content."
+1041,Electron GUI Development,5,Video,Beginner,4.8,24,"Electron course covering: Cross-platform compatibility, System integration. Perfect for Advanced learners. Includes Project-based content."
+1042,Computer Vision in Practice,3,Interactive,Beginner,3.8,77,"Computer Vision course covering: Data preprocessing, Model training, Neural network architecture, Hyperparameter tuning. Perfect for Advanced learners. Includes Interactive content."
+1043,Advanced Computer Vision,3,Project-based,Beginner,4.8,38,"Computer Vision course covering: Model training, Model deployment, Data preprocessing, Neural network architecture. Perfect for Advanced learners. Includes Video content."
+1044,iOS App Development,2,Mixed,Advanced,3.6,63,"iOS course covering: Native features access, Mobile UI/UX. Perfect for Advanced learners. Includes Interactive content."
+1045,MySQL Security,4,Project-based,Advanced,4.9,63,"MySQL course covering: Query optimization, Data modeling, Backup and recovery, Schema design. Perfect for Beginner learners. Includes Mixed content."
+1046,Go Algorithms,6,Text,Beginner,4.1,37,"Go course covering: Concurrent programming, Best practices, Memory management, Standard libraries. Perfect for Beginner learners. Includes Text content."
+1047,Android App Development,2,Text,Intermediate,4.5,88,"Android course covering: Cross-platform development, App store deployment, Push notifications, Mobile UI/UX. Perfect for Advanced learners. Includes Mixed content."
+1048,Modern React Development,1,Mixed,Intermediate,4.8,56,"React course covering: Build responsive websites, Create modern UIs, Implement authentication. Perfect for Advanced learners. Includes Text content."
+1049,Advanced Computer Vision,3,Interactive,Advanced,3.6,79,"Computer Vision course covering: Data preprocessing, Neural network architecture, Hyperparameter tuning, Model deployment. Perfect for Beginner learners. Includes Text content."
+1050,Native React Native Development,2,Project-based,Beginner,4.1,69,"React Native course covering: App store deployment, Native features access. Perfect for Advanced learners. Includes Project-based content."
+1051,MySQL Performance Tuning,4,Text,Beginner,4.8,53,"MySQL course covering: Data modeling, Schema design, Query optimization. Perfect for Beginner learners. Includes Project-based content."
+1052,Redis Administration,4,Interactive,Intermediate,4.5,70,"Redis course covering: Data modeling, Security implementation, Backup and recovery. Perfect for Advanced learners. Includes Text content."
+1053,Electron GUI Development,5,Video,Beginner,3.6,78,"Electron course covering: Performance optimization, System integration. Perfect for Beginner learners. Includes Video content."
+1054,WPF Application Architecture,5,Text,Advanced,4.4,28,"WPF course covering: Event handling, UI component design, Cross-platform compatibility, System integration. Perfect for Advanced learners. Includes Text content."
+1055,Cross-platform iOS Development,2,Mixed,Advanced,4.3,63,"iOS course covering: Cross-platform development, Mobile UI/UX, Native features access, App store deployment. Perfect for Intermediate learners. Includes Text content."
+1056,Native Kotlin Development,2,Interactive,Intermediate,3.8,33,"Kotlin course covering: Native features access, Push notifications. Perfect for Beginner learners. Includes Text content."
+1057,Kotlin App Development,2,Mixed,Advanced,3.7,27,"Kotlin course covering: Push notifications, App store deployment. Perfect for Beginner learners. Includes Video content."
+1058,PostgreSQL Performance Tuning,4,Project-based,Beginner,4.2,54,"PostgreSQL course covering: Backup and recovery, Data modeling, Security implementation, Schema design. Perfect for Beginner learners. Includes Project-based content."
+1059,React Native App Development,2,Video,Intermediate,3.5,84,"React Native course covering: Native features access, Push notifications, Mobile UI/UX. Perfect for Beginner learners. Includes Mixed content."
+1060,Redis Database Design,4,Mixed,Intermediate,4.6,67,"Redis course covering: Security implementation, Schema design, Backup and recovery. Perfect for Advanced learners. Includes Video content."
+1061,Cross-platform Kotlin Development,2,Text,Intermediate,4.7,65,"Kotlin course covering: App store deployment, Push notifications. Perfect for Intermediate learners. Includes Project-based content."
+1062,Python Data Structures,6,Interactive,Intermediate,4.5,87,"Python course covering: Standard libraries, Best practices. Perfect for Advanced learners. Includes Text content."
+1063,iOS App Development,2,Video,Advanced,4.9,30,"iOS course covering: Native features access, Mobile UI/UX, Cross-platform development, App store deployment. Perfect for Intermediate learners. Includes Video content."
+1064,Frontend Development with Django,1,Interactive,Advanced,3.8,27,"Django course covering: Database integration, Implement authentication. Perfect for Beginner learners. Includes Text content."
+1065,Kotlin App Development,2,Mixed,Beginner,4.5,38,"Kotlin course covering: Native features access, Cross-platform development, Push notifications, Mobile UI/UX. Perfect for Intermediate learners. Includes Text content."
+1066,JavaScript Data Structures,6,Mixed,Intermediate,4.4,86,"JavaScript course covering: Standard libraries, Best practices. Perfect for Beginner learners. Includes Project-based content."
+1067,WPF GUI Development,5,Project-based,Beginner,4.0,45,"WPF course covering: Cross-platform compatibility, UI component design, System integration. Perfect for Intermediate learners. Includes Project-based content."
+1068,Modern Flask Development,1,Interactive,Beginner,3.6,53,"Flask course covering: Build responsive websites, Database integration, Create modern UIs, Handle API integration. Perfect for Advanced learners. Includes Video content."
+1069,Oracle Database Design,4,Mixed,Intermediate,4.1,54,"Oracle course covering: Backup and recovery, Schema design, Query optimization. Perfect for Beginner learners. Includes Video content."
+1070,C++ Programming,6,Mixed,Intermediate,3.8,22,"C++ course covering: Best practices, Memory management, Object-oriented programming, Concurrent programming. Perfect for Beginner learners. Includes Text content."
+1071,JavaFX GUI Development,5,Text,Advanced,4.3,40,"JavaFX course covering: UI component design, Performance optimization, Cross-platform compatibility, Event handling. Perfect for Beginner learners. Includes Text content."
+1072,Python Data Structures,6,Project-based,Beginner,3.8,83,"Python course covering: Concurrent programming, Best practices, Memory management, Standard libraries. Perfect for Beginner learners. Includes Project-based content."
+1073,JavaFX GUI Development,5,Video,Beginner,3.8,22,"JavaFX course covering: Cross-platform compatibility, System integration, UI component design. Perfect for Beginner learners. Includes Video content."
+1074,Advanced JavaScript,6,Project-based,Advanced,4.5,62,"JavaScript course covering: Object-oriented programming, Concurrent programming, Memory management, Best practices. Perfect for Beginner learners. Includes Text content."
+1075,Building Electron Apps,5,Text,Intermediate,4.6,35,"Electron course covering: Performance optimization, Event handling, UI component design. Perfect for Beginner learners. Includes Video content."
+1076,Backend Development with Vue.js,1,Video,Intermediate,3.7,38,"Vue.js course covering: Database integration, Handle API integration, Create modern UIs. Perfect for Intermediate learners. Includes Interactive content."
+1077,Backend Development with Node.js,1,Mixed,Advanced,3.7,70,"Node.js course covering: Build responsive websites, Database integration. Perfect for Beginner learners. Includes Interactive content."
+1078,Full Stack React,1,Text,Intermediate,5.0,42,"React course covering: Database integration, Build responsive websites, Implement authentication, Create modern UIs. Perfect for Beginner learners. Includes Project-based content."
+1079,Modern Node.js Development,1,Mixed,Beginner,4.1,86,"Node.js course covering: Database integration, Create modern UIs, Implement authentication. Perfect for Advanced learners. Includes Video content."
+1080,JavaScript Programming,6,Video,Intermediate,4.3,49,"JavaScript course covering: Concurrent programming, Memory management, Object-oriented programming, Best practices. Perfect for Beginner learners. Includes Project-based content."
+1081,Backend Development with Django,1,Mixed,Intermediate,4.1,33,"Django course covering: Database integration, Create modern UIs, Implement authentication, Build responsive websites. Perfect for Beginner learners. Includes Text content."
+1082,Kotlin App Development,2,Text,Advanced,4.6,88,"Kotlin course covering: Push notifications, App store deployment, Mobile UI/UX, Native features access. Perfect for Advanced learners. Includes Text content."
+1083,Java Data Structures,6,Video,Intermediate,4.6,20,"Java course covering: Memory management, Best practices, Object-oriented programming, Standard libraries. Perfect for Intermediate learners. Includes Text content."
+1084,Cross-platform Kotlin Development,2,Interactive,Beginner,4.0,65,"Kotlin course covering: Mobile UI/UX, Cross-platform development, Native features access. Perfect for Intermediate learners. Includes Interactive content."
+1085,Python Data Structures,6,Text,Beginner,3.7,35,"Python course covering: Object-oriented programming, Best practices, Standard libraries, Concurrent programming. Perfect for Intermediate learners. Includes Text content."
+1086,PyQt GUI Development,5,Mixed,Advanced,4.0,56,"PyQt course covering: Cross-platform compatibility, UI component design, System integration, Performance optimization. Perfect for Intermediate learners. Includes Mixed content."
+1087,Rust Programming,6,Mixed,Advanced,4.4,50,"Rust course covering: Object-oriented programming, Standard libraries, Best practices, Memory management. Perfect for Beginner learners. Includes Mixed content."
+1088,Native Kotlin Development,2,Project-based,Advanced,3.6,73,"Kotlin course covering: Native features access, Mobile UI/UX, Push notifications. Perfect for Advanced learners. Includes Text content."
+1089,PostgreSQL Administration,4,Interactive,Beginner,3.7,95,"PostgreSQL course covering: Query optimization, Schema design, Security implementation, Backup and recovery. Perfect for Advanced learners. Includes Text content."
+1090,PyQt Application Architecture,5,Mixed,Advanced,3.8,93,"PyQt course covering: Cross-platform compatibility, Performance optimization, Event handling, System integration. Perfect for Intermediate learners. Includes Video content."
+1091,Oracle Security,4,Interactive,Intermediate,4.1,71,"Oracle course covering: Backup and recovery, Security implementation, Data modeling. Perfect for Advanced learners. Includes Mixed content."
+1092,Native Android Development,2,Project-based,Advanced,4.4,59,"Android course covering: Mobile UI/UX, Cross-platform development, Native features access. Perfect for Advanced learners. Includes Project-based content."
+1093,Native Android Development,2,Mixed,Intermediate,4.5,45,"Android course covering: Cross-platform development, Native features access. Perfect for Beginner learners. Includes Mixed content."
+1094,Native React Native Development,2,Text,Advanced,5.0,86,"React Native course covering: Cross-platform development, Mobile UI/UX, Native features access. Perfect for Beginner learners. Includes Interactive content."
+1095,MySQL Security,4,Project-based,Intermediate,4.3,40,"MySQL course covering: Data modeling, Security implementation, Query optimization, Schema design. Perfect for Beginner learners. Includes Interactive content."
+1096,MySQL Performance Tuning,4,Text,Intermediate,3.7,93,"MySQL course covering: Backup and recovery, Schema design, Data modeling. Perfect for Beginner learners. Includes Text content."
+1097,MySQL Performance Tuning,4,Text,Intermediate,3.6,48,"MySQL course covering: Security implementation, Schema design. Perfect for Advanced learners. Includes Interactive content."
+1098,NLP Fundamentals,3,Video,Advanced,4.1,77,"NLP course covering: Model deployment, Data preprocessing, Model training. Perfect for Intermediate learners. Includes Video content."
+1099,PostgreSQL Performance Tuning,4,Project-based,Intermediate,4.9,50,"PostgreSQL course covering: Query optimization, Data modeling. Perfect for Intermediate learners. Includes Interactive content."
+1100,PostgreSQL Administration,4,Interactive,Beginner,3.6,52,"PostgreSQL course covering: Data modeling, Security implementation. Perfect for Intermediate learners. Includes Interactive content."
+1101,Advanced Deep Learning,3,Mixed,Beginner,4.6,29,"Deep Learning course covering: Model deployment, Hyperparameter tuning. Perfect for Intermediate learners. Includes Mixed content."
+1102,Cross-platform Android Development,2,Text,Intermediate,3.9,74,"Android course covering: App store deployment, Push notifications. Perfect for Beginner learners. Includes Mixed content."
+1103,Java Programming,6,Video,Beginner,4.9,37,"Java course covering: Object-oriented programming, Concurrent programming. Perfect for Intermediate learners. Includes Interactive content."
+1104,Modern React Development,1,Text,Intermediate,3.8,22,"React course covering: Handle API integration, Create modern UIs. Perfect for Beginner learners. Includes Text content."
+1105,Backend Development with Flask,1,Interactive,Intermediate,3.8,83,"Flask course covering: Create modern UIs, Implement authentication, Build responsive websites. Perfect for Intermediate learners. Includes Video content."
+1106,Java Programming,6,Text,Advanced,5.0,85,"Java course covering: Standard libraries, Memory management, Concurrent programming. Perfect for Intermediate learners. Includes Project-based content."
+1107,Cross-platform React Native Development,2,Mixed,Intermediate,4.2,59,"React Native course covering: Cross-platform development, App store deployment, Mobile UI/UX, Native features access. Perfect for Beginner learners. Includes Text content."
+1108,NLP Fundamentals,3,Video,Intermediate,3.5,39,"NLP course covering: Model deployment, Neural network architecture, Data preprocessing, Model training. Perfect for Beginner learners. Includes Interactive content."
+1109,Backend Development with Node.js,1,Interactive,Beginner,4.6,85,"Node.js course covering: Create modern UIs, Build responsive websites, Implement authentication, Handle API integration. Perfect for Beginner learners. Includes Interactive content."
+1110,Oracle Database Design,4,Text,Advanced,5.0,38,"Oracle course covering: Query optimization, Backup and recovery, Data modeling, Security implementation. Perfect for Intermediate learners. Includes Text content."
+1111,Full Stack Angular,1,Mixed,Beginner,4.7,52,"Angular course covering: Build responsive websites, Create modern UIs, Handle API integration. Perfect for Advanced learners. Includes Interactive content."
+1112,JavaScript Algorithms,6,Interactive,Intermediate,4.6,56,"JavaScript course covering: Object-oriented programming, Concurrent programming, Memory management. Perfect for Advanced learners. Includes Interactive content."
+1113,Deep Learning in Practice,3,Mixed,Advanced,4.9,50,"Deep Learning course covering: Hyperparameter tuning, Neural network architecture, Model deployment, Model training. Perfect for Advanced learners. Includes Project-based content."
+1114,Go Algorithms,6,Video,Advanced,4.2,32,"Go course covering: Object-oriented programming, Standard libraries. Perfect for Intermediate learners. Includes Text content."
+1115,Advanced Deep Learning,3,Mixed,Intermediate,4.0,65,"Deep Learning course covering: Hyperparameter tuning, Data preprocessing, Model training. Perfect for Intermediate learners. Includes Text content."
+1116,Frontend Development with Node.js,1,Text,Beginner,4.9,73,"Node.js course covering: Database integration, Handle API integration. Perfect for Advanced learners. Includes Interactive content."
+1117,Python Algorithms,6,Video,Beginner,4.9,91,"Python course covering: Best practices, Object-oriented programming. Perfect for Beginner learners. Includes Project-based content."
+1118,Python Programming,6,Video,Intermediate,3.7,69,"Python course covering: Concurrent programming, Object-oriented programming, Standard libraries. Perfect for Intermediate learners. Includes Project-based content."
+1119,MongoDB Performance Tuning,4,Project-based,Intermediate,3.8,68,"MongoDB course covering: Schema design, Backup and recovery. Perfect for Advanced learners. Includes Text content."
+1120,Building WPF Apps,5,Interactive,Advanced,4.8,61,"WPF course covering: System integration, Event handling. Perfect for Intermediate learners. Includes Video content."
+1121,Frontend Development with React,1,Video,Advanced,3.7,99,"React course covering: Handle API integration, Build responsive websites, Implement authentication, Create modern UIs. Perfect for Intermediate learners. Includes Text content."
+1122,Neural Networks in Practice,3,Video,Beginner,4.5,78,"Neural Networks course covering: Model deployment, Neural network architecture, Hyperparameter tuning. Perfect for Beginner learners. Includes Text content."
+1123,Redis Security,4,Video,Beginner,5.0,74,"Redis course covering: Schema design, Query optimization, Data modeling, Security implementation. Perfect for Beginner learners. Includes Interactive content."
+1124,Applied NLP,3,Video,Advanced,4.2,32,"NLP course covering: Data preprocessing, Hyperparameter tuning. Perfect for Beginner learners. Includes Interactive content."
+1125,Applied Machine Learning,3,Text,Advanced,5.0,61,"Machine Learning course covering: Neural network architecture, Data preprocessing, Model deployment, Model training. Perfect for Intermediate learners. Includes Video content."
+1126,Advanced Computer Vision,3,Interactive,Advanced,3.9,43,"Computer Vision course covering: Model training, Hyperparameter tuning. Perfect for Advanced learners. Includes Text content."
+1127,Redis Administration,4,Project-based,Advanced,4.2,52,"Redis course covering: Backup and recovery, Query optimization, Security implementation. Perfect for Intermediate learners. Includes Interactive content."
+1128,WPF Application Architecture,5,Mixed,Beginner,3.6,62,"WPF course covering: Event handling, Cross-platform compatibility. Perfect for Advanced learners. Includes Mixed content."
+1129,Cross-platform iOS Development,2,Interactive,Intermediate,3.6,42,"iOS course covering: Mobile UI/UX, Native features access. Perfect for Beginner learners. Includes Text content."
+1130,Oracle Security,4,Video,Intermediate,3.5,91,"Oracle course covering: Schema design, Security implementation, Query optimization, Backup and recovery. Perfect for Beginner learners. Includes Interactive content."
+1131,Deep Learning Fundamentals,3,Interactive,Beginner,4.5,59,"Deep Learning course covering: Neural network architecture, Hyperparameter tuning. Perfect for Advanced learners. Includes Text content."
+1132,Advanced Rust,6,Text,Intermediate,3.8,32,"Rust course covering: Object-oriented programming, Standard libraries, Concurrent programming. Perfect for Advanced learners. Includes Project-based content."
+1133,Frontend Development with Flask,1,Mixed,Beginner,4.0,67,"Flask course covering: Build responsive websites, Database integration. Perfect for Advanced learners. Includes Interactive content."
+1134,Oracle Database Design,4,Text,Advanced,4.6,77,"Oracle course covering: Data modeling, Security implementation. Perfect for Intermediate learners. Includes Text content."
+1135,Kotlin App Development,2,Project-based,Beginner,4.9,80,"Kotlin course covering: Mobile UI/UX, Cross-platform development, Native features access, App store deployment. Perfect for Beginner learners. Includes Text content."
+1136,Oracle Database Design,4,Text,Advanced,3.6,47,"Oracle course covering: Query optimization, Security implementation. Perfect for Intermediate learners. Includes Interactive content."
+1137,.NET GUI Development,5,Video,Beginner,3.5,71,".NET course covering: UI component design, Cross-platform compatibility, Event handling, Performance optimization. Perfect for Intermediate learners. Includes Video content."
+1138,Applied Computer Vision,3,Mixed,Advanced,3.8,82,"Computer Vision course covering: Model training, Model deployment, Data preprocessing. Perfect for Beginner learners. Includes Interactive content."
+1139,Full Stack Flask,1,Mixed,Advanced,3.5,26,"Flask course covering: Implement authentication, Build responsive websites, Database integration. Perfect for Intermediate learners. Includes Project-based content."
+1140,Applied Computer Vision,3,Text,Advanced,4.6,60,"Computer Vision course covering: Model training, Neural network architecture. Perfect for Intermediate learners. Includes Interactive content."
+1141,Frontend Development with Angular,1,Project-based,Advanced,3.5,64,"Angular course covering: Implement authentication, Handle API integration, Database integration, Build responsive websites. Perfect for Intermediate learners. Includes Mixed content."
+1142,Python Algorithms,6,Mixed,Intermediate,4.7,30,"Python course covering: Standard libraries, Concurrent programming. Perfect for Intermediate learners. Includes Text content."
+1143,Advanced Neural Networks,3,Text,Advanced,3.7,80,"Neural Networks course covering: Hyperparameter tuning, Data preprocessing, Neural network architecture, Model deployment. Perfect for Advanced learners. Includes Project-based content."
+1144,WPF GUI Development,5,Project-based,Advanced,4.4,96,"WPF course covering: Event handling, UI component design, System integration. Perfect for Advanced learners. Includes Interactive content."
+1145,Redis Security,4,Mixed,Advanced,3.9,42,"Redis course covering: Security implementation, Query optimization, Data modeling. Perfect for Beginner learners. Includes Mixed content."
+1146,MySQL Security,4,Interactive,Advanced,4.5,84,"MySQL course covering: Query optimization, Security implementation, Backup and recovery, Data modeling. Perfect for Beginner learners. Includes Project-based content."
+1147,MySQL Administration,4,Project-based,Intermediate,4.5,60,"MySQL course covering: Schema design, Security implementation, Backup and recovery. Perfect for Intermediate learners. Includes Interactive content."
+1148,Flutter App Development,2,Mixed,Advanced,4.4,57,"Flutter course covering: Cross-platform development, App store deployment, Native features access, Push notifications. Perfect for Advanced learners. Includes Interactive content."
+1149,Applied Neural Networks,3,Interactive,Advanced,4.9,94,"Neural Networks course covering: Neural network architecture, Data preprocessing, Hyperparameter tuning. Perfect for Beginner learners. Includes Project-based content."
+1150,Native Kotlin Development,2,Project-based,Intermediate,4.0,84,"Kotlin course covering: Push notifications, Cross-platform development. Perfect for Advanced learners. Includes Project-based content."
+1151,.NET GUI Development,5,Mixed,Intermediate,3.9,82,".NET course covering: UI component design, System integration, Cross-platform compatibility. Perfect for Advanced learners. Includes Interactive content."
+1152,Cross-platform Kotlin Development,2,Video,Intermediate,4.1,92,"Kotlin course covering: Native features access, Mobile UI/UX, Cross-platform development, App store deployment. Perfect for Beginner learners. Includes Text content."
+1153,C++ Algorithms,6,Video,Intermediate,4.0,63,"C++ course covering: Concurrent programming, Standard libraries, Object-oriented programming, Memory management. Perfect for Advanced learners. Includes Interactive content."
+1154,Advanced NLP,3,Project-based,Advanced,4.7,81,"NLP course covering: Hyperparameter tuning, Model training. Perfect for Intermediate learners. Includes Interactive content."
+1155,Advanced Computer Vision,3,Mixed,Advanced,3.7,72,"Computer Vision course covering: Model deployment, Model training, Data preprocessing, Hyperparameter tuning. Perfect for Advanced learners. Includes Interactive content."
+1156,Building Electron Apps,5,Video,Advanced,3.8,92,"Electron course covering: Cross-platform compatibility, System integration. Perfect for Beginner learners. Includes Mixed content."
+1157,PostgreSQL Administration,4,Mixed,Advanced,4.8,48,"PostgreSQL course covering: Security implementation, Data modeling, Query optimization. Perfect for Intermediate learners. Includes Mixed content."
+1158,.NET GUI Development,5,Project-based,Intermediate,4.0,67,".NET course covering: Performance optimization, System integration, Cross-platform compatibility. Perfect for Intermediate learners. Includes Video content."
+1159,Modern Django Development,1,Mixed,Beginner,3.9,47,"Django course covering: Implement authentication, Handle API integration, Build responsive websites, Database integration. Perfect for Beginner learners. Includes Mixed content."
+1160,Python Programming,6,Video,Beginner,3.6,22,"Python course covering: Best practices, Standard libraries, Concurrent programming, Memory management. Perfect for Intermediate learners. Includes Mixed content."
+1161,Applied Machine Learning,3,Interactive,Intermediate,4.0,90,"Machine Learning course covering: Model training, Model deployment, Data preprocessing, Hyperparameter tuning. Perfect for Intermediate learners. Includes Video content."
+1162,Building .NET Apps,5,Video,Intermediate,4.0,66,".NET course covering: Performance optimization, Event handling, Cross-platform compatibility, UI component design. Perfect for Intermediate learners. Includes Text content."
+1163,Java Programming,6,Mixed,Intermediate,4.7,52,"Java course covering: Best practices, Object-oriented programming, Concurrent programming, Standard libraries. Perfect for Advanced learners. Includes Interactive content."
+1164,Cross-platform Flutter Development,2,Text,Beginner,4.1,71,"Flutter course covering: App store deployment, Mobile UI/UX. Perfect for Beginner learners. Includes Interactive content."
+1165,Kotlin App Development,2,Video,Intermediate,3.9,28,"Kotlin course covering: Cross-platform development, App store deployment, Push notifications, Native features access. Perfect for Advanced learners. Includes Video content."
+1166,Applied Neural Networks,3,Project-based,Beginner,4.1,97,"Neural Networks course covering: Hyperparameter tuning, Model deployment, Neural network architecture. Perfect for Intermediate learners. Includes Text content."
+1167,Android App Development,2,Video,Intermediate,3.7,78,"Android course covering: Cross-platform development, Push notifications, Native features access. Perfect for Beginner learners. Includes Interactive content."
+1168,Native Flutter Development,2,Interactive,Intermediate,4.6,54,"Flutter course covering: App store deployment, Push notifications. Perfect for Beginner learners. Includes Mixed content."
+1169,MongoDB Performance Tuning,4,Interactive,Beginner,4.0,60,"MongoDB course covering: Query optimization, Schema design. Perfect for Intermediate learners. Includes Project-based content."
+1170,Backend Development with React,1,Mixed,Advanced,3.9,41,"React course covering: Create modern UIs, Database integration, Build responsive websites, Implement authentication. Perfect for Beginner learners. Includes Text content."
+1171,Modern Flask Development,1,Interactive,Advanced,4.3,48,"Flask course covering: Build responsive websites, Database integration, Implement authentication. Perfect for Beginner learners. Includes Video content."
+1172,Java Data Structures,6,Project-based,Beginner,4.0,53,"Java course covering: Concurrent programming, Best practices. Perfect for Beginner learners. Includes Text content."
+1173,Java Data Structures,6,Text,Beginner,4.8,67,"Java course covering: Memory management, Object-oriented programming, Best practices, Concurrent programming. Perfect for Advanced learners. Includes Mixed content."
+1174,Python Data Structures,6,Project-based,Advanced,3.7,39,"Python course covering: Object-oriented programming, Concurrent programming. Perfect for Intermediate learners. Includes Mixed content."
+1175,Electron Application Architecture,5,Project-based,Intermediate,4.2,36,"Electron course covering: Event handling, System integration, UI component design, Cross-platform compatibility. Perfect for Intermediate learners. Includes Interactive content."
+1176,Oracle Administration,4,Mixed,Intermediate,3.8,88,"Oracle course covering: Schema design, Backup and recovery. Perfect for Advanced learners. Includes Mixed content."
+1177,Full Stack Django,1,Mixed,Advanced,4.3,69,"Django course covering: Handle API integration, Database integration, Create modern UIs. Perfect for Intermediate learners. Includes Text content."
+1178,Electron GUI Development,5,Mixed,Beginner,5.0,35,"Electron course covering: UI component design, Cross-platform compatibility, Performance optimization. Perfect for Beginner learners. Includes Interactive content."
+1179,Advanced Java,6,Mixed,Intermediate,3.8,37,"Java course covering: Object-oriented programming, Standard libraries, Memory management, Best practices. Perfect for Advanced learners. Includes Text content."
+1180,Oracle Administration,4,Text,Advanced,4.3,54,"Oracle course covering: Data modeling, Schema design, Backup and recovery. Perfect for Beginner learners. Includes Interactive content."
+1181,Full Stack Vue.js,1,Mixed,Advanced,4.4,86,"Vue.js course covering: Implement authentication, Build responsive websites, Handle API integration. Perfect for Beginner learners. Includes Text content."
+1182,Full Stack Vue.js,1,Mixed,Beginner,4.4,80,"Vue.js course covering: Build responsive websites, Database integration. Perfect for Intermediate learners. Includes Video content."
+1183,Rust Programming,6,Video,Intermediate,4.0,33,"Rust course covering: Memory management, Object-oriented programming. Perfect for Advanced learners. Includes Text content."
+1184,Applied NLP,3,Interactive,Beginner,4.5,40,"NLP course covering: Neural network architecture, Model training, Model deployment, Data preprocessing. Perfect for Intermediate learners. Includes Interactive content."
+1185,Cross-platform Flutter Development,2,Mixed,Advanced,4.6,80,"Flutter course covering: Cross-platform development, Mobile UI/UX, App store deployment, Push notifications. Perfect for Intermediate learners. Includes Project-based content."
+1186,Building JavaFX Apps,5,Project-based,Beginner,4.3,63,"JavaFX course covering: UI component design, Event handling, System integration. Perfect for Beginner learners. Includes Interactive content."
+1187,Backend Development with React,1,Mixed,Advanced,4.3,68,"React course covering: Implement authentication, Database integration, Create modern UIs, Build responsive websites. Perfect for Intermediate learners. Includes Interactive content."
+1188,Advanced Deep Learning,3,Video,Advanced,4.4,50,"Deep Learning course covering: Hyperparameter tuning, Data preprocessing, Neural network architecture, Model training. Perfect for Intermediate learners. Includes Project-based content."
+1189,Java Algorithms,6,Mixed,Beginner,3.8,76,"Java course covering: Standard libraries, Best practices, Object-oriented programming, Concurrent programming. Perfect for Advanced learners. Includes Text content."
+1190,Frontend Development with Django,1,Video,Beginner,4.3,51,"Django course covering: Database integration, Create modern UIs, Implement authentication, Build responsive websites. Perfect for Beginner learners. Includes Video content."
+1191,NLP in Practice,3,Text,Intermediate,4.6,20,"NLP course covering: Neural network architecture, Model deployment, Model training. Perfect for Beginner learners. Includes Project-based content."
+1192,Advanced Deep Learning,3,Project-based,Advanced,4.7,34,"Deep Learning course covering: Neural network architecture, Model deployment. Perfect for Beginner learners. Includes Video content."
+1193,Java Data Structures,6,Project-based,Beginner,4.4,49,"Java course covering: Best practices, Standard libraries, Memory management. Perfect for Advanced learners. Includes Text content."
+1194,Electron Application Architecture,5,Mixed,Beginner,3.7,81,"Electron course covering: Event handling, Cross-platform compatibility. Perfect for Intermediate learners. Includes Text content."
+1195,Cross-platform Flutter Development,2,Project-based,Intermediate,4.4,57,"Flutter course covering: Mobile UI/UX, Native features access. Perfect for Intermediate learners. Includes Project-based content."
+1196,MySQL Administration,4,Project-based,Beginner,4.7,90,"MySQL course covering: Security implementation, Schema design. Perfect for Advanced learners. Includes Text content."
+1197,Go Programming,6,Text,Beginner,4.7,83,"Go course covering: Concurrent programming, Standard libraries, Best practices. Perfect for Intermediate learners. Includes Project-based content."
+1198,MongoDB Security,4,Video,Intermediate,4.8,77,"MongoDB course covering: Schema design, Backup and recovery, Data modeling, Query optimization. Perfect for Beginner learners. Includes Text content."
+1199,Cross-platform Kotlin Development,2,Text,Beginner,4.5,97,"Kotlin course covering: App store deployment, Push notifications. Perfect for Intermediate learners. Includes Video content."
+1200,Modern Flask Development,1,Video,Beginner,3.6,35,"Flask course covering: Handle API integration, Build responsive websites, Create modern UIs, Database integration. Perfect for Advanced learners. Includes Video content."
