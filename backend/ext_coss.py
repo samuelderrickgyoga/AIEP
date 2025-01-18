@@ -2,6 +2,12 @@ import os
 import json
 import re
 from PyPDF2 import PdfReader
+base_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(base_dir, 'data')
+
+os.makedirs(data_dir, exist_ok=True)
+
+courses_path = os.path.join(data_dir, 'C and C++.pdf')
 
 def extract_chapters_from_pdf(pdf_path):
     """
@@ -53,7 +59,7 @@ def save_to_json(data, output_path):
 
 # Example Usage
 if __name__ == "__main__":
-    pdf_file = "example.pdf"  # Replace with your PDF file
+    pdf_file = courses_path  # Replace with your PDF file
     output_file = "chapters.json"  # Output JSON file
 
     try:
