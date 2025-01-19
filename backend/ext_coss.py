@@ -7,7 +7,7 @@ data_dir = os.path.join(base_dir, 'data')
 
 os.makedirs(data_dir, exist_ok=True)
 
-courses_path = os.path.join(data_dir, 'C and C++.pdf')
+courses_path = os.path.join(data_dir, 'pythonqt.pdf')
 
 def extract_chapters_from_pdf(pdf_path):
     """
@@ -60,7 +60,7 @@ def save_to_json(data, output_path):
 # Example Usage
 if __name__ == "__main__":
     pdf_file = courses_path  # Replace with your PDF file
-    output_file = "chapters.json"  # Output JSON file
+    output_file = "chapters3.json"  # Output JSON file
 
     try:
         chapters = extract_chapters_from_pdf(pdf_file)
