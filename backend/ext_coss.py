@@ -2,69 +2,83 @@ import os
 import json
 import re
 from PyPDF2 import PdfReader
-base_dir = os.path.dirname(os.path.abspath(__file__))
-data_dir = os.path.join(base_dir, 'data')
-
-os.makedirs(data_dir, exist_ok=True)
-
-courses_path = os.path.join(data_dir, 'pythonqt.pdf')
 
 def extract_chapters_from_pdf(pdf_path):
     """
-    Extracts entire chapters from a PDF file based on chapter markers.
-
-    Args:
-        pdf_path (str): Path to the PDF file.
-
-    Returns:
-        dict: A dictionary with chapter titles as keys and their content as values.
+    Extracts chapters from PDF with improved chapter detection and content organization
     """
-    # Check if the file exists
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"File not found: {pdf_path}")
     
-    # Load the PDF file
     reader = PdfReader(pdf_path)
     all_text = ""
     
-    # Combine all pages' text into a single string
+    # Extract text with better formatting preservation
     for page in reader.pages:
-        all_text += page.extract_text() + "\n"
+        text = page.extract_text()
+        # Normalize whitespace while preserving paragraph breaks
+        text = re.sub(r'\s+', ' ', text)
+        all_text += text + "\n"
     
-    # Define a regex pattern to identify chapter titles (e.g., "Chapter 1", "Chapter 2")
-    chapter_pattern = r"(Chapter\s\d+|CHAPTER\s\d+|CHAPTER [A-Z]+)"
+    # Enhanced chapter pattern matching
+    chapter_patterns = [
+        r'Chapter\s+\d+[\s:]+([^\n]+)',
+        r'CHAPTER\s+\d+[\s:]+([^\n]+)',
+        r'CHAPTER\s+[A-Z]+[\s:]+([^\n]+)'
+    ]
     
-    # Split text into chapters based on the pattern
-    chapters = re.split(chapter_pattern, all_text, flags=re.IGNORECASE)
+    chapters = {}
+    current_chapter = None
+    current_content = []
     
-    # Clean up and structure chapters
-    chapter_data = {}
-    for i in range(1, len(chapters), 2):  # Skip non-chapter content
-        title = chapters[i].strip()  # Chapter title
-        content = chapters[i + 1].strip() if i + 1 < len(chapters) else ""
-        chapter_data[title] = content
+    # Process text line by line
+    for line in all_text.split('\n'):
+        is_chapter_header = False
+        
+        # Check for chapter headers
+        for pattern in chapter_patterns:
+            match = re.match(pattern, line, re.IGNORECASE)
+            if match:
+                # Save previous chapter if exists
+                if current_chapter:
+                    chapters[current_chapter] = '\n'.join(current_content).strip()
+                
+                current_chapter = line.strip()
+                current_content = []
+                is_chapter_header = True
+                break
+        
+        # Add line to current chapter content
+        if not is_chapter_header and current_chapter:
+            current_content.append(line.strip())
     
-    return chapter_data
+    # Save the last chapter
+    if current_chapter:
+        chapters[current_chapter] = '\n'.join(current_content).strip()
+    
+    return chapters
 
 def save_to_json(data, output_path):
     """
-    Saves the extracted chapters into a JSON file.
-
-    Args:
-        data (dict): Extracted chapter data.
-        output_path (str): Path to save the JSON file.
+    Saves extracted chapters to JSON with proper formatting
     """
     with open(output_path, 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)
 
-# Example Usage
-if __name__ == "__main__":
-    pdf_file = courses_path  # Replace with your PDF file
-    output_file = "chapters3.json"  # Output JSON file
-
+def main():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(base_dir, 'data')
+    os.makedirs(data_dir, exist_ok=True)
+    
+    pdf_path = os.path.join(data_dir, 'pythonqt.pdf')
+    output_file = os.path.join(data_dir, 'chapters.json')
+    
     try:
-        chapters = extract_chapters_from_pdf(pdf_file)
+        chapters = extract_chapters_from_pdf(pdf_path)
         save_to_json(chapters, output_file)
-        print(f"Extracted chapters saved to {output_file}")
+        print(f"Successfully extracted {len(chapters)} chapters to {output_file}")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"Error processing PDF: {str(e)}")
+
+if __name__ == "__main__":
+    main()
