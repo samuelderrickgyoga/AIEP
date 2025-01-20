@@ -6,6 +6,7 @@ import RegistrationForm from './components/RegistrationForm';
 import CategorySelector from './components/CategorySelector';
 import CourseList from './components/CourseList';
 import Recommendations from './components/RecommendedCourses';
+import ChapterPage from './components/ChapterPage';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/categories" element={<CategorySelector />} />
         <Route path="/courses" element={<CourseList />} />
         <Route path="/recommendations" element={<Recommendations />} />
+        <Route path="/course/:courseId/chapter/:chapterId" element={<ChapterPage />} />
+
       </Routes>
     </Router>
   );
