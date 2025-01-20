@@ -1,0 +1,194 @@
+<!DOCTYPE html><html><body>
+<div class="page" id="page-1">
+<p>Python Qt tutorial Documentation</p>
+<p>Release 0.0</p>
+<p>Thomas P. Robitaille</p>
+<p>Jun 11, 2018</p>
+</div>
+<div class="page" id="page-2">
+</div>
+<div class="page" id="page-3">
+<p>Contents</p>
+<p>1 Installing 3</p>
+<p>2 Part 1 - Hello, World! 5</p>
+<p>3 Part 2 - Buttons and events 7</p>
+<p>4 Part 3 - Laying out widgets 9</p>
+<p>5 Part 4 - Dynamically updating widgets 13</p>
+<p>i</p>
+</div>
+<div class="page" id="page-4">
+<p>ii</p>
+</div>
+<div class="page" id="page-5">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>This is a short tutorial on using Qt from Python. There are two main versions of Qt in use (Qt4 and Qt5) and several Python libraries to use Qt from Python (PyQt and PySide), but rather than picking one of these, this tutorial makes use of the</p>
+<p>This is not meant to be a completely exhaustive tutorial but just a place to start if you’ve never done Qt development before, and it will be expanded over time.</p>
+<p>Contents 1</p>
+</div>
+<div class="page" id="page-6">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>2 Contents</p>
+</div>
+<div class="page" id="page-7">
+<p>CHAPTER</p>
+<p>Installing</p>
+<p>1.1 conda</p>
+<p>If you use conda to manage your Python environment (for example as part of Anaconda or Miniconda), you can easily install Qt, PyQt5, and QtPy (a common interface to all Python Qt bindings) using:</p>
+<p>conda install pyqt qtpy</p>
+<p>1.2 pip</p>
+<p>If you don’t make use of conda, an easy way to install Qt, PyQt5, and QtPy is to do:</p>
+<p>pip install pyqt5 qtpy</p>
+<p>3</p>
+</div>
+<div class="page" id="page-8">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>4 Chapter 1. Installing</p>
+</div>
+<div class="page" id="page-9">
+<p>CHAPTER</p>
+<p>Part 1 - Hello, World!</p>
+<p>To start off, we need to create a</p>
+<p>from app</p>
+<p>You will always need to ensure that a an error if you try and use any other Qt objects. The above won’t open any window - the term refer to a speciﬁc window that will open, but instead to a windowless object that forms the basis for anything else we will build.</p>
+<p>Building blocks in Qt (and other similar frameworks) are called We can create a label widget by doing:</p>
+<p>from label label</p>
+<p>Note that this should be done after creating a show the widget as a graphical window using we want to use widgets as building blocks for windows).</p>
+<p>If you were to run the two code blocks above, the label would appear and disappear straight away because the script would ﬁnish running. The ﬁnal step is to start the event loop. In graphical user interface (GUI) programming, an loop with the interface, such as clicking on buttons, entering text, and moving or closing windows. The inﬁnite loop can be terminated in various ways depending on the conﬁguration in visible windows are closed. To start the event loop, we can do:</p>
+<p>app</p>
+<p>This is equivalent to doing:</p>
+<p>while True app</p>
+<p>5</p>
+</div>
+<div class="page" id="page-10">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>Let’s take a look at the complete example:</p>
+<p>from</p>
+<p># Initialize application app</p>
+<p># Create label widget label label</p>
+<p># Start 'event loop' app</p>
+<p>Copy this into a Python script, and run it with e.g.:</p>
+<p>python</p>
+<p>You should see a small window pop up with ‘Hello, world!’ inside:</p>
+<p>Close the window, and the Python script should stop running.</p>
+<p>Congratulations, you’ve written your ﬁrst Qt application!</p>
+<p>6 Chapter 2. Part 1 - Hello, World!</p>
+</div>
+<div class="page" id="page-11">
+<p>CHAPTER</p>
+<p>Part 2 - Buttons and events</p>
+<p>Let’s be honest - the application we wrote in we’re going to look at how to use buttons, and we will learn about events in Qt.</p>
+<p>First, let’s create a button (remember that as mentioned in QApplication</p>
+<p>from button</p>
+<p>Qt widgets often have different kinds of (but not limited to) something the user does. For instance, when the user clicks on the button. The normal way to use events is to write functions that can then do something as a result of the event being triggered.</p>
+<p>Let’s write a function that will get executed when the user clicks on the button:</p>
+<p>def</p>
+<p>print</p>
+<p>Such a function typically takes the event as its only positional argument.</p>
+<p>We can then connect this function to the</p>
+<p>button</p>
+<p>Finally, we can show the button with:</p>
+<p>button</p>
+<p>Let’s take a look at the full example:</p>
+<p>from</p>
+<p># Initialize application app</p>
+<p>(continues on next page)</p>
+<p>7</p>
+</div>
+<div class="page" id="page-12">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>(continued from previous page)</p>
+<p># Define a function to connect to the button def</p>
+<p>print</p>
+<p># Create button widget and connect to 'say_hello' button button button</p>
+<p># Start 'event loop' app</p>
+<p>Copy this into a Python script, and run it with e.g.:</p>
+<p>python</p>
+<p>You should see a small window pop up with a button inside:</p>
+<p>Now click on the button and you should see the following message appear in the terminal:</p>
+<p>Hello, world!</p>
+<p>Such fun!</p>
+<p>8 Chapter 3. Part 2 - Buttons and events</p>
+</div>
+<div class="page" id="page-13">
+<p>CHAPTER</p>
+<p>Part 3 - Laying out widgets</p>
+<p>4.1 Vertical layout</p>
+<p>Let’s now take a look at how to construct more interesting application windows by combining different widgets to- gether. Qt widgets can all include a ‘layout’, which deﬁnes combinations of children widgets. A simple example is the QVBoxLayout these vertically into a layout:</p>
+<p>from</p>
+<p># Create label and button label button</p>
+<p># Create layout and add widgets layout layout layout</p>
+<p>However, note that a layout is not a widget, so we can’t simply do add this layout to a parent widget. For this, we’ll use nothing by default:</p>
+<p>widget widget</p>
+<p>We can now show this widget using:</p>
+<p>widget</p>
+<p>Note that in this kind of situation, it’s clear why we don’t want widgets to be shown by default and to have to specify widget.show()</p>
+<p>Here is the complete example:</p>
+<p>9</p>
+</div>
+<div class="page" id="page-14">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>from QVBoxLayout, QPushButton)</p>
+<p># Initialize application app</p>
+<p># Create label and button label button</p>
+<p># Create layout and add widgets layout layout layout</p>
+<p># Apply layout to widget widget widget</p>
+<p># Show widget widget</p>
+<p># Start event loop app</p>
+<p>Copy this into a Python script, and run it with e.g.:</p>
+<p>python</p>
+<p>You should see a small window pop up with the two widgets:</p>
+<p>4.2 Other layouts</p>
+<p>There are other types of layout besides vertical stacking. As you might expect, there is a corresponding QHBoxLayout</p>
+<p>from</p>
+<p>layout layout layout</p>
+<p>which will look like:</p>
+<p>10 Chapter 4. Part 3 - Laying out widgets</p>
+</div>
+<div class="page" id="page-15">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>Another example is you need to specify the row and column:</p>
+<p># Create label and button label1 label2 label3 button</p>
+<p># Create layout and add widgets layout layout layout layout layout</p>
+<p>which will look like:</p>
+<p>4.3 Nesting layouts</p>
+<p>In practice, you may need to use more complex layouts - for this, you can start to nest layouts. You can do this by adding a layout to a widget which is itself in a layout. Let’s take a look at the following example:</p>
+<p>from QHBoxLayout, QVBoxLayout, QPushButton)</p>
+<p># Initialize application app</p>
+<p># Set up individual widgets label1 label2 button</p>
+<p># Combine label2 and button into a single widget bottom_widget bottom_layout bottom_layout bottom_layout bottom_widget</p>
+<p># Combine this widget with label1 to form the main window widget layout layout layout widget</p>
+<p># Show main widget</p>
+<p>(continues on next page)</p>
+<p>4.3. Nesting layouts 11</p>
+</div>
+<div class="page" id="page-16">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>(continued from previous page)</p>
+<p>widget</p>
+<p># Start event loop app</p>
+<p>This will result in the following window:</p>
+<p>12 Chapter 4. Part 3 - Laying out widgets</p>
+</div>
+<div class="page" id="page-17">
+<p>CHAPTER</p>
+<p>Part 4 - Dynamically updating widgets</p>
+<p>Now that we know how to show multiple widgets in a single window, we can make use of what we learned in 2.but- ton.py to connect different widgets together. For example, we can make it so that pressing a button changes the text in one of the widgets:</p>
+<p>from QPushButton)</p>
+<p># Initialize application app</p>
+<p># Create label label</p>
+<p>def label</p>
+<p># Create button button button</p>
+<p># Create layout and add widgets layout layout layout</p>
+<p># Apply layout to widget widget widget</p>
+<p>widget</p>
+<p>app</p>
+<p>Try running this script, and you should see something like:</p>
+<p>13</p>
+</div>
+<div class="page" id="page-18">
+<p>Python Qt tutorial Documentation, Release 0.0</p>
+<p>Now press the button, and the label text should change:</p>
+<p>If you are interested in helping maintain these pages and/or add new pages, head over to the</p>
+<p>14 Chapter 5. Part 4 - Dynamically updating widgets</p>
+</div>
+</body></html>
