@@ -7,6 +7,7 @@ import CategorySelector from './components/CategorySelector';
 import CourseList from './components/CourseList';
 import Recommendations from './components/RecommendedCourses';
 import ChapterPage from './components/ChapterPage';
+import CategorySection from './components/CategorySection';
 
 function App() {
   return (
