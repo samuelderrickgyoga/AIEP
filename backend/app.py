@@ -232,6 +232,14 @@ class RecommendationEngine:
     def update_engagement_metrics(self) -> None:
         metrics = self.calculate_engagement_metrics()
         ENGAGEMENT_SCORE_GAUGE.set(metrics['avg_engagement_score'])
+    def initialize_student_engagement(self,student_id):
+        try:
+            new_engagement = {'student_id': student_id, 'course_id': None, 'rating': 0}
+            self.engagement = self.engagement.append(new_engagement, ignore_index=True)
+            self.engagement.to_csv(engagement_path, index=False)
+            logger.info(f"Engagement initialized for student_id {student_id}")
+        except Exception as e:
+            logger.error(f"Error initializing engagement: {e}")
 
 @app.route('/train', methods=['POST'])
 async def train_models():
@@ -284,6 +292,54 @@ async def get_content_performance():
     except Exception as e:
         logger.error(f"Error fetching content performance: {e}")
         return jsonify({'error': 'Internal server error'}), 500
+    
+@app.route('/register', methods=['POST'])
+def register_student(self):
+    try:
+        data = request.get_json()
+        full_name = data['full_name']
+        email = data['email']
+        password = data['password']  
+        interests = data['interests']
+        skill_level = data['skillLevel']
+        preferred_categories = data.get('preferredCategories', [])
+
+        # Check for duplicate emails
+        if email in self.students['email'].values:
+            return jsonify({'error': 'Email already exists'}), 400
+
+        # Generate a new student ID
+        student_id = len(self.students) + 1
+
+        # Append the new student
+        new_student = {
+            'student_id': student_id,
+            'full_name': full_name,
+            'email': email,
+            'password': password,  # Hash this for security
+            'interests': '|'.join(interests),
+            'skill_level': skill_level,
+            'preferred_categories': '|'.join(preferred_categories),
+        }
+        self.students = self.students.append(new_student, ignore_index=True)
+
+        # Save the updated dataset
+        self.students.to_csv(students_path, index=False)
+
+        # Generate a token (dummy here for demonstration)
+        token = f"token_{student_id}"
+
+        return jsonify({'student_id': student_id, 'token': token}), 201
+    except Exception as e:
+        logger.error(f"Error in registration: {e}")
+        return jsonify({'error': 'An error occurred'}), 500
+    
+@app.route('/dashboard', methods=['GET'])
+def get_dashboard():
+    token = request.headers.get('Authorization')
+    if not validate_token(token):
+        return jsonify({'error': 'Unauthorized'}), 401
+    return jsonify({'message': 'Welcome to the dashboard!'})
 
 if __name__ == '__main__':
     engine = RecommendationEngine()
