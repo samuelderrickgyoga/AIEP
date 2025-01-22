@@ -5,7 +5,7 @@ import axios from 'axios';
 const RegistrationForm = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    fullName: '',
+    full_name: '',
     email: '',
     password: '',
     interests: [],
@@ -23,10 +23,10 @@ const RegistrationForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/register', formData);
-      const { studentId, token } = response.data;
+      const { student_id, token } = response.data;
       
       // Store in localStorage
-      localStorage.setItem('studentId', studentId);
+      localStorage.setItem('student_id', student_id);
       localStorage.setItem('token', token);
       
       navigate('/dashboard');
