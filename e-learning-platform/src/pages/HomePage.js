@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import RegistrationForm from '../components/RegistrationForm';
 import CourseList from '../components/CourseList';
 import RecommendedCourses from '../components/RecommendedCourses';
-
+import CategorySection from '../components/CategorySection';
 const categories = [
   {
     id: 1,
@@ -216,57 +216,11 @@ const HomePage = () => {
 
       {/* Sections */}
       <main className="container mx-auto py-12 space-y-12">
-        {/* Categories Section */}
-        <section className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-lg">
-  <h3 className="text-4xl font-bold text-gray-800 mb-12 text-center">
-    Explore Categories
-  </h3>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {categories.map((category) => (
-      <div
-        key={category.id}
-        className="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer border border-gray-100"
-        onClick={() => setSelectedCategory(category.id)}
-      >
-        <div className="flex flex-col items-center">
-          <div className="relative mb-6">
-            <img
-              src={category.image}
-              alt={category.name}
-              className="w-24 h-24 rounded-full object-cover ring-4 ring-blue-100 group-hover:ring-blue-200"
-            />
-            <span className="absolute -bottom-2 -right-2 text-3xl">
-              {category.icon}
-            </span>
-          </div>
-          <h4 className="text-xl font-bold text-blue-600 mb-3 group-hover:text-blue-700">
-            {category.name}
-          </h4>
-          <p className="text-gray-600 text-center leading-relaxed">
-            {category.description}
-          </p>
-        </div>
-        <div className="mt-6 flex justify-center">
-          <span className="text-blue-500 group-hover:text-blue-600 font-medium inline-flex items-center">
-            Explore Courses
-            <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </span>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+       
+{/* Categories Section */}
+<CategorySection categories={categories} />
 
-        {/* Course List Section */}
-        {selectedCategory && (
-          <section className="bg-white p-6 shadow-md rounded-md">
-            <h3 className="text-3xl font-bold text-gray-700 mb-4 text-center">Courses</h3>
-            <CourseList categoryId={selectedCategory} />
-          </section>
-        )}
-
+     
        {/* Testimonials Section */}
 <section className="bg-gradient-to-b from-gray-50 to-gray-100 p-12 rounded-xl">
   <h3 className="text-4xl font-bold text-gray-800 mb-12 text-center">
