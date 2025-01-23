@@ -43,6 +43,8 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+app.config['JWT_SECRET_KEY'] = 'derrickjwt003@phoenix' 
+jwt = JWTManager(app)
 class RecommendationEngine:
     def __init__(self):
         self.data_lock = Lock()
