@@ -1,101 +1,103 @@
-student_id,full_name,email,skill_level,registration_date,interests,preferences,active_status
-1001,Student_1,student_1@outlook.com,advanced,4/7/2024,Desktop Applications,preference_tag_4,1
-1002,Student_2,student_2@hotmail.com,intermediate,12/19/2024,Mobile Development,preference_tag_1,1
-1003,Student_3,student_3@gmail.com,intermediate,9/30/2024,"Web Development,Desktop Applications,Mobile Development",preference_tag_1,1
-1004,Student_4,student_4@outlook.com,intermediate,12/3/2024,Programming Languages,preference_tag_4,1
-1005,Student_5,student_5@outlook.com,intermediate,2/11/2024,"Mobile Development,Database Management",preference_tag_2,1
-1006,Student_6,student_6@hotmail.com,intermediate,4/5/2024,"AI/ML,Web Development",preference_tag_3,1
-1007,Student_7,student_7@gmail.com,intermediate,2/20/2024,AI/ML,preference_tag_1,1
-1008,Student_8,student_8@gmail.com,advanced,9/10/2024,Desktop Applications,preference_tag_5,1
-1009,Student_9,student_9@outlook.com,advanced,2/3/2024,"Web Development,Database Management,Mobile Development",preference_tag_5,1
-1010,Student_10,student_10@yahoo.com,intermediate,5/30/2024,"Programming Languages,Database Management,Desktop Applications",preference_tag_4,1
-1011,Student_11,student_11@outlook.com,advanced,7/10/2024,"AI/ML,Mobile Development,Programming Languages",preference_tag_2,1
-1012,Student_12,student_12@outlook.com,beginner,6/5/2024,"Desktop Applications,Mobile Development,Web Development",preference_tag_1,1
-1013,Student_13,student_13@outlook.com,intermediate,4/8/2024,AI/ML,preference_tag_2,1
-1014,Student_14,student_14@outlook.com,beginner,9/17/2024,Mobile Development,preference_tag_1,0
-1015,Student_15,student_15@hotmail.com,beginner,9/22/2024,Programming Languages,preference_tag_4,1
-1016,Student_16,student_16@gmail.com,intermediate,5/28/2024,Mobile Development,preference_tag_4,1
-1017,Student_17,student_17@hotmail.com,advanced,5/2/2024,"Desktop Applications,Database Management,AI/ML",preference_tag_5,1
-1018,Student_18,student_18@hotmail.com,beginner,1/23/2024,"Web Development,Desktop Applications",preference_tag_2,1
-1019,Student_19,student_19@hotmail.com,intermediate,7/2/2024,"Web Development,Desktop Applications,Database Management",preference_tag_5,1
-1020,Student_20,student_20@outlook.com,beginner,9/1/2024,Desktop Applications,preference_tag_2,1
-1021,Student_21,student_21@yahoo.com,beginner,3/4/2024,"Database Management,Web Development,Programming Languages",preference_tag_5,1
-1022,Student_22,student_22@gmail.com,beginner,8/4/2024,"AI/ML,Programming Languages",preference_tag_3,1
-1023,Student_23,student_23@yahoo.com,beginner,6/5/2024,AI/ML,preference_tag_3,1
-1024,Student_24,student_24@hotmail.com,advanced,3/15/2024,"Mobile Development,Web Development",preference_tag_3,1
-1025,Student_25,student_25@hotmail.com,beginner,5/27/2024,"Desktop Applications,Database Management",preference_tag_3,1
-1026,Student_26,student_26@yahoo.com,beginner,7/28/2024,"AI/ML,Web Development",preference_tag_1,1
-1027,Student_27,student_27@yahoo.com,beginner,8/17/2024,"Mobile Development,Desktop Applications",preference_tag_3,1
-1028,Student_28,student_28@yahoo.com,advanced,3/7/2024,Mobile Development,preference_tag_4,0
-1029,Student_29,student_29@hotmail.com,beginner,8/9/2024,"Programming Languages,Web Development",preference_tag_4,1
-1030,Student_30,student_30@hotmail.com,beginner,10/12/2024,"Web Development,AI/ML,Programming Languages",preference_tag_1,1
-1031,Student_31,student_31@gmail.com,advanced,5/28/2024,"Desktop Applications,Programming Languages,Mobile Development",preference_tag_3,0
-1032,Student_32,student_32@gmail.com,advanced,7/20/2024,"AI/ML,Database Management",preference_tag_3,1
-1033,Student_33,student_33@hotmail.com,advanced,9/25/2024,"AI/ML,Mobile Development,Desktop Applications",preference_tag_3,1
-1034,Student_34,student_34@yahoo.com,beginner,3/4/2024,"Programming Languages,AI/ML",preference_tag_5,1
-1035,Student_35,student_35@yahoo.com,advanced,11/25/2024,Mobile Development,preference_tag_2,1
-1036,Student_36,student_36@gmail.com,advanced,4/23/2024,"Web Development,Mobile Development,Database Management",preference_tag_5,1
-1037,Student_37,student_37@hotmail.com,beginner,3/27/2024,"Database Management,Programming Languages",preference_tag_2,0
-1038,Student_38,student_38@gmail.com,advanced,9/25/2024,"Programming Languages,Mobile Development",preference_tag_3,1
-1039,Student_39,student_39@gmail.com,beginner,10/7/2024,"Desktop Applications,AI/ML",preference_tag_3,1
-1040,Student_40,student_40@outlook.com,intermediate,9/25/2024,AI/ML,preference_tag_5,1
-1041,Student_41,student_41@outlook.com,advanced,10/27/2024,"AI/ML,Database Management,Web Development",preference_tag_5,1
-1042,Student_42,student_42@outlook.com,intermediate,7/13/2024,"Web Development,Programming Languages",preference_tag_2,1
-1043,Student_43,student_43@yahoo.com,beginner,9/25/2024,Web Development,preference_tag_4,1
-1044,Student_44,student_44@hotmail.com,advanced,1/14/2025,Desktop Applications,preference_tag_2,1
-1045,Student_45,student_45@hotmail.com,beginner,9/8/2024,Mobile Development,preference_tag_5,1
-1046,Student_46,student_46@hotmail.com,intermediate,6/10/2024,"AI/ML,Desktop Applications,Mobile Development",preference_tag_5,1
-1047,Student_47,student_47@hotmail.com,beginner,11/23/2024,Web Development,preference_tag_1,1
-1048,Student_48,student_48@outlook.com,advanced,2/8/2024,Desktop Applications,preference_tag_5,1
-1049,Student_49,student_49@yahoo.com,advanced,6/6/2024,"Web Development,AI/ML",preference_tag_1,1
-1050,Student_50,student_50@yahoo.com,intermediate,6/5/2024,"Database Management,Desktop Applications",preference_tag_4,1
-1051,Student_51,student_51@outlook.com,beginner,9/12/2024,"Mobile Development,Programming Languages",preference_tag_2,1
-1052,Student_52,student_52@yahoo.com,advanced,9/8/2024,Desktop Applications,preference_tag_2,1
-1053,Student_53,student_53@outlook.com,intermediate,11/24/2024,"Desktop Applications,Programming Languages,Mobile Development",preference_tag_1,1
-1054,Student_54,student_54@hotmail.com,advanced,7/28/2024,"Mobile Development,AI/ML,Web Development",preference_tag_2,1
-1055,Student_55,student_55@outlook.com,advanced,6/12/2024,Desktop Applications,preference_tag_5,1
-1056,Student_56,student_56@hotmail.com,beginner,8/9/2024,AI/ML,preference_tag_3,1
-1057,Student_57,student_57@hotmail.com,advanced,7/2/2024,Mobile Development,preference_tag_1,1
-1058,Student_58,student_58@gmail.com,beginner,5/14/2024,"Programming Languages,Desktop Applications,Mobile Development",preference_tag_2,0
-1059,Student_59,student_59@outlook.com,advanced,2/27/2024,"Database Management,Programming Languages,AI/ML",preference_tag_1,1
-1060,Student_60,student_60@gmail.com,intermediate,6/27/2024,Mobile Development,preference_tag_1,1
-1061,Student_61,student_61@outlook.com,advanced,7/16/2024,AI/ML,preference_tag_3,1
-1062,Student_62,student_62@outlook.com,beginner,9/15/2024,"Programming Languages,Web Development",preference_tag_5,1
-1063,Student_63,student_63@gmail.com,beginner,5/6/2024,"Database Management,Desktop Applications,Web Development",preference_tag_1,1
-1064,Student_64,student_64@gmail.com,intermediate,3/28/2024,"AI/ML,Programming Languages",preference_tag_2,1
-1065,Student_65,student_65@outlook.com,advanced,4/11/2024,"AI/ML,Database Management",preference_tag_4,1
-1066,Student_66,student_66@yahoo.com,advanced,2/26/2024,"AI/ML,Programming Languages",preference_tag_1,1
-1067,Student_67,student_67@hotmail.com,intermediate,10/10/2024,"Database Management,AI/ML,Programming Languages",preference_tag_1,1
-1068,Student_68,student_68@gmail.com,advanced,7/2/2024,"Programming Languages,AI/ML,Mobile Development",preference_tag_3,0
-1069,Student_69,student_69@hotmail.com,advanced,5/21/2024,"Programming Languages,Web Development,Mobile Development",preference_tag_5,1
-1070,Student_70,student_70@yahoo.com,beginner,8/25/2024,"Web Development,Desktop Applications,Database Management",preference_tag_4,0
-1071,Student_71,student_71@yahoo.com,advanced,10/11/2024,"Web Development,AI/ML,Database Management",preference_tag_2,1
-1072,Student_72,student_72@yahoo.com,advanced,6/29/2024,Database Management,preference_tag_4,1
-1073,Student_73,student_73@gmail.com,intermediate,9/14/2024,"AI/ML,Mobile Development",preference_tag_2,0
-1074,Student_74,student_74@yahoo.com,intermediate,7/13/2024,Web Development,preference_tag_5,1
-1075,Student_75,student_75@gmail.com,beginner,2/25/2024,Database Management,preference_tag_2,1
-1076,Student_76,student_76@yahoo.com,advanced,2/2/2024,"Programming Languages,Mobile Development",preference_tag_3,1
-1077,Student_77,student_77@hotmail.com,advanced,5/2/2024,"Programming Languages,Desktop Applications,Mobile Development",preference_tag_3,1
-1078,Student_78,student_78@hotmail.com,advanced,8/21/2024,Database Management,preference_tag_3,1
-1079,Student_79,student_79@outlook.com,beginner,5/9/2024,"Programming Languages,Desktop Applications,Mobile Development",preference_tag_3,1
-1080,Student_80,student_80@hotmail.com,beginner,2/5/2024,"Desktop Applications,AI/ML",preference_tag_4,1
-1081,Student_81,student_81@outlook.com,intermediate,8/22/2024,"Desktop Applications,AI/ML",preference_tag_5,1
-1082,Student_82,student_82@hotmail.com,beginner,8/21/2024,"Mobile Development,AI/ML,Database Management",preference_tag_2,1
-1083,Student_83,student_83@gmail.com,advanced,1/30/2024,AI/ML,preference_tag_2,1
-1084,Student_84,student_84@hotmail.com,advanced,7/1/2024,Desktop Applications,preference_tag_3,1
-1085,Student_85,student_85@outlook.com,beginner,3/14/2024,Web Development,preference_tag_3,1
-1086,Student_86,student_86@outlook.com,advanced,9/10/2024,"Database Management,Mobile Development,Web Development",preference_tag_1,1
-1087,Student_87,student_87@yahoo.com,advanced,12/8/2024,Database Management,preference_tag_5,1
-1088,Student_88,student_88@gmail.com,beginner,2/13/2024,"Mobile Development,Database Management,Programming Languages",preference_tag_4,1
-1089,Student_89,student_89@hotmail.com,beginner,1/22/2024,Programming Languages,preference_tag_2,1
-1090,Student_90,student_90@yahoo.com,advanced,9/9/2024,Mobile Development,preference_tag_1,1
-1091,Student_91,student_91@hotmail.com,advanced,4/24/2024,Mobile Development,preference_tag_1,1
-1092,Student_92,student_92@hotmail.com,advanced,8/18/2024,Database Management,preference_tag_2,1
-1093,Student_93,student_93@yahoo.com,intermediate,3/24/2024,Database Management,preference_tag_4,1
-1094,Student_94,student_94@yahoo.com,intermediate,10/9/2024,Programming Languages,preference_tag_1,1
-1095,Student_95,student_95@yahoo.com,intermediate,4/28/2024,"Web Development,AI/ML",preference_tag_1,1
-1096,Student_96,student_96@yahoo.com,beginner,5/9/2024,"Desktop Applications,Database Management",preference_tag_5,1
-1097,Student_97,student_97@yahoo.com,intermediate,8/25/2024,Desktop Applications,preference_tag_4,1
-1098,Student_98,student_98@hotmail.com,beginner,2/5/2024,"AI/ML,Web Development,Database Management",preference_tag_1,1
-1099,Student_99,student_99@yahoo.com,beginner,9/26/2024,"Web Development,AI/ML,Desktop Applications",preference_tag_4,1
-1100,Student_100,student_100@gmail.com,intermediate,11/17/2024,"Web Development,Programming Languages",preference_tag_2,1
+student_id,full_name,email,skill_level,registration_date,interests,preferences,active_status,password,preferred_categories
+1001,Student_1,student_1@outlook.com,advanced,4/7/2024,Desktop Applications,preference_tag_4,1.0,,
+1002,Student_2,student_2@hotmail.com,intermediate,12/19/2024,Mobile Development,preference_tag_1,1.0,,
+1003,Student_3,student_3@gmail.com,intermediate,9/30/2024,"Web Development,Desktop Applications,Mobile Development",preference_tag_1,1.0,,
+1004,Student_4,student_4@outlook.com,intermediate,12/3/2024,Programming Languages,preference_tag_4,1.0,,
+1005,Student_5,student_5@outlook.com,intermediate,2/11/2024,"Mobile Development,Database Management",preference_tag_2,1.0,,
+1006,Student_6,student_6@hotmail.com,intermediate,4/5/2024,"AI/ML,Web Development",preference_tag_3,1.0,,
+1007,Student_7,student_7@gmail.com,intermediate,2/20/2024,AI/ML,preference_tag_1,1.0,,
+1008,Student_8,student_8@gmail.com,advanced,9/10/2024,Desktop Applications,preference_tag_5,1.0,,
+1009,Student_9,student_9@outlook.com,advanced,2/3/2024,"Web Development,Database Management,Mobile Development",preference_tag_5,1.0,,
+1010,Student_10,student_10@yahoo.com,intermediate,5/30/2024,"Programming Languages,Database Management,Desktop Applications",preference_tag_4,1.0,,
+1011,Student_11,student_11@outlook.com,advanced,7/10/2024,"AI/ML,Mobile Development,Programming Languages",preference_tag_2,1.0,,
+1012,Student_12,student_12@outlook.com,beginner,6/5/2024,"Desktop Applications,Mobile Development,Web Development",preference_tag_1,1.0,,
+1013,Student_13,student_13@outlook.com,intermediate,4/8/2024,AI/ML,preference_tag_2,1.0,,
+1014,Student_14,student_14@outlook.com,beginner,9/17/2024,Mobile Development,preference_tag_1,0.0,,
+1015,Student_15,student_15@hotmail.com,beginner,9/22/2024,Programming Languages,preference_tag_4,1.0,,
+1016,Student_16,student_16@gmail.com,intermediate,5/28/2024,Mobile Development,preference_tag_4,1.0,,
+1017,Student_17,student_17@hotmail.com,advanced,5/2/2024,"Desktop Applications,Database Management,AI/ML",preference_tag_5,1.0,,
+1018,Student_18,student_18@hotmail.com,beginner,1/23/2024,"Web Development,Desktop Applications",preference_tag_2,1.0,,
+1019,Student_19,student_19@hotmail.com,intermediate,7/2/2024,"Web Development,Desktop Applications,Database Management",preference_tag_5,1.0,,
+1020,Student_20,student_20@outlook.com,beginner,9/1/2024,Desktop Applications,preference_tag_2,1.0,,
+1021,Student_21,student_21@yahoo.com,beginner,3/4/2024,"Database Management,Web Development,Programming Languages",preference_tag_5,1.0,,
+1022,Student_22,student_22@gmail.com,beginner,8/4/2024,"AI/ML,Programming Languages",preference_tag_3,1.0,,
+1023,Student_23,student_23@yahoo.com,beginner,6/5/2024,AI/ML,preference_tag_3,1.0,,
+1024,Student_24,student_24@hotmail.com,advanced,3/15/2024,"Mobile Development,Web Development",preference_tag_3,1.0,,
+1025,Student_25,student_25@hotmail.com,beginner,5/27/2024,"Desktop Applications,Database Management",preference_tag_3,1.0,,
+1026,Student_26,student_26@yahoo.com,beginner,7/28/2024,"AI/ML,Web Development",preference_tag_1,1.0,,
+1027,Student_27,student_27@yahoo.com,beginner,8/17/2024,"Mobile Development,Desktop Applications",preference_tag_3,1.0,,
+1028,Student_28,student_28@yahoo.com,advanced,3/7/2024,Mobile Development,preference_tag_4,0.0,,
+1029,Student_29,student_29@hotmail.com,beginner,8/9/2024,"Programming Languages,Web Development",preference_tag_4,1.0,,
+1030,Student_30,student_30@hotmail.com,beginner,10/12/2024,"Web Development,AI/ML,Programming Languages",preference_tag_1,1.0,,
+1031,Student_31,student_31@gmail.com,advanced,5/28/2024,"Desktop Applications,Programming Languages,Mobile Development",preference_tag_3,0.0,,
+1032,Student_32,student_32@gmail.com,advanced,7/20/2024,"AI/ML,Database Management",preference_tag_3,1.0,,
+1033,Student_33,student_33@hotmail.com,advanced,9/25/2024,"AI/ML,Mobile Development,Desktop Applications",preference_tag_3,1.0,,
+1034,Student_34,student_34@yahoo.com,beginner,3/4/2024,"Programming Languages,AI/ML",preference_tag_5,1.0,,
+1035,Student_35,student_35@yahoo.com,advanced,11/25/2024,Mobile Development,preference_tag_2,1.0,,
+1036,Student_36,student_36@gmail.com,advanced,4/23/2024,"Web Development,Mobile Development,Database Management",preference_tag_5,1.0,,
+1037,Student_37,student_37@hotmail.com,beginner,3/27/2024,"Database Management,Programming Languages",preference_tag_2,0.0,,
+1038,Student_38,student_38@gmail.com,advanced,9/25/2024,"Programming Languages,Mobile Development",preference_tag_3,1.0,,
+1039,Student_39,student_39@gmail.com,beginner,10/7/2024,"Desktop Applications,AI/ML",preference_tag_3,1.0,,
+1040,Student_40,student_40@outlook.com,intermediate,9/25/2024,AI/ML,preference_tag_5,1.0,,
+1041,Student_41,student_41@outlook.com,advanced,10/27/2024,"AI/ML,Database Management,Web Development",preference_tag_5,1.0,,
+1042,Student_42,student_42@outlook.com,intermediate,7/13/2024,"Web Development,Programming Languages",preference_tag_2,1.0,,
+1043,Student_43,student_43@yahoo.com,beginner,9/25/2024,Web Development,preference_tag_4,1.0,,
+1044,Student_44,student_44@hotmail.com,advanced,1/14/2025,Desktop Applications,preference_tag_2,1.0,,
+1045,Student_45,student_45@hotmail.com,beginner,9/8/2024,Mobile Development,preference_tag_5,1.0,,
+1046,Student_46,student_46@hotmail.com,intermediate,6/10/2024,"AI/ML,Desktop Applications,Mobile Development",preference_tag_5,1.0,,
+1047,Student_47,student_47@hotmail.com,beginner,11/23/2024,Web Development,preference_tag_1,1.0,,
+1048,Student_48,student_48@outlook.com,advanced,2/8/2024,Desktop Applications,preference_tag_5,1.0,,
+1049,Student_49,student_49@yahoo.com,advanced,6/6/2024,"Web Development,AI/ML",preference_tag_1,1.0,,
+1050,Student_50,student_50@yahoo.com,intermediate,6/5/2024,"Database Management,Desktop Applications",preference_tag_4,1.0,,
+1051,Student_51,student_51@outlook.com,beginner,9/12/2024,"Mobile Development,Programming Languages",preference_tag_2,1.0,,
+1052,Student_52,student_52@yahoo.com,advanced,9/8/2024,Desktop Applications,preference_tag_2,1.0,,
+1053,Student_53,student_53@outlook.com,intermediate,11/24/2024,"Desktop Applications,Programming Languages,Mobile Development",preference_tag_1,1.0,,
+1054,Student_54,student_54@hotmail.com,advanced,7/28/2024,"Mobile Development,AI/ML,Web Development",preference_tag_2,1.0,,
+1055,Student_55,student_55@outlook.com,advanced,6/12/2024,Desktop Applications,preference_tag_5,1.0,,
+1056,Student_56,student_56@hotmail.com,beginner,8/9/2024,AI/ML,preference_tag_3,1.0,,
+1057,Student_57,student_57@hotmail.com,advanced,7/2/2024,Mobile Development,preference_tag_1,1.0,,
+1058,Student_58,student_58@gmail.com,beginner,5/14/2024,"Programming Languages,Desktop Applications,Mobile Development",preference_tag_2,0.0,,
+1059,Student_59,student_59@outlook.com,advanced,2/27/2024,"Database Management,Programming Languages,AI/ML",preference_tag_1,1.0,,
+1060,Student_60,student_60@gmail.com,intermediate,6/27/2024,Mobile Development,preference_tag_1,1.0,,
+1061,Student_61,student_61@outlook.com,advanced,7/16/2024,AI/ML,preference_tag_3,1.0,,
+1062,Student_62,student_62@outlook.com,beginner,9/15/2024,"Programming Languages,Web Development",preference_tag_5,1.0,,
+1063,Student_63,student_63@gmail.com,beginner,5/6/2024,"Database Management,Desktop Applications,Web Development",preference_tag_1,1.0,,
+1064,Student_64,student_64@gmail.com,intermediate,3/28/2024,"AI/ML,Programming Languages",preference_tag_2,1.0,,
+1065,Student_65,student_65@outlook.com,advanced,4/11/2024,"AI/ML,Database Management",preference_tag_4,1.0,,
+1066,Student_66,student_66@yahoo.com,advanced,2/26/2024,"AI/ML,Programming Languages",preference_tag_1,1.0,,
+1067,Student_67,student_67@hotmail.com,intermediate,10/10/2024,"Database Management,AI/ML,Programming Languages",preference_tag_1,1.0,,
+1068,Student_68,student_68@gmail.com,advanced,7/2/2024,"Programming Languages,AI/ML,Mobile Development",preference_tag_3,0.0,,
+1069,Student_69,student_69@hotmail.com,advanced,5/21/2024,"Programming Languages,Web Development,Mobile Development",preference_tag_5,1.0,,
+1070,Student_70,student_70@yahoo.com,beginner,8/25/2024,"Web Development,Desktop Applications,Database Management",preference_tag_4,0.0,,
+1071,Student_71,student_71@yahoo.com,advanced,10/11/2024,"Web Development,AI/ML,Database Management",preference_tag_2,1.0,,
+1072,Student_72,student_72@yahoo.com,advanced,6/29/2024,Database Management,preference_tag_4,1.0,,
+1073,Student_73,student_73@gmail.com,intermediate,9/14/2024,"AI/ML,Mobile Development",preference_tag_2,0.0,,
+1074,Student_74,student_74@yahoo.com,intermediate,7/13/2024,Web Development,preference_tag_5,1.0,,
+1075,Student_75,student_75@gmail.com,beginner,2/25/2024,Database Management,preference_tag_2,1.0,,
+1076,Student_76,student_76@yahoo.com,advanced,2/2/2024,"Programming Languages,Mobile Development",preference_tag_3,1.0,,
+1077,Student_77,student_77@hotmail.com,advanced,5/2/2024,"Programming Languages,Desktop Applications,Mobile Development",preference_tag_3,1.0,,
+1078,Student_78,student_78@hotmail.com,advanced,8/21/2024,Database Management,preference_tag_3,1.0,,
+1079,Student_79,student_79@outlook.com,beginner,5/9/2024,"Programming Languages,Desktop Applications,Mobile Development",preference_tag_3,1.0,,
+1080,Student_80,student_80@hotmail.com,beginner,2/5/2024,"Desktop Applications,AI/ML",preference_tag_4,1.0,,
+1081,Student_81,student_81@outlook.com,intermediate,8/22/2024,"Desktop Applications,AI/ML",preference_tag_5,1.0,,
+1082,Student_82,student_82@hotmail.com,beginner,8/21/2024,"Mobile Development,AI/ML,Database Management",preference_tag_2,1.0,,
+1083,Student_83,student_83@gmail.com,advanced,1/30/2024,AI/ML,preference_tag_2,1.0,,
+1084,Student_84,student_84@hotmail.com,advanced,7/1/2024,Desktop Applications,preference_tag_3,1.0,,
+1085,Student_85,student_85@outlook.com,beginner,3/14/2024,Web Development,preference_tag_3,1.0,,
+1086,Student_86,student_86@outlook.com,advanced,9/10/2024,"Database Management,Mobile Development,Web Development",preference_tag_1,1.0,,
+1087,Student_87,student_87@yahoo.com,advanced,12/8/2024,Database Management,preference_tag_5,1.0,,
+1088,Student_88,student_88@gmail.com,beginner,2/13/2024,"Mobile Development,Database Management,Programming Languages",preference_tag_4,1.0,,
+1089,Student_89,student_89@hotmail.com,beginner,1/22/2024,Programming Languages,preference_tag_2,1.0,,
+1090,Student_90,student_90@yahoo.com,advanced,9/9/2024,Mobile Development,preference_tag_1,1.0,,
+1091,Student_91,student_91@hotmail.com,advanced,4/24/2024,Mobile Development,preference_tag_1,1.0,,
+1092,Student_92,student_92@hotmail.com,advanced,8/18/2024,Database Management,preference_tag_2,1.0,,
+1093,Student_93,student_93@yahoo.com,intermediate,3/24/2024,Database Management,preference_tag_4,1.0,,
+1094,Student_94,student_94@yahoo.com,intermediate,10/9/2024,Programming Languages,preference_tag_1,1.0,,
+1095,Student_95,student_95@yahoo.com,intermediate,4/28/2024,"Web Development,AI/ML",preference_tag_1,1.0,,
+1096,Student_96,student_96@yahoo.com,beginner,5/9/2024,"Desktop Applications,Database Management",preference_tag_5,1.0,,
+1097,Student_97,student_97@yahoo.com,intermediate,8/25/2024,Desktop Applications,preference_tag_4,1.0,,
+1098,Student_98,student_98@hotmail.com,beginner,2/5/2024,"AI/ML,Web Development,Database Management",preference_tag_1,1.0,,
+1099,Student_99,student_99@yahoo.com,beginner,9/26/2024,"Web Development,AI/ML,Desktop Applications",preference_tag_4,1.0,,
+1100,Student_100,student_100@gmail.com,intermediate,11/17/2024,"Web Development,Programming Languages",preference_tag_2,1.0,,
+101,,samydero@gmail.com,beginner,,Web Development,,,scrypt:32768:8:1$m97VYtJx1PItUcXc$591adaf33955ba75ceb9f98b3cfcf16c6459bc489c9cec06ba21726458df64300d134afb14b5cabd2311aa8a7c26581af785860fc2e5750153162b6a85c0e861,
+102,,suzannabasumba@outlook.com,advanced,,AI/ML|Mobile Development|Programming Languages,,,scrypt:32768:8:1$eKlMnU5apaeZgo7Q$0f5f534e994bc659ea1fbb3baa8b3810224d202a6cdb7e8463d7c86e245b050f0b554be2b783b7ccee878d449f3260b3b18b3c9710144f004b7bd4d998e51ac2,
