@@ -14,7 +14,14 @@ from threading import Lock
 import logging
 from typing import List, Dict, Union
 from prometheus_client import Histogram, Counter, Gauge
-import time
+from datetime import datetime
+from flask_cors import CORS
+
+from flask_jwt_extended import (
+    JWTManager, create_access_token, jwt_required, get_jwt_identity
+)
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 # Monitoring setup
 RECOMMENDATION_LATENCY = Histogram('recommendation_latency_seconds', 'Time spent processing recommendations')
@@ -35,7 +42,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 class RecommendationEngine:
     def __init__(self):
         self.data_lock = Lock()
@@ -292,54 +299,61 @@ async def get_content_performance():
     except Exception as e:
         logger.error(f"Error fetching content performance: {e}")
         return jsonify({'error': 'Internal server error'}), 500
+def hash_password(password: str) -> str:
+    return generate_password_hash(password)
+
+def verify_password(password: str, hashed: str) -> bool:
+    return check_password_hash(password, hashed)
     
 @app.route('/register', methods=['POST'])
-def register_student(self):
+def register_student():
     try:
         data = request.get_json()
-        full_name = data['full_name']
-        email = data['email']
-        password = data['password']  
-        interests = data['interests']
-        skill_level = data['skillLevel']
-        preferred_categories = data.get('preferredCategories', [])
-
+        # Validate required fields
+        required_fields = ['full_name', 'email', 'password', 'interests', 'skillLevel']
+        if not all(field in data for field in required_fields):
+            return jsonify({'error': 'Missing required fields'}), 400
+            
         # Check for duplicate emails
-        if email in self.students['email'].values:
+        if data['email'] in engine.students['email'].values:
             return jsonify({'error': 'Email already exists'}), 400
 
-        # Generate a new student ID
-        student_id = len(self.students) + 1
-
-        # Append the new student
+        student_id = len(engine.students) + 1
         new_student = {
             'student_id': student_id,
-            'full_name': full_name,
-            'email': email,
-            'password': password,  # Hash this for security
-            'interests': '|'.join(interests),
-            'skill_level': skill_level,
-            'preferred_categories': '|'.join(preferred_categories),
+            'full_name': data['full_name'],
+            'email': data['email'],
+            'password': hash_password(data['password']),  # Hash password
+            'interests': '|'.join(data['interests']),
+            'skill_level': data['skillLevel'],
+            'preferred_categories': '|'.join(data.get('preferredCategories', []))
         }
-        self.students = self.students.append(new_student, ignore_index=True)
-
-        # Save the updated dataset
-        self.students.to_csv(students_path, index=False)
-
-        # Generate a token (dummy here for demonstration)
-        token = f"token_{student_id}"
-
-        return jsonify({'student_id': student_id, 'token': token}), 201
+        
+        engine.students = pd.concat([engine.students, pd.DataFrame([new_student])], ignore_index=True)
+        engine.students.to_csv(students_path, index=False)
+        
+        # Initialize engagement for new student
+        engine.initialize_student_engagement(student_id)
+        
+        # Generate a JWT token
+        access_token = create_access_token(identity={'student_id': student_id, 'email': data['email']})
+        
+        return jsonify({
+            'student_id': student_id,
+            'token': access_token
+        }), 201
+        
     except Exception as e:
         logger.error(f"Error in registration: {e}")
         return jsonify({'error': 'An error occurred'}), 500
-    
+
+
 @app.route('/dashboard', methods=['GET'])
+@jwt_required()
 def get_dashboard():
-    token = request.headers.get('Authorization')
-    if not validate_token(token):
-        return jsonify({'error': 'Unauthorized'}), 401
-    return jsonify({'message': 'Welcome to the dashboard!'})
+    current_user = get_jwt_identity()
+    return jsonify({'message': f"Welcome {current_user['email']} to the dashboard!"})
+
 
 if __name__ == '__main__':
     engine = RecommendationEngine()
