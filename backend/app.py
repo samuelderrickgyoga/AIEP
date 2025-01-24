@@ -15,7 +15,12 @@ import logging
 from typing import List, Dict, Union
 from prometheus_client import Histogram, Counter, Gauge
 from datetime import datetime
+from models import db, Student, StudentProfile
 from flask_cors import CORS
+from config import Config
+from flask_migrate import Migrate
+
+
 
 from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity
@@ -41,10 +46,19 @@ engagement_path = os.path.join(data_dir, 'engagement.csv')
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
-app.config['JWT_SECRET_KEY'] = 'derrickjwt003@phoenix' 
-jwt = JWTManager(app)
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object(Config)
+    CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+    db.init_app(app)
+    jwt = JWTManager(app)
+    
+    with app.app_context():
+        db.create_all()
+    
+    return app
+app = create_app()
+migrate = Migrate(app, db)
 class RecommendationEngine:
     def __init__(self):
         self.data_lock = Lock()
@@ -194,27 +208,72 @@ class RecommendationEngine:
                 await self.update_engagement_metrics()
 
     def calculate_engagement_metrics(self) -> Dict:
-        overall_time = self.engagement.groupby(['course_id'])['time_spent'].mean()
-        avg_time_spent = self.engagement['time_spent'].mean()
-        self.engagement['engagement_score'] = (
-            0.4 * (self.engagement['time_spent'] / avg_time_spent) +
-            0.4 * (self.engagement['quiz_score'] / 100) +
-            0.2 * (self.engagement['rating'] / 5)
-        )
-        content_performance = pd.merge(
-            self.engagement,
-            self.courses[['course_id', 'content_type']],
-            on='course_id'
-        ).groupby('content_type').agg({
-            'quiz_score': 'mean',
-            'engagement_score': 'mean',
-            'time_spent': 'mean'
-        })
-        return {
-            'overall_time': overall_time.to_dict(),
-            'content_performance': content_performance.to_dict(),
-            'avg_engagement_score': self.engagement['engagement_score'].mean()
-        }
+        try:
+            overall_time = self.engagement.groupby(['course_id'])['time_spent'].mean()
+            avg_time_spent = self.engagement['time_spent'].mean()
+
+            # Calculate engagement score
+            self.engagement['engagement_score'] = (
+                0.4 * (self.engagement['time_spent'] / avg_time_spent) +
+                0.4 * (self.engagement['quiz_score'] / 100) +
+                0.2 * (self.engagement['rating'] / 5)
+            )
+
+            # Calculate content performance metrics
+            content_performance = pd.merge(
+                self.engagement,
+                self.courses[['course_id', 'content_type']],
+                on='course_id'
+            ).groupby('content_type').agg({
+                'quiz_score': 'mean',
+                'engagement_score': 'mean',
+                'time_spent': 'mean'
+            })
+
+            return {
+                'overall_time': overall_time.to_dict(),
+                'content_performance': content_performance.to_dict(),
+                'avg_engagement_score': self.engagement['engagement_score'].mean()
+            }
+        except Exception as e:
+            logger.error(f"Error calculating engagement metrics: {e}")
+            return {}
+
+    def calculate_engagement_score(self, student_id: int) -> float:
+        try:
+            student_engagement = self.engagement[self.engagement['student_id'] == student_id]
+            if student_engagement.empty:
+                logger.info(f"No engagement data found for student {student_id}")
+                return 0.0
+
+            time_score = student_engagement['time_spent'].sum() / self.courses['expected_time'].sum()
+            completion_score = student_engagement['completion_status'].mean()
+            quiz_score = student_engagement['quiz_score'].mean()
+
+            score = (0.4 * time_score + 0.3 * completion_score + 0.3 * quiz_score)
+            logger.info(f"Calculated engagement score for student {student_id}: {score:.2f}")
+            return score
+        except Exception as e:
+            logger.error(f"Error calculating engagement score for student {student_id}: {e}")
+            return 0.0
+
+    def normalize_engagement_score(self, student_id: int) -> float:
+        try:
+            # Calculate engagement scores for all students
+            scores = self.engagement.groupby('student_id').apply(
+                lambda df: self.calculate_engagement_score(df['student_id'].iloc[0])
+            )
+
+            # Normalize scores using MinMaxScaler
+            scaler = MinMaxScaler()
+            normalized_scores = scaler.fit_transform(scores.values.reshape(-1, 1))
+            normalized_score = dict(zip(scores.index, normalized_scores))[student_id]
+
+            return normalized_score
+        except Exception as e:
+            logger.error(f"Error normalizing engagement score for student {student_id}: {e}")
+            return 0.0
+
 
     def get_student_progress(self, student_id: int) -> Dict:
         student_data = self.engagement[self.engagement['student_id'] == student_id]
@@ -307,48 +366,82 @@ def hash_password(password: str) -> str:
 def verify_password(password: str, hashed: str) -> bool:
     return check_password_hash(password, hashed)
     
+
 @app.route('/register', methods=['POST'])
 def register_student():
     try:
         data = request.get_json()
+        
         # Validate required fields
         required_fields = ['full_name', 'email', 'password', 'interests', 'skillLevel']
         if not all(field in data for field in required_fields):
             return jsonify({'error': 'Missing required fields'}), 400
             
-        # Check for duplicate emails
-        if data['email'] in engine.students['email'].values:
+        # Check for duplicate email
+        if Student.query.filter_by(email=data['email']).first():
             return jsonify({'error': 'Email already exists'}), 400
 
-        student_id = len(engine.students) + 1
-        new_student = {
-            'student_id': student_id,
-            'full_name': data['full_name'],
-            'email': data['email'],
-            'password': hash_password(data['password']),  # Hash password
-            'interests': '|'.join(data['interests']),
-            'skill_level': data['skillLevel'],
-            'preferred_categories': '|'.join(data.get('preferredCategories', []))
-        }
+        # Create new student
+        new_student = Student(
+            full_name=data['full_name'],
+            email=data['email'],
+            password=hash_password(data['password']),
+            interests=data['interests'],
+            skill_level=data['skillLevel'],
+            preferred_categories=data.get('preferredCategories', [])
+        )
         
-        engine.students = pd.concat([engine.students, pd.DataFrame([new_student])], ignore_index=True)
-        engine.students.to_csv(students_path, index=False)
+        # Create student profile
+        profile = StudentProfile(student=new_student)
         
-        # Initialize engagement for new student
-        engine.initialize_student_engagement(student_id)
+        # Add to database
+        db.session.add(new_student)
+        db.session.add(profile)
+        db.session.commit()
         
-        # Generate a JWT token
-        access_token = create_access_token(identity={'student_id': student_id, 'email': data['email']})
+        # Generate JWT token
+        access_token = create_access_token(
+            identity={'student_id': new_student.id, 'email': new_student.email}
+        )
         
         return jsonify({
-            'student_id': student_id,
+            'student_id': new_student.id,
             'token': access_token
         }), 201
         
     except Exception as e:
+        db.session.rollback()
         logger.error(f"Error in registration: {e}")
         return jsonify({'error': 'An error occurred'}), 500
 
+
+@app.route('/profile/<int:student_id>', methods=['GET'])
+@jwt_required()
+def get_profile(student_id):
+    try:
+        student = Student.query.get_or_404(student_id)
+        profile = student.profile
+        
+        return jsonify({
+            'student': {
+                'id': student.id,
+                'full_name': student.full_name,
+                'email': student.email,
+                'interests': student.interests,
+                'skill_level': student.skill_level
+            },
+            'profile': {
+                'bio': profile.bio,
+                'avatar_url': profile.avatar_url,
+                'completed_courses': profile.completed_courses,
+                'current_courses': profile.current_courses,
+                'achievements': profile.achievements,
+                'last_active': profile.last_active.isoformat()
+            }
+        })
+    except Exception as e:
+        logger.error(f"Error fetching profile: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
 
 @app.route('/dashboard', methods=['GET'])
 @jwt_required()
