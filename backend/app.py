@@ -15,9 +15,9 @@ import logging
 from typing import List, Dict, Union
 from prometheus_client import Histogram, Counter, Gauge
 from datetime import datetime
-from models import db, Student, StudentProfile
+from backend.models import db, Student, StudentProfile
 from flask_cors import CORS
-from config import Config
+from backend.config import Config
 from flask_migrate import Migrate
 
 
@@ -55,10 +55,10 @@ def create_app():
     
     with app.app_context():
         db.create_all()
-    
+    Migrate(app, db)
     return app
 app = create_app()
-migrate = Migrate(app, db)
+
 class RecommendationEngine:
     def __init__(self):
         self.data_lock = Lock()
