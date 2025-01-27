@@ -15,9 +15,9 @@ import logging
 from typing import List, Dict, Union
 from prometheus_client import Histogram, Counter, Gauge
 from datetime import datetime
-from backend.models import db, Student, StudentProfile
+from models import db, Student, StudentProfile
 from flask_cors import CORS
-from backend.config import Config
+from config import Config
 from flask_migrate import Migrate
 
 
