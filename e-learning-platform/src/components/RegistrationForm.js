@@ -24,11 +24,11 @@ const RegistrationForm = () => {
     try {
       const response = await axios.post('http://localhost:5000/register', formData);
       const { student_id, token } = response.data;
-      
+
       // Store in localStorage
       localStorage.setItem('student_id', student_id);
       localStorage.setItem('token', token);
-      
+
       navigate('/dashboard');
     } catch (error) {
       console.error('Registration error:', error);
@@ -55,7 +55,7 @@ const RegistrationForm = () => {
                 type="text"
                 required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
               />
             </div>
 
@@ -68,10 +68,21 @@ const RegistrationForm = () => {
                 type="email"
                 required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
             </div>
-
+            {/* Password Input */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Password
+              </label>
+              <input
+                type="password"
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+              />
+            </div>
             {/* Skill Level Selection */}
             <div>
               <label className="block text-sm font-medium text-gray-700">
@@ -79,7 +90,7 @@ const RegistrationForm = () => {
               </label>
               <select
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                onChange={(e) => setFormData({...formData, skillLevel: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, skillLevel: e.target.value })}
               >
                 {skillLevels.map((level) => (
                   <option key={level} value={level}>
@@ -104,7 +115,7 @@ const RegistrationForm = () => {
                         const newInterests = e.target.checked
                           ? [...formData.interests, interest]
                           : formData.interests.filter(i => i !== interest);
-                        setFormData({...formData, interests: newInterests});
+                        setFormData({ ...formData, interests: newInterests });
                       }}
                     />
                     <span className="ml-2 text-sm text-gray-600">{interest}</span>
