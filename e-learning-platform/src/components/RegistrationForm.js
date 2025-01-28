@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Course_List from '../components/Course_List';
 import axios from 'axios';
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
+  const [showCourses, setShowCourses] = useState(false);
   const [formData, setFormData] = useState({
     full_name: '',
     email: '',
@@ -24,17 +26,16 @@ const RegistrationForm = () => {
     try {
       const response = await axios.post('http://localhost:5000/register', formData);
       const { student_id, token } = response.data;
-
-      // Store in localStorage
+      
       localStorage.setItem('student_id', student_id);
       localStorage.setItem('token', token);
-
-      navigate('/dashboard');
+      
+      setShowCourses(true);
     } catch (error) {
       console.error('Registration error:', error);
     }
   };
-
+  
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -133,6 +134,15 @@ const RegistrationForm = () => {
           </form>
         </div>
       </div>
+      {showCourses && (
+  <div className="mt-8">
+    <h2 className="text-2xl font-bold mb-4">Recommended Courses</h2>
+    <Course_List 
+      selectedCategories={formData.interests} 
+      skillLevel={formData.skillLevel}
+    />
+  </div>
+)}
     </div>
   );
 };
