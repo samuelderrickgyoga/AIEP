@@ -112,6 +112,7 @@ const HomePage = () => {
       <Link to="/" className="nav-link text-gray-700 hover:text-blue-600">Home</Link>
       <Link to="/about" className="nav-link text-gray-700 hover:text-blue-600">About</Link>
       <Link to="/courses" className="nav-link text-gray-700 hover:text-blue-600">Courses</Link>
+      <Link to="/login" className="nav-link text-gray-700 hover:text-blue-600">Login</Link>
       <Link to="/register" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
         Register
       </Link>
