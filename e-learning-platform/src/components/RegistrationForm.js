@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
-  const [showCourses, setShowCourses] = useState(false);
+ 
   const [formData, setFormData] = useState({
     full_name: '',
     email: '',
@@ -27,10 +27,12 @@ const RegistrationForm = () => {
       const response = await axios.post('http://localhost:5000/register', formData);
       const { student_id, token } = response.data;
       
+      // Store authentication data
       localStorage.setItem('student_id', student_id);
       localStorage.setItem('token', token);
       
-      setShowCourses(true);
+      // Navigate to dashboard
+      navigate('/dashboard');
     } catch (error) {
       console.error('Registration error:', error);
     }
@@ -134,15 +136,7 @@ const RegistrationForm = () => {
           </form>
         </div>
       </div>
-      {showCourses && (
-  <div className="mt-8">
-    <h2 className="text-2xl font-bold mb-4">Recommended Courses</h2>
-    <Course_List 
-      selectedCategories={formData.interests} 
-      skillLevel={formData.skillLevel}
-    />
-  </div>
-)}
+      
     </div>
   );
 };
