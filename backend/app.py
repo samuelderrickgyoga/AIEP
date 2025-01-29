@@ -15,7 +15,7 @@ import logging
 from typing import List, Dict, Union
 from prometheus_client import Histogram, Counter, Gauge
 from datetime import datetime
-from models import db, Student, StudentProfile
+from models import db, Student, StudentProfile, CourseEnrollment, Course
 from flask_cors import CORS
 from config import Config
 from flask_migrate import Migrate
@@ -442,6 +442,28 @@ def get_profile(student_id):
     except Exception as e:
         logger.error(f"Error fetching profile: {e}")
         return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/courses', methods=['GET'])
+def get_courses():
+    category_id = request.args.get('category_id')
+    difficulty = request.args.get('difficulty')
+    
+    courses_query = Course.query
+    
+    if category_id:
+        courses_query = courses_query.filter_by(category_id=category_id)
+    if difficulty:
+        courses_query = courses_query.filter_by(difficulty=difficulty)
+    
+    courses = courses_query.all()
+    
+    return jsonify([{
+        'course_id': course.course_id,
+        'course_name': course.course_name,
+        'category_id': course.category_id,
+        'difficulty': course.difficulty,
+        'features': course.features
+    } for course in courses])
 
 @app.route('/dashboard', methods=['GET'])
 @jwt_required()
