@@ -15,12 +15,13 @@ const CourseList = ({ selectedCategories, skillLevel }) => {
           params.append('difficulty', skillLevel);
         }
         
-        const response = await axios.get(`/api/courses?${params}`);
+        const response = await axios.get(`http://localhost:5000/courses?${params}`);
         setCourses(response.data);
       } catch (error) {
         console.error('Error fetching courses:', error);
       }
     };
+    
 
     fetchCourses();
   }, [selectedCategories, skillLevel]);
