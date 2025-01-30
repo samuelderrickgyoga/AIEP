@@ -52,3 +52,18 @@ class CourseEnrollment(db.Model):
     course_id = db.Column(db.Integer, db.ForeignKey('courses.course_id'))
     enrollment_date = db.Column(db.DateTime, default=datetime.utcnow)
     completion_status = db.Column(db.String(20), default='enrolled')
+
+class Engagement(db.Model):
+    __tablename__ = 'engagements'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.Integer, db.ForeignKey('students.id'), nullable=False)
+    course_id = db.Column(db.Integer, db.ForeignKey('courses.course_id'), nullable=False)
+    time_spent = db.Column(db.Float, nullable=False)  # Time spent on the course (hours)
+    quiz_score = db.Column(db.Float, nullable=False)  # Quiz score (0-100)
+    completion_status = db.Column(db.Float, nullable=False)  # Completion percentage (0 to 1)
+    rating = db.Column(db.Float, nullable=True)  # Student rating (1-5)
+    
+    # Relationships
+    student = db.relationship('Student', backref='engagements')
+    course = db.relationship('Course', backref='engagements')
