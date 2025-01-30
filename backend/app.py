@@ -475,3 +475,21 @@ def get_dashboard():
 if __name__ == '__main__':
     engine = RecommendationEngine()
     app.run(debug=True)
+
+from flask import jsonify
+import openai
+
+# Add this to your existing Flask routes
+@app.route('/api/chat', methods=['POST'])
+def chat():
+    message = request.json.get('message')
+    openai.api_key = 'your-api-key-here'
+    
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "You are a helpful AI learning assistant."},
+            {"role": "user", "content": message}
+        ]
+    )
+    return jsonify({"message": response.choices[0].message.content})
