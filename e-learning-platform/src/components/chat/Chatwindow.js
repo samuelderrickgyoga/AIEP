@@ -1,5 +1,5 @@
+
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const ChatWindow = ({ onClose }) => {
   const [messages, setMessages] = useState([]);
@@ -16,18 +16,19 @@ const ChatWindow = ({ onClose }) => {
     setIsTyping(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/chat', {
-        message: input
-      });
-
-      setMessages(prev => [...prev, {
-        role: 'assistant',
-        content: response.data.message
-      }]);
+        const response = await fetch('http://localhost:5000/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: input }),
+        });
+        const data = await response.json();
+        setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
     } catch (error) {
-      console.error('Error:', error);
+        console.error('Chat Error:', error);
     } finally {
-      setIsTyping(false);
+        setIsTyping(false);
     }
   };
 
