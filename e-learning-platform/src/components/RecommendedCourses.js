@@ -34,8 +34,10 @@ const RecommendedCourses = ({ studentId }) => {
                     {recommendations.map((course) => (
                         <div key={course.course_id} 
                              className="border rounded-lg p-4 hover:shadow-md transition-shadow">
-                            <h4 className="font-semibold text-lg">{course.title}</h4>
-                            <p className="text-gray-600">{course.description}</p>
+                            <h4 className="font-semibold text-lg">{course.course_name}</h4>
+                            <p className="text-gray-600">Category ID: {course.category_id}</p>
+                            <p className="text-gray-600">Difficulty: {course.difficulty}</p>
+                            <p className="text-gray-600">Estimated Time: {course.average_time} hours</p>
                             <div className="mt-2 text-sm text-blue-600">
                                 Confidence: {(course.confidence * 100).toFixed(1)}%
                             </div>
@@ -46,4 +48,5 @@ const RecommendedCourses = ({ studentId }) => {
         </div>
     );
 };
+
 export default RecommendedCourses;
