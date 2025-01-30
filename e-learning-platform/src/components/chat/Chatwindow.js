@@ -91,3 +91,5 @@ const ChatWindow = ({ onClose }) => {
 };
 
 export default ChatWindow;
+
+//#AIEP\e-learning-platform\src\components\chat\Chatwindow.js 
