@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { recommendationService } from '../services/api';
+import axios from 'axios';
 
 const RecommendedCourses = ({ studentId }) => {
     const [recommendations, setRecommendations] = useState([]);
@@ -8,8 +8,8 @@ const RecommendedCourses = ({ studentId }) => {
     useEffect(() => {
         const fetchRecommendations = async () => {
             try {
-                const data = await recommendationService.getRecommendations(studentId);
-                setRecommendations(data.recommendations);
+                const response = await axios.get(`http://localhost:5000/recommendations?student_id=${studentId}`);
+                setRecommendations(response.data.recommendations);
             } catch (error) {
                 console.error('Error fetching recommendations:', error);
             } finally {
