@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Line, Pie, Bar } from 'react-chartjs-2';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import axios from 'axios';
+import ChatButton from '../components/chat/Chatbutton';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -185,6 +186,7 @@ const Dashboard = () => {
           </div>
         </div>
       </main>
+      <ChatButton />
     </div>
   );
 };
