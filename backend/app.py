@@ -19,14 +19,18 @@ from models import db, Student, StudentProfile, CourseEnrollment, Course
 from flask_cors import CORS
 from config import Config
 from flask_migrate import Migrate
-
+import openai 
+import time 
 
 
 from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity
 )
 from werkzeug.security import generate_password_hash, check_password_hash
+from dotenv import load_dotenv
 
+
+load_dotenv()
 
 # Monitoring setup
 RECOMMENDATION_LATENCY = Histogram('recommendation_latency_seconds', 'Time spent processing recommendations')
@@ -46,6 +50,7 @@ engagement_path = os.path.join(data_dir, 'engagement.csv')
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -464,6 +469,39 @@ def get_courses():
         'difficulty': course.difficulty,
         'features': course.features
     } for course in courses])
+@app.route('/api/chat', methods=['POST'])
+def chat():
+    message = request.json.get('message')
+
+    if not message:
+        return jsonify({"error": "Message field is required"}), 400
+
+    retries = 3
+    delay = 1
+
+    for attempt in range(retries):
+        try:
+            client = openai.OpenAI(api_key=openai.api_key)
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                    {"role": "system", "content": "You are Metatron, an advanced AI learning assistant for Phoenix. When asked about your name, always introduce yourself as Metatron."},
+        {"role": "user", "content": message}
+                ]
+            )
+            return jsonify({"message": response.choices[0].message.content})
+
+        except openai.RateLimitError:
+            if attempt < retries - 1:
+                time.sleep(delay)
+                delay *= 2
+            else:
+                return jsonify({"error": "Rate limit exceeded. Please try again later."}), 429
+
+        except openai.OpenAIError as e:
+            return jsonify({"error": f"OpenAI API error: {str(e)}"}), 500
+
+    return jsonify({"error": "Unexpected error occurred"}), 500
 
 @app.route('/dashboard', methods=['GET'])
 @jwt_required()
@@ -476,20 +514,4 @@ if __name__ == '__main__':
     engine = RecommendationEngine()
     app.run(debug=True)
 
-from flask import jsonify
-import openai
 
-# Add this to your existing Flask routes
-@app.route('/api/chat', methods=['POST'])
-def chat():
-    message = request.json.get('message')
-    openai.api_key = 'your-api-key-here'
-    
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": "You are a helpful AI learning assistant."},
-            {"role": "user", "content": message}
-        ]
-    )
-    return jsonify({"message": response.choices[0].message.content})
