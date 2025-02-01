@@ -160,7 +160,8 @@ const Dashboard = () => {
         </main>
       </div>
       <ChatButton />
-    </div>
+
+   </div>
   );
 };
 

@@ -35,7 +35,7 @@ const ChatWindow = ({ onClose }) => {
   return (
     <div className="fixed bottom-24 right-6 w-96 h-[500px] bg-white rounded-lg shadow-xl flex flex-col z-50">
       <div className="p-4 border-b flex justify-between items-center bg-indigo-600 text-white rounded-t-lg">
-        <h3 className="font-semibold">AI Learning Assistant</h3>
+        <h3 className="font-semibold">Metatron</h3>
         <button onClick={onClose} className="text-white hover:text-gray-200">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -92,4 +92,3 @@ const ChatWindow = ({ onClose }) => {
 
 export default ChatWindow;
 
-//#AIEP\e-learning-platform\src\components\chat\Chatwindow.js 
