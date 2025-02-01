@@ -67,3 +67,21 @@ class Engagement(db.Model):
     # Relationships
     student = db.relationship('Student', backref='engagements')
     course = db.relationship('Course', backref='engagements')
+
+class Achievement(db.Model):
+    __tablename__ = 'achievements'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.Integer, db.ForeignKey('students.id'))
+    name = db.Column(db.String(100), nullable=False)
+    icon = db.Column(db.String(10))
+    date_earned = db.Column(db.DateTime, default=db.func.current_timestamp())
+    student = db.relationship('Student', backref='achievements')
+
+class Event(db.Model):
+    __tablename__ = 'events'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(200), nullable=False)
+    date = db.Column(db.Date, nullable=False)
+    time = db.Column(db.Time, nullable=False)
+    description = db.Column(db.Text)
+
