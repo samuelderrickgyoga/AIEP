@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Recommendations from './components/RecommendedCourses';
 import ChapterPage from './components/ChapterPage';
 import CategorySection from './components/CategorySection';
+import { API_BASE_URL } from './config/api';
 
 function App() {
   return (
@@ -22,7 +23,6 @@ function App() {
         <Route path="/courses" element={<CourseList />} />
         <Route path="/recommendations" element={<Recommendations />} />
         <Route path="/course/:courseId/chapter/:chapterId" element={<ChapterPage />} />
-
       </Routes>
     </Router>
   );

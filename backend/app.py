@@ -15,9 +15,9 @@ import logging
 from typing import List, Dict, Union
 from prometheus_client import Histogram, Counter, Gauge
 from datetime import datetime
-from models import db, Student, StudentProfile, CourseEnrollment, Course
+from .models import *
 from flask_cors import CORS
-from config import Config
+from .config import *
 from flask_migrate import Migrate
 import openai 
 import time 
@@ -175,12 +175,49 @@ class RecommendationEngine:
     def _check_saved_models(self) -> bool:
         return os.path.exists('models/cf_model.pk') and os.path.exists('models/tfidf_vectorizer.pk') and os.path.exists('models/cbf_similarity_matrix.pk')
 
-    async def get_hybrid_recommendations(
-        self, 
-        student_id: int, 
-        n: int = 5
-    ) -> Dict[str, Union[List, float]]:
-        with RECOMMENDATION_LATENCY.time():
+async def get_hybrid_recommendations(self, student_id: int, n: int = 5) -> Dict[str, Union[List, float]]:
+    with RECOMMENDATION_LATENCY.time():
+        # Check if student has any interactions
+        student_interactions = self.engagement[self.engagement['student_id'] == student_id]
+        
+        if student_interactions.empty:
+            # New user - use cold start strategy
+            student = Student.query.get(student_id)
+            
+            # Get popular courses
+            popular_courses = self.engagement.groupby('course_id').agg({
+                'rating': ['count', 'mean']
+            }).sort_values(('rating', 'count'), ascending=False)
+            
+            # Get content-based recommendations using student profile
+            course_features = self.tfidf_vectorizer.transform(self.courses['features'])
+            student_profile = ' '.join(student.interests)
+            profile_vector = self.tfidf_vectorizer.transform([student_profile])
+            
+            content_similarities = cosine_similarity(profile_vector, course_features)[0]
+            
+            # Combine popularity and content-based scores
+            recommendations = []
+            for idx, course in self.courses.iterrows():
+                popularity_score = popular_courses.get(course['course_id'], (0, 0))[1]
+                content_score = content_similarities[idx]
+                
+                if course['difficulty'] <= student.skill_level:
+                    confidence = (0.6 * popularity_score) + (0.4 * content_score)
+                    recommendations.append({
+                        'course_id': course['course_id'],
+                        'course_name': course['course_name'],
+                        'confidence': float(confidence),
+                        'reason': 'Based on your interests and popular courses'
+                    })
+            
+            return {
+                'recommendations': sorted(recommendations, key=lambda x: x['confidence'], reverse=True)[:n],
+                'engagement_score': 0.0
+            }
+        
+        else:
+            # Existing user - use hybrid recommendations
             normalized_engagement = self.normalize_engagement_score(student_id)
             
             cf_task = asyncio.to_thread(self.get_cf_recommendations, student_id, n)
@@ -509,6 +546,165 @@ def get_dashboard():
     current_user = get_jwt_identity()
     return jsonify({'message': f"Welcome {current_user['email']} to the dashboard!"})
 
+@app.route('/api/dashboard/overview/<int:student_id>', methods=['GET'])
+@jwt_required()
+def get_dashboard_overview(student_id):
+    try:
+        student = Student.query.get_or_404(student_id)
+        progress = engine.get_student_progress(student_id)
+        recommendations = engine.get_hybrid_recommendations(student_id, n=3)
+        
+        return jsonify({
+            'streak_days': student.streak_days,
+            'points': student.points,
+            'level': student.level,
+            'progress_metrics': progress,
+            'recent_achievements': student.achievements[:3],
+            'recommended_courses': recommendations['recommendations'],
+            'engagement_score': progress['engagement_score']
+        })
+    except Exception as e:
+        logger.error(f"Error fetching dashboard overview: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/api/dashboard/my-courses/<int:student_id>', methods=['GET'])
+@jwt_required()
+def get_student_courses(student_id):
+    try:
+        enrollments = CourseEnrollment.query.filter_by(student_id=student_id).all()
+        
+        courses_data = [{
+            'course_id': enrollment.course.course_id,
+            'course_name': enrollment.course.course_name,
+            'progress': enrollment.progress,
+            'completion_status': enrollment.completion_status,
+            'last_accessed': enrollment.last_accessed,
+            'thumbnail_url': enrollment.course.thumbnail_url,
+            'description': enrollment.course.description
+        } for enrollment in enrollments]
+        
+        return jsonify(courses_data)
+    except Exception as e:
+        logger.error(f"Error fetching student courses: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/api/dashboard/achievements/<int:student_id>', methods=['GET'])
+@jwt_required()
+def get_student_achievements(student_id):
+    try:
+        achievements = Achievement.query.filter_by(student_id=student_id).all()
+        return jsonify([{
+            'id': achievement.id,
+            'name': achievement.name,
+            'icon': achievement.icon,
+            'description': achievement.description,
+            'date_earned': achievement.date_earned.isoformat(),
+            'points': achievement.points
+        } for achievement in achievements])
+    except Exception as e:
+        logger.error(f"Error fetching achievements: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/api/dashboard/events', methods=['GET'])
+@jwt_required()
+def get_upcoming_events():
+    try:
+        current_date = datetime.now().date()
+        events = Event.query.filter(Event.date >= current_date).order_by(Event.date).limit(5).all()
+        
+        return jsonify([{
+            'id': event.id,
+            'title': event.title,
+            'date': event.date.isoformat(),
+            'time': event.time.strftime('%H:%M'),
+            'description': event.description,
+            'type': event.type,
+            'capacity': event.capacity,
+            'location': event.location
+        } for event in events])
+    except Exception as e:
+        logger.error(f"Error fetching events: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/api/dashboard/community', methods=['GET'])
+@jwt_required()
+def get_community_data():
+    try:
+        top_students = Student.query.order_by(Student.points.desc()).limit(10).all()
+        
+        return jsonify({
+            'leaderboard': [{
+                'student_id': student.id,
+                'full_name': student.full_name,
+                'points': student.points,
+                'level': student.level,
+                'avatar_url': student.profile.avatar_url
+            } for student in top_students]
+        })
+    except Exception as e:
+        logger.error(f"Error fetching community data: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/api/dashboard/settings/<int:student_id>', methods=['GET', 'PUT'])
+@jwt_required()
+def handle_settings(student_id):
+    try:
+        if request.method == 'GET':
+            profile = StudentProfile.query.filter_by(student_id=student_id).first_or_404()
+            return jsonify({
+                'notification_preferences': profile.notification_preferences,
+                'theme_preference': profile.theme_preference,
+                'language_preference': profile.language_preference,
+                'email': profile.student.email,
+                'social_links': profile.social_links
+            })
+        
+        elif request.method == 'PUT':
+            data = request.json
+            profile = StudentProfile.query.filter_by(student_id=student_id).first_or_404()
+            
+            for key, value in data.items():
+                if hasattr(profile, key):
+                    setattr(profile, key, value)
+            
+            db.session.commit()
+            return jsonify({'message': 'Settings updated successfully'})
+            
+    except Exception as e:
+        logger.error(f"Error handling settings: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/api/dashboard/learning-goals/<int:student_id>', methods=['GET', 'POST'])
+@jwt_required()
+def handle_learning_goals(student_id):
+    try:
+        if request.method == 'GET':
+            goals = LearningGoal.query.filter_by(student_id=student_id).all()
+            return jsonify([{
+                'id': goal.id,
+                'title': goal.title,
+                'description': goal.description,
+                'target_date': goal.target_date.isoformat(),
+                'progress': goal.progress,
+                'status': goal.status
+            } for goal in goals])
+            
+        elif request.method == 'POST':
+            data = request.json
+            new_goal = LearningGoal(
+                student_id=student_id,
+                title=data['title'],
+                description=data.get('description'),
+                target_date=datetime.strptime(data['target_date'], '%Y-%m-%d').date(),
+                status='active'
+            )
+            db.session.add(new_goal)
+            db.session.commit()
+            return jsonify({'message': 'Goal created successfully', 'goal_id': new_goal.id})
+            
+    except Exception as e:
+        logger.error(f"Error handling learning goals: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
 
 if __name__ == '__main__':
     engine = RecommendationEngine()
