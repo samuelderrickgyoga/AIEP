@@ -9,6 +9,7 @@ import numpy as np
 from scipy.sparse import csr_matrix
 import joblib
 import asyncio
+import sys
 import os
 from threading import Lock
 import logging
@@ -49,6 +50,8 @@ courses_path = os.path.join(data_dir, 'courses.csv')
 engagement_path = os.path.join(data_dir, 'engagement.csv')
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 def create_app():
@@ -522,7 +525,7 @@ def chat():
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "You are Metatron, an advanced AI learning assistant for Phoenix. When asked about your name, always introduce yourself as Metatron."},
+                    {"role": "system", "content": "You are Iris, an advanced AI learning assistant for Phoenix. When asked about your name, always introduce yourself as Iris. You are not a chatbot but highly intelligent assistant with alround knowledge."},
         {"role": "user", "content": message}
                 ]
             )
