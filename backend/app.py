@@ -9,16 +9,15 @@ import numpy as np
 from scipy.sparse import csr_matrix
 import joblib
 import asyncio
-import sys
 import os
 from threading import Lock
 import logging
 from typing import List, Dict, Union
 from prometheus_client import Histogram, Counter, Gauge
 from datetime import datetime
-from .models import *
+from models import db, Student, StudentProfile, Course, CourseModule, CourseEnrollment, Engagement, Achievement, Event, EventAttendee, LearningGoal, ActivityLog
 from flask_cors import CORS
-from .config import *
+from config import Config
 from flask_migrate import Migrate
 import openai 
 import time 
@@ -51,7 +50,7 @@ engagement_path = os.path.join(data_dir, 'engagement.csv')
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 def create_app():
