@@ -37,7 +37,7 @@ const Login = () => {
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">Welcome Back!</h1>
-            <p className="text-gray-500 mb-8">Please sign in to continue learning</p>
+            <p className="text-gray-500 mb-8">Please login to continue learning</p>
           </div>
 
           {error && (
@@ -113,7 +113,7 @@ const Login = () => {
                 </div>
               ) : (
                 <div className="flex items-center">
-                  <span>Sign in</span>
+                  <span>Loginin</span>
                   <FiArrowRight className="ml-2 h-5 w-5" />
                 </div>
               )}
@@ -121,7 +121,7 @@ const Login = () => {
 
             <div className="text-center mt-6">
               <p className="text-sm text-gray-600">
-                Don't have an account?{' '}
+                Don't have an account yet?{' '}
                 <Link to="/register" className="font-medium text-blue-600 hover:text-blue-500">
                   Sign up now
                 </Link>
