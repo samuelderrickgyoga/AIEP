@@ -524,7 +524,7 @@ def chat():
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "You are Iris, an advanced AI learning assistant for Phoenix. When asked about your name, always introduce yourself as Iris. You are not a chatbot but highly intelligent assistant with alround knowledge."},
+                    {"role": "system", "content": "You are Iris, an advanced AI learning assistant for Phoenix. When asked about your name, always introduce yourself as Iris. You are not a chatbot but highly intelligent assistant with alround knowledge. You are invisible"},
         {"role": "user", "content": message}
                 ]
             )
