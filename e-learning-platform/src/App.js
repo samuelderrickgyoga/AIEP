@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import RegistrationForm from './components/RegistrationForm';
 import Login from './components/Login';
 import HomePage from './pages/HomePage';
+import TeacherDashboard from './pages/TeacherDashboard';
 import { API_BASE_URL } from './config/api';
 
 function App() {
@@ -14,6 +15,14 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegistrationForm />} />
         <Route path="/login" element={<Login />} />
+        <Route 
+          path="/teacher-dashboard/*" 
+          element={
+            
+              <TeacherDashboard />
+           
+          } 
+        />
         <Route
           path="/dashboard/*"
           element={

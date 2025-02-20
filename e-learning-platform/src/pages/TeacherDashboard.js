@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FiUsers, FiActivity, FiBrain, FiBook, FiMessageSquare, FiCalendar, FiBarChart2, FiAward } from 'react-icons/fi';
+// Replace FiBrain with FiZap for AI-related icons
+import { FiUsers, FiActivity, FiZap, FiBook, FiMessageSquare, FiCalendar, FiBarChart2, FiAward } from 'react-icons/fi';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
@@ -97,12 +98,13 @@ const TeacherDashboard = () => {
       <div className="bg-white rounded-xl shadow-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold">AI Insights</h3>
-          <FiBrain className="text-purple-500 w-6 h-6" />
+          <FiZap className="text-purple-500 w-6 h-6" />
         </div>
         <p className="text-sm text-gray-600">
           {dashboardData.aiInsights?.latestInsight || 'No insights available'}
         </p>
       </div>
+
     </div>
   );
 
@@ -158,11 +160,10 @@ const TeacherDashboard = () => {
                   <span className="text-sm text-gray-900">{student.performance}%</span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                    student.status === 'active'
+                  <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${student.status === 'active'
                       ? 'bg-green-100 text-green-800'
                       : 'bg-red-100 text-red-800'
-                  }`}>
+                    }`}>
                     {student.status}
                   </span>
                 </td>
