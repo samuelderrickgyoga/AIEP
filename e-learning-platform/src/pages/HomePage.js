@@ -90,7 +90,7 @@ const HomePage = () => {
         <path d="M2 17L12 22L22 17" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M2 12L12 17L22 12" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
-      <h1 className="text-2xl text-blue-600 font-bold tracking-tight">Phoenix</h1>
+      <h1 className="text-2xl text-blue-600 font-bold tracking-tight">Phoenixlearn</h1>
     </div>
 
     {/* Search Bar */}
