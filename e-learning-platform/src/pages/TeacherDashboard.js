@@ -19,51 +19,51 @@ const TeacherDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchDashboardData = async () => {
-      try {
-        const token = localStorage.getItem('token');
-        const headers = { Authorization: `Bearer ${token}` };
+  // useEffect(() => {
+  //   const fetchDashboardData = async () => {
+  //     try {
+  //       const token = localStorage.getItem('token');
+  //       const headers = { Authorization: `Bearer ${token}` };
 
-        const [
-          overviewData,
-          performanceData,
-          insightsData,
-          contentData,
-          communicationData,
-          attendanceData,
-          gamificationData,
-          reportsData
-        ] = await Promise.all([
-          axios.get('/api/dashboard/overview', { headers }),
-          axios.get('/api/dashboard/student-performance', { headers }),
-          axios.get('/api/dashboard/ai-insights', { headers }),
-          axios.get('/api/dashboard/content', { headers }),
-          axios.get('/api/dashboard/communication', { headers }),
-          axios.get('/api/dashboard/attendance', { headers }),
-          axios.get('/api/dashboard/gamification', { headers }),
-          axios.get('/api/dashboard/reports', { headers })
-        ]);
+  //       const [
+  //         overviewData,
+  //         performanceData,
+  //         insightsData,
+  //         contentData,
+  //         communicationData,
+  //         attendanceData,
+  //         gamificationData,
+  //         reportsData
+  //       ] = await Promise.all([
+  //         axios.get('/api/dashboard/overview', { headers }),
+  //         axios.get('/api/dashboard/student-performance', { headers }),
+  //         axios.get('/api/dashboard/ai-insights', { headers }),
+  //         axios.get('/api/dashboard/content', { headers }),
+  //         axios.get('/api/dashboard/communication', { headers }),
+  //         axios.get('/api/dashboard/attendance', { headers }),
+  //         axios.get('/api/dashboard/gamification', { headers }),
+  //         axios.get('/api/dashboard/reports', { headers })
+  //       ]);
 
-        setDashboardData({
-          overview: overviewData.data,
-          studentPerformance: performanceData.data,
-          aiInsights: insightsData.data,
-          contentManagement: contentData.data,
-          communication: communicationData.data,
-          attendance: attendanceData.data,
-          gamification: gamificationData.data,
-          reports: reportsData.data
-        });
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+  //       setDashboardData({
+  //         overview: overviewData.data,
+  //         studentPerformance: performanceData.data,
+  //         aiInsights: insightsData.data,
+  //         contentManagement: contentData.data,
+  //         communication: communicationData.data,
+  //         attendance: attendanceData.data,
+  //         gamification: gamificationData.data,
+  //         reports: reportsData.data
+  //       });
+  //     } catch (err) {
+  //       setError(err.message);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchDashboardData();
-  }, []);
+  //   fetchDashboardData();
+  // }, []);
 
   const OverviewSection = () => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

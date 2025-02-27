@@ -247,10 +247,10 @@ const Dashboard = () => {
 
   useEffect(() => {
     const studentId = localStorage.getItem('student_id');
-    if (!studentId) {
-      navigate('/login');
-      return;
-    }
+    // if (!studentId) {
+    //   navigate('/login');
+    //   return;
+    // }
 
     const loadDashboardData = async () => {
       try {
