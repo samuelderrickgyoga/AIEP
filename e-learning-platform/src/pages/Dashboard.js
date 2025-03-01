@@ -11,6 +11,9 @@ import { FiHome, FiBook, FiAward, FiCalendar, FiSettings, FiUsers, FiLogOut } fr
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
+import { dummyCourses } from '../data/DummyCourses';
+// import { useNavigate } from 'react-router-dom';
+
 const HomeContent = ({ data }) => {
   return (
     <div className="space-y-8">
@@ -81,7 +84,82 @@ const HomeContent = ({ data }) => {
   );
 };
 
+// const CoursesContent = ({ data }) => {
+//   return (
+//     <div className="space-y-8">
+//       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//         {data.courses?.map((course) => (
+//           <div key={course.course_id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+//             <div className="h-48 bg-gray-200">
+//               <img
+//                 src={course.thumbnail_url || '/default-course.jpg'}
+//                 alt={course.course_name}
+//                 className="w-full h-full object-cover"
+//               />
+//             </div>
+//             <div className="p-6">
+//               <h4 className="font-semibold text-lg text-gray-800">{course.course_name}</h4>
+//               <p className="text-gray-500 mt-2">{course.description}</p>
+//               <div className="mt-4 flex justify-between items-center">
+//                 <span className="text-sm text-blue-600">
+//                   {(course.confidence * 100).toFixed(1)}% Match
+//                 </span>
+//                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+//                   Start Learning
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// const CoursesContent = ({ data }) => {
+//   if (!data.courses?.length) {
+//     return (
+//       <div className="text-center py-8">
+//         <p className="text-gray-500">No courses available at the moment.</p>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     // Your existing courses display code
+//     <div className="space-y-8">
+//       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//         {data.courses?.map((course) => (
+//           <div key={course.course_id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+//             <div className="h-48 bg-gray-200">
+//               <img
+//                 src={course.thumbnail_url || '/default-course.jpg'}
+//                 alt={course.course_name}
+//                 className="w-full h-full object-cover"
+//               />
+//             </div>
+//             <div className="p-6">
+//               <h4 className="font-semibold text-lg text-gray-800">{course.course_name}</h4>
+//               <p className="text-gray-500 mt-2">{course.description}</p>
+//               <div className="mt-4 flex justify-between items-center">
+//                 <span className="text-sm text-blue-600">
+//                   {(course.confidence * 100).toFixed(1)}% Match
+//                 </span>
+//                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+//                   Start Learning
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
 const CoursesContent = ({ data }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -101,7 +179,10 @@ const CoursesContent = ({ data }) => {
                 <span className="text-sm text-blue-600">
                   {(course.confidence * 100).toFixed(1)}% Match
                 </span>
-                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                <button 
+                  onClick={() => navigate(`/course/${course.course_id}`)}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                >
                   Start Learning
                 </button>
               </div>
@@ -112,6 +193,8 @@ const CoursesContent = ({ data }) => {
     </div>
   );
 };
+
+
 
 const AchievementsContent = ({ data }) => {
   return (
@@ -234,16 +317,28 @@ const SettingsContent = ({ data }) => {
 };
 
 const Dashboard = () => {
+
+  
+  
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('home');
   const [loading, setLoading] = useState(true);
+  // In your Dashboard component, update the initial state:
   const [dashboardData, setDashboardData] = useState({
     profile: null,
-    courses: [],
+    courses: dummyCourses.recommendations,
     achievements: [],
     events: [],
     progress: null
   });
+
+  // const [dashboardData, setDashboardData] = useState({
+  //   profile: null,
+  //   courses: [],
+  //   achievements: [],
+  //   events: [],
+  //   progress: null
+  // });
 
   useEffect(() => {
     const studentId = localStorage.getItem('student_id');
@@ -252,6 +347,29 @@ const Dashboard = () => {
     //   return;
     // }
 
+    // const loadDashboardData = async () => {
+    //   try {
+    //     const [profile, courses, progress, achievements, events] = await Promise.all([
+    //       fetchStudentProfile(studentId),
+    //       fetchRecommendedCourses(studentId),
+    //       fetchCourseProgress(studentId),
+    //       fetchAchievements(studentId),
+    //       fetchEvents()
+    //     ]);
+
+    //     setDashboardData({
+    //       profile,
+    //       courses: courses.recommendations,
+    //       progress,
+    //       achievements,
+    //       events
+    //     });
+    //   } catch (error) {
+    //     console.error('Error loading dashboard data:', error);
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
     const loadDashboardData = async () => {
       try {
         const [profile, courses, progress, achievements, events] = await Promise.all([
@@ -261,10 +379,11 @@ const Dashboard = () => {
           fetchAchievements(studentId),
           fetchEvents()
         ]);
-
+    
         setDashboardData({
           profile,
-          courses: courses.recommendations,
+          // Update this line to handle both direct course array or recommendations property
+          courses: courses?.recommendations || courses || [],
           progress,
           achievements,
           events
@@ -275,6 +394,8 @@ const Dashboard = () => {
         setLoading(false);
       }
     };
+    
+    
 
     loadDashboardData();
   }, [navigate]);
