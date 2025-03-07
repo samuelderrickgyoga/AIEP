@@ -53,6 +53,7 @@ import Login from './components/Login';
 import HomePage from './pages/HomePage';
 import TeacherDashboard from './pages/TeacherDashboard';
 import CourseLearning from './pages/CourseLearning';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -65,6 +66,8 @@ function App() {
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/course/:courseId" element={<CourseLearning />} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/about" element={<AboutUs />} />
+
       </Routes>
     </BrowserRouter>
   );

@@ -10,6 +10,7 @@ import {
 import { FiHome, FiBook, FiAward, FiCalendar, FiSettings, FiUsers, FiLogOut } from 'react-icons/fi';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import ChatButton from '../components/chat/Chatbutton';
 
 import { dummyCourses } from '../data/DummyCourses';
 // import { useNavigate } from 'react-router-dom';
@@ -495,6 +496,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <ChatButton />
     </div>
   );
 };
